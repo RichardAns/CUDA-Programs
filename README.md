@@ -1,4 +1,3 @@
 # CUDA-Programs
-Examples from Programming in Parallel with CUDA
-I hope to put all the code from my book here
-29 January 2021
+Examples from my CUP book Programming in Parallel with CUDA
+This is the first realease June 19 2021
