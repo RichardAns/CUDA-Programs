@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7e25fc0b-10bd-4491-91e8-2533a899b11b}</ProjectGuid>
-    <RootNamespace>batcher9PT</RootNamespace>
+    <ProjectGuid>{D0C90227-CD45-4AAB-8F10-ED1617973EBA}</ProjectGuid>
+    <RootNamespace>stencil9PT_sm</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -88,7 +88,7 @@
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CudaCompile Include="batcher9PT.cu" />
+    <CudaCompile Include="stencil9PT_sm.cu" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

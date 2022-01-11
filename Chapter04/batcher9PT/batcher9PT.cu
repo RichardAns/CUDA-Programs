@@ -1,4 +1,20 @@
-﻿// example 4.14 batcher9PT
+﻿// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
+// example 4.14 batcher9PT
+// 
+// RTX 2070
+// C:\Users\Richard\OneDrive\toGit2>bin\batcher9PT.exe data\ives512.raw data\test.raw 512 512  10000
+// file data\ives512.raw read
+// median9PT iterations 10000 time 75.079 ms
+// file data\test.raw written
+// 
+// RTX 3080
+// C:\Users\Richard\OneDrive\toGit2>bin\batcher9PT.exe data\ives512.raw data\test.raw 512 512  10000
+// file data\ives512.raw read
+// median9PT iterations 10000 time 44.322 ms
+// file data\test.raw written
 
 #include "cx.h"
 #include "cxbinio.h"

@@ -1,10 +1,26 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 4.10 filter9PT_3
+// 
+// RTX 2070
+// C:\>bin\filter9PT_3.exe data\ives512.raw data\test.raw 512 512  10000 1.0 1.0 1.0   1.0 1.0 1.0   1.0 1.0 1.0
+// file data\ives512.raw read
+// filter9PT_3 iterations 10000 time 69.219 ms
+// file data\test.raw written
+// 
+// RTX 3080
+// C:\bin\filter9PT_3.exe data\ives512.raw data\test.raw 512 512 10000 1.0 1.0 1.0   1.0 1.0 1.0   1.0 1.0 1.0
+// file data\ives512.raw read
+// filter9PT_3 iterations 10000 time 41.062 ms
+// file data\test.raw written
 
 #include "cx.h"
 #include "cxbinio.h"
 #include "cxtimers.h"
 
-// data explicilty in constnat memory must be declared at file scope
+// data explicilty in conststant memory must be declared at file scope
 // arrays sizes must be known at compile time.
 __constant__ float fc[9];
 

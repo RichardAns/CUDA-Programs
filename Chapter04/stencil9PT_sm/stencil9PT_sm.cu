@@ -2,23 +2,23 @@
 // copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
 // This code may be freely changed but please retain an acknowledgement
 
-// example 4.3 Stencil9PT
+// example 4.4 Stencil9PT_sm
 // 
 // RTX 2070
-// C:\bin\stencil9PT.exe 2048 2048 50 50000
+// C:\bin\stencil9PT_sm.exe 2048 2048 50 50000
 // file stencil9PT_host.raw written
 // file stencil9PT_gpu.raw written
-// stencil2d size 2048 x 2048 speedup 74.446
-// host iter       50 time   546.071 ms GFlops    1.536
-// gpu  iter    50000 time  7335.109 ms GFlops  114.362
+// stencil2d size 2048 x 2048 speedup 86.729
+// host iter       50 time   546.371 ms GFlops    1.535
+// gpu  iter    50000 time  6299.781 ms GFlops  133.157
 // 
 // RTX 3080
-// C:\bin\stencil9PT.exe 2048 2048 50 50000
+// C:\bin\stencil9PT_sm.exe 2048 2048 50 50000
 // file stencil9PT_host.raw written
 // file stencil9PT_gpu.raw written
-// stencil2d size 2048 x 2048 speedup 157.609
-// host iter       50 time   430.421 ms GFlops    1.949
-// gpu  iter    50000 time  2730.948 ms GFlops  307.168
+// stencil2d size 2048 x 2048 speedup 141.085
+// host iter       50 time   428.599 ms GFlops    1.957
+// gpu  iter    50000 time  3037.874 ms GFlops  276.134
 
 #include "cx.h"
 #include "cxtimers.h"
@@ -122,9 +122,29 @@ int main(int argc,char *argv[])
 	dim3 blocks ={(nx+threads.x-1)/threads.x,(ny+threads.y-1)/threads.y,1};
 
 	tim.reset();  // apply stencil iter_gpu times
-	for(int k=0;k<iter_gpu/2;k++){  // ping pong buffers dev_a and dev_b
-		stencil9PT<<<blocks,threads>>>(dev_a.data().get(),dev_b.data().get(),nx,ny,dev_c.data().get()); // a=>b
-		stencil9PT<<<blocks,threads>>>(dev_b.data().get(),dev_a.data().get(),nx,ny,dev_c.data().get()); // b=>a
+	if (threadx==16 && thready==16) {
+		for (int k=0; k<iter_gpu/2; k++) {  // ping pong buffers dev_a and dev_b
+			stencil9PT_sm<16,16><<<blocks, threads>>>(dev_a.data().get(), dev_b.data().get(), nx, ny, dev_c.data().get()); // a=>b
+			stencil9PT_sm<16,16><<<blocks, threads>>>(dev_b.data().get(), dev_a.data().get(), nx, ny, dev_c.data().get()); // b=>a
+		}
+	}
+	else if (threadx==32 && thready==32) {
+		for (int k=0; k<iter_gpu/2; k++) {  // ping pong buffers dev_a and dev_b
+			stencil9PT_sm<32,32><<<blocks, threads>>>(dev_a.data().get(), dev_b.data().get(), nx, ny, dev_c.data().get()); // a=>b
+			stencil9PT_sm<32,32><<<blocks, threads>>>(dev_b.data().get(), dev_a.data().get(), nx, ny, dev_c.data().get()); // b=>a
+		}
+	}
+	else if (threadx==32 && thready==16) {
+		for (int k=0; k<iter_gpu/2; k++) {  // ping pong buffers dev_a and dev_b
+			stencil9PT_sm<32,16><<<blocks, threads>>>(dev_a.data().get(), dev_b.data().get(), nx, ny, dev_c.data().get()); // a=>b
+			stencil9PT_sm<32,16><<<blocks, threads>>>(dev_b.data().get(), dev_a.data().get(), nx, ny, dev_c.data().get()); // b=>a
+		}
+	}
+	else if (threadx==32 && thready==8) {
+		for (int k=0; k<iter_gpu/2; k++) {  // ping pong buffers dev_a and dev_b
+			stencil9PT_sm<32,8><<<blocks, threads>>>(dev_a.data().get(), dev_b.data().get(), nx, ny, dev_c.data().get()); // a=>b
+			stencil9PT_sm<32,8><<<blocks, threads>>>(dev_b.data().get(), dev_a.data().get(), nx, ny, dev_c.data().get()); // b=>a
+		}
 	}
 	cudaDeviceSynchronize();
 	double t2 = tim.lap_ms();
@@ -141,10 +161,10 @@ int main(int argc,char *argv[])
 	printf("gpu  iter %8d time %9.3f ms GFlops %8.3f\n",iter_gpu,t2,gflops_gpu);
 
 	// for logging
-	FILE* flog = fopen("stencil9PT_gpu.log", "a");
+	FILE* flog = fopen("stencil9PTsm_gpu.log", "a");
 	fprintf(flog, "%4d %4d %6d %8.3f\n", nx, ny, iter_gpu, gflops_gpu);
 	fclose(flog);
-	flog = fopen("stencil9PT_host.log", "a");
+	flog = fopen("stencil9PTsm_host.log", "a");
 	fprintf(flog, "%4d %4d %6d %8.3f\n", nx, ny, iter_host, gflops_host);
 	fclose(flog);
 	return 0;

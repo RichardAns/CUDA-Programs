@@ -1,4 +1,55 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 4.6 cascade
+// RTX 2070
+// C:\bin\cascade.exe 0 1024 1024 1000000 (floats)
+// mx    32 iter 2500
+// mx    64 iter 2500
+// mx   128 iter 2500
+// mx   256 iter 2500
+// mx   512 iter 2500
+// mx  1024 iter 20000
+// mx 1024 diff 4.76837e-07
+// file cascade1024_4.raw written
+// cascade time 1134.328 ms
+// 
+// RTX 3080
+// C:\bin\cascade.exe 0 1024 1024 1000000  (floats)
+// mx    32 iter 2500
+// mx    64 iter 2500
+// mx   128 iter 2500
+// mx   256 iter 2500
+// mx   512 iter 2500
+// mx  1024 iter 20000
+// mx 1024 diff 4.76837e-07
+// file cascade1024_4.raw written
+// cascade time 693.533 ms
+// 
+// RTX 2070
+// C:\bin\cascade.exe 1 1024 1024 1000000 (doubles)
+// mx    32 iter 2500
+// mx    64 iter 2500
+// mx   128 iter 2500
+// mx   256 iter 5000
+// mx   512 iter 12500
+// mx  1024 iter 120000
+// mx 1024 diff 7.72109e-11
+// file cascade1024_8.raw written
+// cascade time 11507.192 ms
+// 
+// RTX 3080
+// C:\bin\cascade.exe 1 1024 1024 1000000 (doubles)
+// mx    32 iter 2500
+// mx    64 iter 2500
+// mx   128 iter 2500
+// mx   256 iter 5000
+// mx   512 iter 12500
+// mx  1024 iter 120000
+// mx 1024 diff 7.72109e-11
+// file cascade1024_8.raw written
+// cascade time 6823.324 ms
 
 #include "cx.h"
 #include "cxbinio.h"
@@ -88,6 +139,7 @@ template <typename T> int cascade(int nx,int ny,int iter)
 	thrustDvec<T>  dev_aold(size);
 
 	cx::timer tim;                         // nx is final size
+	double diff = 0.0f;
 	for(int mx=nx_start; mx<=nx; mx *= 2){ // mx is current size
 		int my = mx; // assume square
 		dim3 threads(16,16,1);
@@ -101,16 +153,20 @@ template <typename T> int cascade(int nx,int ny,int iter)
 		dev_b = dev_a;
 
 		int check = (mx==nx) ? 5000 : 2500;  // convergence check frequency 
-		double diff_cut = (mx==nx) ? 1.0e-14 : 1.0e-09;  // convergence accuracy
+		double           diff_cut = (mx==nx) ? 5.0e-7 : 1.0e-05;  // convergence accuracy for floats
+		if(sizeof(T)==8) diff_cut = (mx==nx) ? 1.0e-10 : 1.0e-07;  // convergence accuracy for doubles
 		for(int k=0; k<iter/2; k++){
 			stencil2D<T><<<blocks,threads>>>(dev_a.data().get(),dev_b.data().get(),mx,my);
 			stencil2D<T><<<blocks,threads>>>(dev_b.data().get(),dev_a.data().get(),mx,my);
 			if(k>0 && k%check==0){
 				cudaDeviceSynchronize();
-				double diff = array_diff_max<T>(dev_a.data().get(),dev_b.data().get(),mx,my);
-				if(diff<diff_cut)  break;
+				//double diff = array_diff_max<T>(dev_a.data().get(),dev_b.data().get(),mx,my);
+				diff = array_diff_max<T>(dev_a.data().get(),dev_b.data().get(),mx,my);
+				//if(diff<diff_cut)  break;
+				if (diff<diff_cut) { printf("mx %5d iter %d\n", mx, k); break; }
 			}
 		}
+		if(mx==nx)printf("mx %d diff %g\n", mx, diff);
 		cudaDeviceSynchronize();
 		if(mx>nx_start) dev_aold.resize(size);
 		if(mx<nx) dev_aold = dev_a;

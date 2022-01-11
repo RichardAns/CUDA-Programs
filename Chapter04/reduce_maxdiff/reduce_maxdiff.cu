@@ -1,4 +1,24 @@
-// program reduce_maxdiff  examples 4.4 and 4.5
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
+// reduce_maxdiff  example 4.5
+// 
+// RTX 2070
+// C:\bin\reduce_maxdiff.exe
+// file stencil2D_host.raw written
+// file stencilD2conv_gpu.raw written
+// stencil2d size 1024 x 1024 speedup 85.407
+// host iter     1000 time  2344.336 ms GFlops    1.789
+// gpu  iter    10000 time   274.490 ms GFlops  152.803
+// 
+// RTX 3080
+// C:\bin\reduce_maxdiff.exe
+// file stencil2D_host.raw written
+// file stencilD2conv_gpu.raw written
+// stencil2d size 1024 x 1024 speedup 115.530
+// host iter     1000 time  1816.242 ms GFlops    2.309
+// gpu  iter    10000 time   157.209 ms GFlops  266.798
 
 #include "cx.h"
 #include "cxtimers.h"

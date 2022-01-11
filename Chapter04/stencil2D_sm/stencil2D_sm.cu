@@ -1,4 +1,24 @@
-// example 4.1 Stencil2D
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
+// example 4.2 Stencil2D_sm
+// 
+// RTX 2070
+// C:\Users\Richard\OneDrive\toGit2>bin\stencil2D_sm.exe 2048 2048 50 50000
+// file stencil2Dsm_host.raw written
+// file stencil2Dsm_gpu.raw written
+// stencil2d size 2048 x 2048 speedup 31.141
+// host iter       50 time   189.784 ms GFlops    4.420
+// gpu  iter    50000 time  6094.385 ms GFlops  137.645
+//
+// RTX 3080
+// C:\Users\Richard\OneDrive\toGit2>bin\stencil2D_sm.exe 2048 2048 50 50000
+// file stencil2Dsm_host.raw written
+// file stencil2Dsm_gpu.raw written
+// stencil2d size 2048 x 2048 speedup 52.483
+// host iter       50 time   147.909 ms GFlops    5.671
+// gpu  iter    50000 time  2818.238 ms GFlops  297.654
 
 #include "cx.h"
 #include "cxtimers.h"
@@ -118,5 +138,13 @@ int main(int argc,char *argv[])
 	printf("stencil2d size %d x %d speedup %.3f\n",nx,ny,speedup);
 	printf("host iter %8d time %9.3f ms GFlops %8.3f\n",iter_host,t1,gflops_host);
 	printf("gpu  iter %8d time %9.3f ms GFlops %8.3f\n",iter_gpu,t2,gflops_gpu);
+
+	// for logging
+	FILE* flog = fopen("stencil4PTsm_gpu.log", "a");
+	fprintf(flog, "%4d %4d %6d %8.3f\n", nx, ny, iter_gpu, gflops_gpu);
+	fclose(flog);
+	flog = fopen("stencil4PTsm_host.log", "a");
+	fprintf(flog, "%4d %4d %6d %8.3f\n", nx, ny, iter_host, gflops_host);
+	fclose(flog);
 	return 0;
 }

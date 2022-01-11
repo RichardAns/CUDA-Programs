@@ -1,4 +1,19 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 4.11 sobel6PT
+// RTX 2070
+// C:\bin\sobel6PT.exe data\ives512.raw data\test.raw 512 512  10000
+// file data\ives512.raw read
+// sobel6PT iterations 10000 time 72.027 ms
+// file data\test.raw written
+// 
+// RTX 3080
+// C:\bin\sobel6PT.exe data\ives512.raw data\test.raw 512 512  10000
+// file data\ives512.raw read
+// sobel6PT iterations 10000 time 40.971 ms
+// file data\test.raw written
 
 #include "cx.h"
 #include "cxbinio.h"

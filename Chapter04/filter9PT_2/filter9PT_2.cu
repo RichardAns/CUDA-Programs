@@ -1,4 +1,20 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 4.9 filter9PT_2
+// 
+// RTX 2070
+// C:\bin\filter9PT_2.exe data\ives512.raw data\test.raw 512 512 16 16 10000 1.0 1.0 1.0   1.0 1.0 1.0   1.0 1.0 1.0
+// file data\ives512.raw read
+// filter9PT_2 iterations 10000 time 103.863 ms
+// file data\test.raw written
+// 
+// RTX 3080
+// C:\bin\filter9PT_2.exe data\ives512.raw data\test.raw 512 512 16 16 10000 1.0 1.0 1.0   1.0 1.0 1.0   1.0 1.0 1.0
+// file data\ives512.raw read
+// filter9PT_2 iterations 10000 time 47.575 ms
+// file data\test.raw written
 
 #include "cx.h"
 #include "cxbinio.h"
