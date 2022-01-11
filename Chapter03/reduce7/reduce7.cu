@@ -1,4 +1,16 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // reduce7 example 3.5
+// 
+// RTX 2070
+// C:\bin\reduce7.exe 26 256 256 1000
+// sum of 67108864 numbers: host 33557315.6 54.883 ms GPU 33557266432.0 0.902 ms
+// 
+// RTX 3080
+// C:\bin\reduce7.exe 26 256 256  1000
+// sum of 67108864 numbers: host 33557315.6 63.688 ms GPU 33557266432.0 0.471 ms
 
 #include "cx.h"
 #include "cxtimers.h"
@@ -57,7 +69,7 @@ int main(int argc,char *argv[])
 	// use reduce7 for both steps.
 	reduce7<<<1,blocks,blocks*sizeof(float)>>>(dx.data().get(),dy.data().get(),blocks);
 	cudaDeviceSynchronize();
-	double t2 = tim.lap_ms();
+	double t2 = tim.lap_ms()/nreps;
 
 	double gpu_sum = dx[0];  // D2H copy (1 word)
 	printf("sum of %d numbers: host %.1f %.3f ms GPU %.1f %.3f ms\n",N,host_sum,t1,gpu_sum,t2);

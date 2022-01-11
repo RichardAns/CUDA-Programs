@@ -1,4 +1,16 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 3.1 reduce5
+// 
+// RTX 2070
+// C:\bin\reduce5.exe
+// sum of 16777216 numbers: host 8388314.9 14.944 ms GPU 8388314.5 0.215 ms
+// 
+// RTX 3080
+// C:\bin\reduce5.exe
+// sum of 16777216 numbers: host 8388314.9 14.830 ms GPU 8388314.5 0.108 ms
 
 #include "cx.h"
 #include "cxtimers.h"
@@ -100,7 +112,7 @@ int main(int argc,char *argv[])
 	// do single reduce of partial sums here using non-templated kernel for simplicity
 	reduce4<<<1,blocks,blocks*sizeof(float)>>>(dx.data().get(),dy.data().get(),blocks);
 	cudaDeviceSynchronize();
-	double t2 = tim.lap_ms();
+	double t2 = tim.lap_ms()/nreps;
 
 	double gpu_sum = dx[0];  // D2H copy (1 word)
 	printf("sum of %d numbers: host %.1f %.3f ms GPU %.1f %.3f ms\n",N,host_sum,t1,gpu_sum,t2);

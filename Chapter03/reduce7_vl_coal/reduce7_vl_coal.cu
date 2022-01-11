@@ -1,4 +1,15 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // reduce7_vl_coal example 3.10
+// RTX 2070
+// C:\bin\reduce7_vl_coal.exe 26 256 256 1000
+// sum of 67108864 numbers: host 33557315.6 56.781 ms GPU 33557317632.0 1.263 ms
+// 
+// RTX 3080
+// C:\bin\reduce7_vl_coal.exe 26 256 256  1000
+// sum of 67108864 numbers: host 33557315.6 64.562 ms GPU 33557317632.0 0.850 ms
 
 #include "cx.h"
 #include "cxtimers.h"
@@ -90,7 +101,7 @@ int main(int argc,char *argv[])
 	reduce7_vl<<<1,blocks>>>(dx.data().get(),dy_even.data().get(),blocks);
 	reduce7_vl<<<1,blocks>>>(dx.data().get(),dy_odd.data().get(),blocks);
 	cudaDeviceSynchronize();
-	double t2 = tim.lap_ms();
+	double t2 = tim.lap_ms()/nreps;
 
 	double gpu_sum = dx[0];  // D2H copy (1 word)
 	printf("sum of %d numbers: host %.1f %.3f ms GPU %.1f %.3f ms\n",N,host_sum,t1,gpu_sum,t2);

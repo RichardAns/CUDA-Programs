@@ -1,4 +1,26 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // cgwarp example 3.3
+//
+// RTX 2070 
+// C:\bin\cgwarp.exe 1234567 28800 256
+// warps and subwarps for thread 1234567:
+// warp32 rank in tile  7 tile size 32 tile rank    4 tile number   8 net size 256
+// warp16 rank in tile  7 tile size 16 tile rank    8 tile number  16 net size 256
+// warp8  rank in tile  7 tile size  8 tile rank   16 tile number  32 net size 256
+// tile8  rank in tile  7 tile size  8 tile rank    0 tile number   4 net size 32
+// tile4  rank in tile  3 tile size  4 tile rank    1 tile number   2 net size 8
+//
+// // RTX 3080
+// C:\bin\cgwarp.exe 1234567 28800 256
+// warps and subwarps for thread 1234567:
+// warp32 rank in tile  7 tile size 32 tile rank    4 tile number   8 net size 256
+// warp16 rank in tile  7 tile size 16 tile rank    8 tile number  16 net size 256
+// warp8  rank in tile  7 tile size  8 tile rank   16 tile number  32 net size 256
+// tile8  rank in tile  7 tile size  8 tile rank    0 tile number   4 net size 32
+// tile4  rank in tile  3 tile size  4 tile rank    1 tile number   2 net size 8
 
 #include "cx.h"
 #include "cooperative_groups.h"
