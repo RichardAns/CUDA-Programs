@@ -1,5 +1,17 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 6.3 piOMP
 // NB this example requires OMP support (in VS properties C++ -> Language _> Open MP Support-> yes)
+// 
+// RTX 2070
+// C:\bin\piOMP.exe 1000 123456  8
+// pi = 3.14160701 err 4.6, ntot 1000000000, time 2348.383 ms
+// 
+// RTX 3080
+// C:\bin\piOMP.exe 1000 123456 20
+// pi = 3.14164101 err 15.4, ntot 1000000000, time 872.135 ms
 
 #include "cx.h"
 #include "cxtimers.h"

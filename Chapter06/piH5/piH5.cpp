@@ -1,3 +1,7 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 6.5 piH5 cuRand Host API with pinned memory
 #include "cx.h"  
 #include "cxtimers.h"

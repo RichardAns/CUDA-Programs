@@ -1,4 +1,17 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 6.4 piH4 cuRand Host API
+// 
+// RTX 2070
+// C:\bin\piH4.exe 1000 123456
+// pi = 3.14165173 err 18.8, ntot 1000000000, time 2543.321 ms (float gen)
+// 
+// RTX 3080
+// C:\bin\piH4.exe 1000 123456
+// pi = 3.14165173 err 18.8, ntot 1000000000, time 2319.768 ms (float gen)
+
 #include "cx.h"  
 #include "cxtimers.h"
 #include "curand.h"  // link step requires curand.lib 

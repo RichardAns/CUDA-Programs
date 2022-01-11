@@ -1,4 +1,16 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 6.7 piG cuRand Device API 
+// 
+// RTX 2070
+// C:\bin\piG.exe 40 123456 8192 1024
+// piG = 3.14159441 err 0.559, ntot 1099511627776, time 3768.053 ms
+// 
+// RTX 3080
+// C:\bin\piG.exe 40 123456 8192 1024
+// piG = 3.14159417 err 0.483, ntot 1099511627776, time 2095.642 ms
 
 #include "cx.h"  
 #include "cxtimers.h"
@@ -9,8 +21,8 @@ template <typename S> __global__ void
 init_generator(long long seed,S *states)
 {
 	int id = threadIdx.x + blockIdx.x*blockDim.x;
-	curand_init(seed+id,0,0,&states[id]); // faster
-	//curand_init(seed, id, 0, &states[id]); // statistically better
+	//curand_init(seed+id,0,0,&states[id]); // faster
+	curand_init(seed, id, 0, &states[id]); // statistically better
 }
 
 template <typename S> __global__ void piG(float *tsum,S *states,int points)
@@ -45,12 +57,19 @@ int main(int argc,char *argv[])
 
 	cx::timer tim;   // start clock
 	init_generator<<<blocks,threads>>>(seed, state.data().get());
-	piG<<<blocks,threads>>>(tsum.data().get(), state.data().get(), nthread);
-	double sum_inside = thrust::reduce(tsum.begin(),tsum.end());
+	cudaDeviceSynchronize();
 	double t1 = tim.lap_ms(); // record time
+	piG<<<blocks,threads>>>(tsum.data().get(), state.data().get(), nthread);
+	cudaDeviceSynchronize();
+	double t2 = tim.lap_ms();
+	double sum_inside = thrust::reduce(tsum.begin(),tsum.end());
+	cudaDeviceSynchronize();
+	double t3 = tim.lap_ms();
+
+	//double t1 = tim.lap_ms(); // record time
 
 	double pi = 4.0*sum_inside/(double)ntot;
 	double frac_error = 1000000.0*(pi - cx::pi<double>)/cx::pi<double>; // ppm
-	printf("piG = %10.8f err %.3f, ntot %lld, time %.3f ms\n", pi,frac_error, ntot, t1);
+	printf("piG = %10.8f err %.3f, ntot %lld, times %.3f %.3f %.3f %.3fms\n", pi,frac_error, ntot, t1,t2,t3,t1+t2+t3);
 	return 0;
 }

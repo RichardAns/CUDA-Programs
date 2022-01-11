@@ -1,4 +1,19 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // 3D Ising Model Simulation examples 6.8-6.10
+// 
+// RTX 2070
+// C:\bin\ising.exe 512 512 512 123456  3.5115 1000  1 32 8
+// timing setup 0.516 ms, init 0.830 ms, fliping 3033.441 ms
+// file ising.raw written
+// 
+// RTX 3080
+// C:\bin\ising.exe 512 512 512 123456  3.5115 1000  1 32 8
+// timing setup 0.571 ms, init 0.565 ms, fliping 1560.559 ms
+// file ising.raw written
+
 #include "cx.h"
 #include "cxtimers.h"
 #include "cxbinio.h"

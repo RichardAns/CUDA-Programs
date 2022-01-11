@@ -1,4 +1,16 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // Example 6.1 piH Host Monte Carlo estimate of pi using faster int RNG
+// 
+// RTX 2070
+// C:\bin\piH.exe 1000 123456
+// pi = 3.14152040 err -23.0, ntot 1000000000, time 72138.720 ms (float gen)
+// 
+// RTX 3080
+// C:\bin\piH.exe 1000 123456
+// pi = 3.14152040 err -23.0, ntot 1000000000, time 64159.500 ms (float gen)
 
 #include "cx.h"  
 #include "cxtimers.h"
