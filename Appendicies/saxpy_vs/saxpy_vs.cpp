@@ -1,3 +1,7 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // saxpy_vs program example D.1 
 // This version to be compled with MS visual Studio C++
 // Enabling AVX2 gives 50% speed boost.
