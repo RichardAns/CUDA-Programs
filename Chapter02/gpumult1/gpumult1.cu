@@ -1,4 +1,16 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 2.14 gpumult1 GPU simple matrix multiply one thread per output element with restrict
+// 
+// RTX 2070
+// C:\bin\gpumult1.exe 1024 1024 1024 32 32
+// A 1024 x 1024 B 1024 x 32 gpu time 0.115 ms GFlops 582.046 GBytes 3492.278
+// 
+// RTX 3080
+// C:\bin\gpumult1.exe 1024 1024 1024 32 8
+// A 1024 x 1024 B 1024 x 32 gpu time 0.067 ms GFlops 1008.538 GBytes 6051.230
 
 #include "cx.h"
 #include "cxtimers.h"
@@ -21,16 +33,17 @@ __global__ void gpumult1(r_Ptr<float> C, cr_Ptr<float> A, cr_Ptr<float> B, int A
 
 int main(int argc,char *argv[])
 {
-	int nacc = (argc > 1) ? atoi(argv[1]) : 100;
-	int Arow = (argc > 2) ? atoi(argv[2]) : 1024; // default 2^10
-	int Acol = (argc > 3) ? atoi(argv[3]) : Arow;
+
+	int Arow = (argc > 1) ? atoi(argv[1]) : 1024; // default 2^10
+	int Acol = (argc > 2) ? atoi(argv[2]) : Arow;
 	int Brow = Acol;
-	int Bcol = (argc > 4) ? atoi(argv[4]) : Brow;
+	int Bcol = (argc > 3) ? atoi(argv[3]) : Brow;
 	int Crow = Arow;
 	int Ccol = Bcol;
 
-	uint tilex = (argc > 5) ? atoi(argv[5]) : 32;  // thread-block x
-	uint tiley = (argc > 6) ? atoi(argv[6]) : 8;   // thread-block y
+	uint tilex = (argc > 4) ? atoi(argv[4]) : 32;  // thread-block x
+	uint tiley = (argc > 5) ? atoi(argv[5]) : 8;   // thread-block y
+	int nacc = (argc > 6) ? atoi(argv[6]) : 100;   // for timing
 
 	thrust::host_vector<float>       A(Arow*Acol);
 	thrust::host_vector<float>       B(Brow*Bcol);

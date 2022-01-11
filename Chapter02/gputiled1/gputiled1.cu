@@ -2,15 +2,15 @@
 // copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
 // This code may be freely changed but please retain an acknowledgement
 
-// gputiled example 2.16 tiled matrix multiplication on GPU using shared memory.
-// 
+// gputiled1 example 2.17 same as example 2.16 but with one added pragma.
+//
 // RTX 2070
-// C:\bin\gputiled.exe 1024 1024 1024 32
-// A 1024 x 1024 B 1024 x 1024 gpu time 2.252 ms GFlops 953.460 GBytes 5720.762 (gputiled)
+// C:\bin\gputiled1.exe 1024 1024 1024 32
+// A 1024 x 1024 B 1024 x 1024 gpu time 2.093 ms GFlops 1026.142 GBytes 6156.853 (gputiled1)
 // 
 // RTX 3080
-// C:\bin\gputiled.exe 1024 1024 1024 32
-// A 1024 x 1024 B 1024 x 1024 gpu time 1.125 ms GFlops 1908.968 GBytes 11453.806 (gputiled)
+// C:\ bin\gputiled1.exe 1024 1024 1024 32
+// A 1024 x 1024 B 1024 x 1024 gpu time 1.049 ms GFlops 2048.090 GBytes 12288.539 (gputiled1)
 
 #include "cx.h"
 #include "cxtimers.h"
@@ -35,6 +35,7 @@ template <int TS> __global__ void gputiled(r_Ptr<float> C, cr_Ptr<float> A, cr_P
 	int by = ty;      // i or y in first tile on B
 
 	float csum = 0.0f;
+#pragma unroll 16
 	for(int t=0; t<gridDim.x; t++){
 		Atile[ty][tx] = A[ay*Ax+ax];  // copy A tile to shared mem
 		Btile[ty][tx] = B[by*Bx+bx];  // copy B tile to shared mem
@@ -89,7 +90,7 @@ int main(int argc,char *argv[])
 	double flops = 2.0*(double)Arow*(double)Acol*(double)Bcol;
 	double gflops = flops/(t3*1000000.0);
 	double gbytes = gflops*6.0; // i.e 12 bytes per term
-	printf("A %d x %d B %d x %d gpu time %.3f ms GFlops %.3f GBytes %.3f (gputiled)\n",Arow,Acol,Brow,Bcol,t3,gflops,gbytes);
+	printf("A %d x %d B %d x %d gpu time %.3f ms GFlops %.3f GBytes %.3f (gputiled1)\n",Arow,Acol,Brow,Bcol,t3,gflops,gbytes);
 
 	return 0;
 }

@@ -1,4 +1,16 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 2.5 reduce0
+// 
+// RTX 2070
+// C:\bin\reduce0.exe
+// sum of 16777216 random numbers: host 8388314.9 14.103 ms, GPU 8388315.0 0.643 ms
+// 
+// RTX 3080
+// C:\bin\reduce0.exe
+// sum of 16777216 random numbers: host 8388314.9 15.595 ms, GPU 8388315.0 0.569 ms
 
 #include "cx.h"
 #include "cxtimers.h"
@@ -38,6 +50,6 @@ int main(int argc,char *argv[])
 	double t2 = tim.lap_ms();
 
 	double gpu_sum = dev_x[0];  // D2H copy (1 word)
-	printf("sum of %d random numbers: host %.1f %.3f ms, GPU %.1f %.3f \n",N,host_sum,t1,gpu_sum,t2);
+	printf("sum of %d random numbers: host %.1f %.3f ms, GPU %.1f %.3f ms\n",N,host_sum,t1,gpu_sum,t2);
 	return 0;
 }

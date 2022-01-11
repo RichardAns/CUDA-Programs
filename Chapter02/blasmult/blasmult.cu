@@ -1,5 +1,19 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // gpublas example 2.18 
 // the final argument argv[5] controls the use of Tensor Cores.
+// 
+// RTX 2070
+// C:\bin\blasmult.exe 1024 1024 1024 0/1
+// A A 1024 x 1024 B 1024 x 1024 gpu time 0.418 ms GFlops 5133.6 GBytes 30801.3 (no TC)
+// A 1024 x 1024 B 1024 x 1024 gpu time 0.220 ms GFlops 9741.4 GBytes 58448.3 (with TC)
+// 
+// RTX 3080
+// C:\bin\blasmult.exe 1024 1024 1024 0/1
+// A 1024 x 1024 B 1024 x 1024 gpu time 0.168 ms GFlops 12777.6 GBytes 76665.7 (no TC)
+// A 1024 x 1024 B 1024 x 1024 gpu time 0.092 ms GFlops 23221.6 GBytes 139329.4 (with TC)
 
 #include "cx.h"
 #include "cxtimers.h"
@@ -8,16 +22,16 @@
 
 int main(int argc,char *argv[])
 {
-	int nacc = (argc > 1) ? atoi(argv[1]) : 100;
-	int Arow = (argc > 2) ? atoi(argv[2]) : 1 << 10; // default 2^10
-	int Acol = (argc > 3) ? atoi(argv[3]) : Arow;
+	int Arow = (argc > 1) ? atoi(argv[1]) : 1 << 10; // default 2^10
+	int Acol = (argc > 2) ? atoi(argv[2]) : Arow;
 	int Brow = Acol;
-	int Bcol = (argc > 4) ? atoi(argv[4]) : Brow;
+	int Bcol = (argc > 3) ? atoi(argv[3]) : Brow;
 	int Crow = Arow;
 	int Ccol = Bcol;
+	int useTC = (argc > 4) ? atoi(argv[4]) : 1;   // use TC by default
+	int nacc = (argc > 5) ? atoi(argv[5]) : 100;  // for timing
 
-	int useTC = (argc > 5) ? atoi(argv[5]) : 1; // use TC by default
-	
+	//printf("params %d %d %d to %d nacc %d\n", Arow, Acol, Bcol, useTC, nacc);
 
 	thrust::host_vector<float>       A(Arow*Acol);
 	thrust::host_vector<float>       B(Brow*Bcol);
@@ -55,7 +69,7 @@ int main(int argc,char *argv[])
 	double flops = 2.0*(double)Arow*(double)Acol*(double)Bcol;
 	double gflops = flops/(t3*1000000.0);
 	double gbytes = gflops*6.0; // i.e 12 bytes per term
-	if(useTC==0) printf("A %d x %d B %d x %d gpu time %.3f ms GFlops %.3f GBytes %.3f (no TC)\n",Arow,Acol,Brow,Bcol,t3,gflops,gbytes);
-	else         printf("A %d x %d B %d x %d gpu time %.3f ms GFlops %.3f GBytes %.3f (using TC)\n",Arow,Acol,Brow,Bcol,t3,gflops,gbytes);
+	if(useTC==0) printf("A %d x %d B %d x %d gpu time %.3f ms GFlops %.1f GBytes %.1f (no TC)\n",Arow,Acol,Brow,Bcol,t3,gflops,gbytes);
+	else         printf("A %d x %d B %d x %d gpu time %.3f ms GFlops %.1f GBytes %.1f (with TC)\n",Arow,Acol,Brow,Bcol,t3,gflops,gbytes);
 	return 0;
 }

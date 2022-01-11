@@ -1,4 +1,26 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // grid3D_linear example 2.4
+// 
+// RTX 2070
+// C:\bin\grid3d_linear.exe 1234567 288 256
+// array size   512 x 512 x 256 = 67108864
+// thread block 256
+// thread  grid 288
+// total number of threads in grid 73728
+// a[4][363][135] = 1234567 and b[4][363][135] = 1111.110718
+// rank_in_block = 135 rank_in_grid = 54919 rank of block_rank_in_grid = 214 pass 16
+// 
+// RTX 3080
+// C:\bin\grid3D_linear.exe 1234567 288 256
+// array size   512 x 512 x 256 = 67108864
+// thread block 256
+// thread  grid 288
+// total number of threads in grid 73728
+// a[4][363][135] = 1234567 and b[4][363][135] = 1111.110718
+// rank_in_block = 135 rank_in_grid = 54919 pass 16 tid offset 1179648
 
 #include "cx.h"
 

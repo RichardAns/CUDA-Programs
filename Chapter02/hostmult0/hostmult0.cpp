@@ -1,4 +1,17 @@
-﻿// example 2.11 hostmult0 simple matrix multiply
+﻿// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
+// example 2.11 hostmult0 simple matrix multiply
+//
+// RTX 2070
+// C:\bin\hostmult0.exe
+// A 1024 x 1024 B 1024 x 1024 host time 2301.111 ms Gflops/sec 0.933
+// 
+// RTX 3080
+// C:\bin\hostmult0.exe
+// A 1024 x 1024 B 1024 x 1024 host time 2916.772 ms Gflops/sec 0.736
+
 #include "thrust/host_vector.h"
 #include "cxtimers.h"
 #include <random>
@@ -37,3 +50,5 @@ int main(int argc,char *argv[])
 		Arow,Acol,Brow,Bcol,t1,gflops);
 	return 0;
 }
+
+
