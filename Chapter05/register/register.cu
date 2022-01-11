@@ -1,4 +1,75 @@
+
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // register chapter5 contans the code from examples 5.9 - 5.13
+// 
+// RTX 2070
+// C:\bin\register.exe data\register\vol1.raw data\register\vol2.raw test1to2cav.raw 256
+// file data\register\vol1.raw read
+// file data\register\vol2.raw read
+// starting cf  1.48153e+14
+// pscale 2.000 iterations 31 cf calls 712 cf  7.18262e+12
+// pscale 1.333 iterations 10 cf calls 942 cf  4.28740e+12
+// pscale 0.889 iterations  7 cf calls 1103 cf  3.59204e+12
+// pscale 0.593 iterations  4 cf calls 1195 cf  3.38810e+12
+// pscale 0.395 iterations  2 cf calls 1241 cf  3.33894e+12
+// pscale 0.263 iterations  2 cf calls 1287 cf  3.30197e+12
+// pscale 0.176 iterations  1 cf calls 1310 cf  3.29348e+12
+// pscale 0.117 iterations  1 cf calls 1333 cf  3.28947e+12
+// pscale 0.078 iterations  1 cf calls 1356 cf  3.28689e+12
+// file test1to2cav.raw written
+// final cf  3.28689e+12 total cf calls 1357 reg time 637.800 ms job time 896.241 ms
+// 
+// C:\bin\register.exe data\register\vol2.raw data\register\vol1.raw test2to1cav.raw 256
+// file data\register\vol2.raw read
+// file data\register\vol1.raw read
+// starting cf  1.48153e+14
+// pscale 2.000 iterations 21 cf calls 482 cf  1.77929e+13
+// pscale 1.333 iterations  3 cf calls 551 cf  1.71427e+13
+// pscale 0.889 iterations  3 cf calls 620 cf  1.64995e+13
+// pscale 0.593 iterations 41 cf calls 1563 cf  9.59296e+12
+// pscale 0.395 iterations 16 cf calls 1931 cf  7.91667e+12
+// pscale 0.263 iterations  4 cf calls 2023 cf  7.41033e+12
+// pscale 0.176 iterations  6 cf calls 2161 cf  6.92232e+12
+// pscale 0.117 iterations  3 cf calls 2230 cf  6.68465e+12
+// pscale 0.078 iterations  2 cf calls 2276 cf  6.55695e+12
+// file test2to1cav.raw written
+// final cf  6.55695e+12 total cf calls 2277 reg time 1139.858 ms job time 1407.141 ms
+// 
+// RTX 3080
+// C:\bin\register.exe data\register\vol1.raw data\register\vol2.raw test1to2.raw 256
+// file data\register\vol1.raw read
+// file data\register\vol2.raw read
+// starting cf  1.48153e+14
+// pscale 2.000 iterations 33 cf calls 758 cf  6.93737e+12
+// pscale 1.333 iterations 10 cf calls 988 cf  4.29380e+12
+// pscale 0.889 iterations  7 cf calls 1149 cf  3.58948e+12
+// pscale 0.593 iterations  4 cf calls 1241 cf  3.39283e+12
+// pscale 0.395 iterations  2 cf calls 1287 cf  3.34142e+12
+// pscale 0.263 iterations  2 cf calls 1333 cf  3.30281e+12
+// pscale 0.176 iterations  1 cf calls 1356 cf  3.29395e+12
+// pscale 0.117 iterations  1 cf calls 1379 cf  3.28978e+12
+// pscale 0.078 iterations  1 cf calls 1402 cf  3.28703e+12
+// file test1to2.raw written
+// final cf  3.28703e+12 total cf calls 1403 reg time 334.068 ms job time 526.643 ms
+// 
+// C:\bin\register.exe data\register\vol2.raw data\register\vol2.raw test2to1.raw 256
+// file data\register\vol2.raw read
+// file data\register\vol2.raw read
+// starting cf  2.59529e-01
+// pscale 2.000 iterations  1 cf calls 24 cf  2.59530e-01
+// pscale 1.333 iterations  1 cf calls 47 cf  2.59529e-01
+// pscale 0.889 iterations  1 cf calls 70 cf  2.59529e-01
+// pscale 0.593 iterations  1 cf calls 93 cf  2.59530e-01
+// pscale 0.395 iterations  1 cf calls 116 cf  2.59529e-01
+// pscale 0.263 iterations  1 cf calls 139 cf  2.59529e-01
+// pscale 0.176 iterations  1 cf calls 162 cf  2.59530e-01
+// pscale 0.117 iterations  1 cf calls 185 cf  2.59529e-01
+// pscale 0.078 iterations  1 cf calls 208 cf  2.59529e-01
+// file test2to1.raw written
+// final cf  2.59529e-01 total cf calls 209 reg time 51.201 ms job time 235.172 ms
 
 #include "cx.h"
 #include "helper_math.h" 

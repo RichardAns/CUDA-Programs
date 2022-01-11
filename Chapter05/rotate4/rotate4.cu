@@ -1,4 +1,24 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 5.5 rotate4 
+// 
+// RTX 2070
+// C:\bin\rotate4.exe data\ives512rgb.raw data\test.raw 512 512  512 512 1.0 1.01 10000
+// scale 0.990099 angle 0.017453
+// scale 0.990099 angle 0.017453 asize 262144 bsize 262144
+// file data\ives512rgb.raw read
+// file data\test.raw written
+// rotate4 iterations 10000 time 78.105 ms
+// 
+// RTX 3080
+// C:\bin\rotate4.exe data\ives512rgb.raw data\test.raw 512 512 512 512 1.0 1.01 10000
+// scale 0.990099 angle 0.017453
+// scale 0.990099 angle 0.017453 asize 262144 bsize 262144
+// file data\ives512rgb.raw read
+// file data\test.raw written
+// rotate4 iterations 10000 time 43.752 ms
 
 #include "cx.h"
 #include "helper_math.h" 

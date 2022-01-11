@@ -1,3 +1,7 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 5.7 affine3D
 // This extended code contains several kernel and host versions. The type user arguemnt 
 // controls which kernel or host versions runs as follows:
@@ -14,7 +18,48 @@
 //         Host takes about 5.6 seconds per 256^3 volume.
 // Type 6: Host dummy version without call to interp3D, takes ~1.1 seconds per 256^3 volume
 //
-// All times measured on an RTX 2070 GPU with a 32 x 8 x 1 thread block size.
+// Above times measured on an RTX 2070 GPU with a 32 x 8 x 1 thread block size.
+//  
+// RTX 2070
+// C:\bin\affine3D.exe data\register\vol2.raw data\cav1.raw 256 256 256   256 256 256  0.0 10.0 0.0  0.0 0.0 0.0  1.0 32 8 1000 1 0
+// input 256x256x256 out 256x256x256 rots 0.0 0.2 0.0 trans 0.0 0.0 0.0 scale 1.000 threads (32,8) // iter 1000 type 1 outflag 0
+// file data\register\vol2.raw read
+// iter 1000 type 1 rot_time 306.428 ms
+// 
+// C:\bin\affine3D.exe data\register\vol2.raw data\cav1.raw 256 256 256   256 256 256  0.0 10.0 0.0  0.0 0.0 0.0  1.0 32 8 1000 2 0
+// input 256x256x256 out 256x256x256 rots 0.0 0.2 0.0 trans 0.0 0.0 0.0 scale 1.000 threads (32,8) iter 1000 type 2 outflag 0
+// file data\register\vol2.raw read
+// iter 1000 type 2 rot_time 624.514 ms
+// 
+// C:\bin\affine3D.exe data\register\vol2.raw data\cav1.raw 256 256 256   256 256 256  0.0 10.0 0.0  0.0 0.0 0.0  1.0 32 8 1000 3 0
+// input 256x256x256 out 256x256x256 rots 0.0 0.2 0.0 trans 0.0 0.0 0.0 scale 1.000 threads (32,8) iter 1000 type 3 outflag 0
+// file data\register\vol2.raw read
+// iter 1000 type 3 rot_time 420.546 ms
+// 
+// C:\bin\affine3D.exe data\register\vol2.raw data\cav1.raw 256 256 256   256 256 256  0.0 10.0 0.0  0.0 0.0 0.0  1.0 32 8 10 5 0
+// input 256x256x256 out 256x256x256 rots 0.0 0.2 0.0 trans 0.0 0.0 0.0 scale 1.000 threads (32,8) iter 10 type 5 outflag 0
+// file data\register\vol2.raw read
+// iter 10 type 5 rot_time 5133.006 ms
+// RTX 3080
+// C:\bin\affine3D.exe data\register\vol2.raw data\test1.raw 256 256 256   256 256 256  0.0 10.0 0.0  0.0 0.0 0.0  1.0 32 8 1000 1 0
+// input 256x256x256 out 256x256x256 rots 0.0 0.2 0.0 trans 0.0 0.0 0.0 scale 1.000 threads (32,8) iter 1000 type 1 outflag 0
+// file data\register\vol2.raw read
+// iter 1000 type 1 rot_time 147.507 ms
+// 
+// C:\bin\affine3D.exe data\register\vol2.raw data\test1.raw 256 256 256   256 256 256  0.0 10.0 0.0  0.0 0.0 0.0  1.0 32 8 1000 2 0
+// input 256x256x256 out 256x256x256 rots 0.0 0.2 0.0 trans 0.0 0.0 0.0 scale 1.000 threads (32,8) iter 1000 type 2 outflag 0
+// file data\register\vol2.raw read
+// iter 1000 type 2 rot_time 217.647 ms
+// 
+// C:\bin\affine3D.exe data\register\vol2.raw data\test1.raw 256 256 256   256 256 256  0.0 10.0 0.0  0.0 0.0 0.0  1.0 32 8 1000 3 0
+// input 256x256x256 out 256x256x256 rots 0.0 0.2 0.0 trans 0.0 0.0 0.0 scale 1.000 threads (32,8) iter 1000 type 3 outflag 0
+// file data\register\vol2.raw read
+// iter 1000 type 3 rot_time 152.804 ms
+// 
+// C:\bin\affine3D.exe data\register\vol2.raw data\test1.raw 256 256 256   256 256 256  0.0 10.0 0.0  0.0 0.0 0.0  1.0 32 8 10 5 0
+// input 256x256x256 out 256x256x256 rots 0.0 0.2 0.0 trans 0.0 0.0 0.0 scale 1.000 threads (32,8) iter 10 type 5 outflag 0
+// file data\register\vol2.raw read
+// iter 10 type 5 rot_time 4236.734 ms
 
 #include "cx.h"
 #include "helper_math.h" 
@@ -300,6 +345,12 @@ int main(int argc,char *argv[])
 
 	if(argc < 3){
 		printf("usage affine3D <infile> <outfile> [nx,ny,nz in] [mx,my,mz out] [rx,ry,rz rotn] [ tx,ty,tz trans] scale thread x|32 tready|8 iter|1 type|2 outflag\n");
+		printf("type 1: 2D thread grid with 3D texture\n");
+		printf("type 2: 2D thread grid and interp3D not texture lookup\n");
+		printf("type 3: 3D thread grid with 3D texture\n");
+		printf("type 4: dummy version for timing overheads\n");
+		printf("type 5: host version using interp3D\n");
+		printf("type 6: host dummy version\n");
 		return 0;
 	}
 	int3 n;

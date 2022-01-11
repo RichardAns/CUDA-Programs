@@ -1,7 +1,22 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 5.3 rotate2 using textures
+// 
+// RTX 2070
+// C:\bin\rotate2.exe data\ives512.raw data\test.raw 512 512  1.0 10000
+// file data\ives512.raw read
+// file data\test.raw written
+// rotate2 iterations 10000 time 70.429 ms
+// 
+// RTX 3080
+// C:\bin\rotate2.exe data\ives512.raw data\test.raw 512 512  1.0 10000
+// file data\ives512.raw read
+// file data\test.raw written
+// rotate2 iterations 10000 time 41.244 ms
 
 #include "cx.h"
-//
 #include "helper_math.h" 
 #include "cxtimers.h"
 #include "cxbinio.h"

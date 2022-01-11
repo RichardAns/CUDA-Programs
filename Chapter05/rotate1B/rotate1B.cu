@@ -1,4 +1,20 @@
-// examples 5.1 & 5.2 rotate1B  This version uses nearest neighbour lookup on GPU
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
+// example 5.2 rotate1B  This version uses nearest neighbour lookup on GPU
+// 
+// RTX 2070
+// C:\bin\rotate1B.exe data\ives512.raw data\test.raw 512 512  1.0 10000
+// file data\ives512.raw read
+// file data\test.raw written
+// rotate1B iterations 10000 time 66.098 ms
+// 
+// RTX 3080
+// C:\bin\rotate1B.exe data\ives512.raw data\test.raw 512 512  1.0 10000
+// file data\ives512.raw read
+// file data\test.raw written
+// rotate1B iterations 10000 time 40.972 ms
 
 #include "cx.h"
 #include "helper_math.h"  // for clamp

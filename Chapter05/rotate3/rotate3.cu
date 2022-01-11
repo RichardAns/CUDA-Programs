@@ -1,7 +1,24 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 5.3 rotate3 using textures and normalized coodinates
+// 
+// RTX 2070
+// C:\bin\rotate3.exe data\ives512.raw data\test.raw 512 512 512 512 1.0  1.01 10000
+// scale 1.010000 angle 0.017453
+// file data\ives512.raw read
+// file data\test.raw written
+// rotate3 iterations 10000 time 71.757 ms
+// 
+// RTX 3080
+// C:\bin\rotate3.exe data\ives512.raw data\test.raw 512 512 512 512 1.0  1.01 10000
+// scale 1.010000 angle 0.017453
+// file data\ives512.raw read
+// file data\test.raw written
+// rotate3 iterations 10000 time 41.102 ms
 
 #include "cx.h"
-//
 #include "helper_math.h" 
 #include "cxtimers.h"
 #include "cxbinio.h"
