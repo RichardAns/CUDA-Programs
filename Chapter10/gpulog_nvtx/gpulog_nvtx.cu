@@ -1,4 +1,8 @@
-﻿// example 10.4 gpulog_nvtx
+﻿// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
+// example 10.4 gpulog_nvtx
 //
 // This example is the same as 10.1 execpt for the
 // cudaProfilerStart/Stop() statements in main and

@@ -2,6 +2,17 @@
 
 // This complete program also includes host and our original tiled gpu matrix multiplation 
 // for timing comparisons
+//
+// // RTX 2070
+// C:\bin\matmulT.exe 100 1024 1024 1024
+// blocks 512 threads 256
+// A 1024 x 1024 B 1024 x 1024 host 0.000 gpu time 264.978 TC time 56.578 ms GFlops 810.438 3795.609 speedup 4.68
+// 
+// RTX 3080
+// C:\bin\matmulT.exe 100 1024 1024 1024
+// blocks 512 threads 256
+// A 1024 x 1024 B 1024 x 1024 host 0.000 gpu time 91.002 TC time 18.075 ms GFlops 2359.812 11881.158 speedup 5.03
+
 
 #include "cx.h"
 #include "cxtimers.h"
@@ -98,16 +109,15 @@ int main(int argc,char *argv[])
 		printf("usage matmulT reps|100 size|24 Arow|1024 Acol|1024 Bcol|1024 show|0 host ver|0 gpu ver|1 TC ver|1\n");
 		return 0;
 	}
-	int reps = (argc > 1) ? atoi(argv[1]) : 100;
-	int Arow = (argc > 2) ? atoi(argv[2]) : 1024; // default 
-	int Acol = (argc > 3) ? atoi(argv[3]) : Arow;
+	int Arow = (argc > 1) ? atoi(argv[1]) : 1024; // default 
+	int Acol = (argc > 2) ? atoi(argv[2]) : Arow;
 	int Brow = Acol;
-	int Bcol = (argc > 4) ? atoi(argv[4]) : Brow;
-	int show = (argc > 5) ? atoi(argv[5]) : 0;
-	int host = (argc > 6) ? atoi(argv[6]) : 0;
-	int gpu  = (argc > 7) ? atoi(argv[7]) : 1;   // this for exmple 2.16
-	int TC   = (argc > 8) ? atoi(argv[8]) : 1;
-
+	int Bcol = (argc > 3) ? atoi(argv[3]) : Brow;
+	int show = (argc > 4) ? atoi(argv[4]) : 0;
+	int host = (argc > 5) ? atoi(argv[5]) : 0;
+	int gpu  = (argc > 6) ? atoi(argv[6]) : 1;   // this for exmple 2.16
+	int TC   = (argc > 7) ? atoi(argv[7]) : 1;
+	int reps = (argc > 8) ? atoi(argv[8]) : 100;  // for timing
 	int Crow = Arow;
 	int Ccol = Bcol;
 

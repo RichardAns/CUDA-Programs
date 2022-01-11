@@ -3,6 +3,16 @@
 // This complete program also includes host and our original tiled gpu matrix multiplation 
 // for timing comparisons
 
+// RTX 2070
+// C:\bin\matmulTS.exe 100 1024 1024 1024
+// blocks 512 threads 256
+// A 1024 x 1024 B 1024 x 1024 host 0.000 gpu time 250.169 TCS time 36.931 ms GFlops 858.415 5814.901 speedup 6.77
+//
+// RTX 3080
+// c:\matmulTS.exe 100 1024 1024 1024
+// blocks 512 threads 256
+// A 1024 x 1024 B 1024 x 1024 host 0.000 gpu time 201.368 TCS time 29.580 ms GFlops 1066.446 7259.991 speedup 6.81
+
 #include "cx.h"
 #include "cxtimers.h"
 #include "cooperative_groups.h"

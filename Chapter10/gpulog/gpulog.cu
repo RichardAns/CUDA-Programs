@@ -1,4 +1,52 @@
-﻿// gpulog.cu example 10.1 includes modifications for cuda-memcheck bug.
+﻿// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
+// gpulog.cu example 10.1 & 10.2 includes modifications for cuda-memcheck bug.
+//
+// RTX 2070 
+// C:\bin\gpulog.exe 16 256 256 100 100
+// steps 65536
+// gpu log(2) 0.688172 frac err  7.178e-01%
+// gpu  int   0.386245 frac err  1.268e-02%
+// host int   0.386245 frac err  1.268e-02%
+// times gpu 0.370 host 11.732 gpujob 223.730 ms speedup 31.7
+// 
+// C:\bin\gpulog.exe 24 256 256 100 100
+// steps 16777216
+// gpu log(2) 0.688172 frac err  7.178e-01%
+// gpu  int   0.386245 frac err  1.267e-02%
+// host int   0.386245 frac err  1.267e-02%
+// times gpu 22.259 host 2985.363 gpujob 207.787 ms speedup 134.1
+// 
+// C:\bin\gpulog.exe 24 256 256 100000 100
+// steps 16777216
+// gpu log(2) 0.693134 frac err  1.874e-03%
+// gpu  int   0.386294 frac err -8.701e-06%
+// host int   0.386245 frac err  1.267e-02%
+// times gpu 1827.215 host 2988.903 gpujob 2016.170 ms speedup 1635.8
+// 
+// RTX 3080
+// c:\bin\gpulog.exe 16 256 256 100 100
+// steps 65536
+// gpu log(2) 0.688172 frac err  7.178e-01%
+// gpu  int   0.386245 frac err  1.269e-02%
+// host int   0.386245 frac err  1.268e-02%
+// times gpu 1.203 host 6.643 gpujob 120.156 ms speedup 5.5
+// 
+// c:\bin\gpulog.exe 24 256 256 100 100
+// steps 16777216
+// gpu log(2) 0.688172 frac err  7.178e-01%
+// gpu  int   0.386245 frac err  1.267e-02%
+// host int   0.386245 frac err  1.267e-02%
+// times gpu 19.045 host 1509.881 gpujob 142.498 ms speedup 79.3
+// 
+// c:\bin\gpulog.exe 24 256 256 100000 100
+// steps 16777216
+// gpu log(2) 0.693134 frac err  1.874e-03%
+// gpu  int   0.386294 frac err -8.701e-06%
+// host int   0.386245 frac err  1.267e-02%
+// times gpu 2203.229 host 1521.715 gpujob 2318.414 ms speedup 690.7
 
 #include "cx.h"
 #include "cxtimers.h"
