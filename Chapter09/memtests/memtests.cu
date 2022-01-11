@@ -1,7 +1,33 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // program memtests includes examples 9.3 - 9.8 
+// 
+// C:\bin\memtests.exe 0..7 256 256 24
 //
-// NB for the uint data type used hre the recudtion step will overflow for
-// buffer sizes greater than about 2^24. The timing inforation remains correct
+// RTX 2070
+// test 0 total time 207.968 kernel time 11.975 ms
+// test 1 total time 203.001 kernel time 5.661 ms
+// test 2 total time 214.865 kernel time 12.058 ms
+// test 3 total time 207.367 kernel time 5.649 ms
+// test 4 total time 222.829 kernel time 5.646 ms
+// test 5 total time 215.511 kernel time 5.752 ms
+// test 6 total time 782.523 kernel time 60.889 ms
+// test 7 total time 755.528 kernel time 67.476 ms
+//
+// RTX 3080
+// test 0 total time 123.757 kernel time 8.076 ms
+// test 1 total time 144.661 kernel time 5.939 ms
+// test 2 total time 131.650 kernel time 8.045 ms
+// test 3 total time 164.538 kernel time 5.926 ms
+// test 4 total time 140.808 kernel time 5.964 ms
+// test 5 total time 155.775 kernel time 5.826 ms
+// test 6 total time 631.557 kernel time 50.210 ms
+// test 7 total time 629.506 kernel time 49.840 ms
+//
+// NB for the uint data type used here the reduction step will overflow for
+// buffer sizes greater than about 2^24. The timing information remains correct
 
 #include "cx.h"
 #include "cxtimers.h"
