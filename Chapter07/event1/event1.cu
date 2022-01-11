@@ -1,4 +1,16 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 7.2 event1 program
+// 
+// RTX 2070
+// C:\bin\event1.exe 256 256 26 10 10
+// times 2.621 2.603 2.550 2.536 diff 0.138 ms
+// 
+// RTX 3080
+// C:\bin\event1.exe 256 256 26 10 10
+// times 1.046 1.258 0.954 0.954 diff 0.396 ms
 
 #include "cx_gpu.h"
 #include "cxtimers.h"

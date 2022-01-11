@@ -1,4 +1,20 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 7.6 CUDA graph program
+// 
+// RTX 2070
+// C:\bin\graph.exe 256 256 1000 50
+// graphs 256 256 size 256 loops 50 kernels 20
+// standard    time    2.877 ms check 10.000309 (expect 10.000000)
+// using graph time    1.950 ms check 10.000309 (expect 10.000000)
+// 
+// RTX 3080
+// C:\bin\graph.exe 256 256 1000 50
+// graphs 256 256 size 256 loops 50 kernels 20
+// standard    time    2.727 ms check 10.000309 (expect 10.000000)
+// using graph time    1.596 ms check 10.000309 (expect 10.000000)
 
 #include "cx.h"
 #include "cxtimers.h"

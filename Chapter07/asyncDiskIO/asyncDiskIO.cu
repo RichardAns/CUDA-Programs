@@ -1,3 +1,7 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // examples 7.4 and 7.5 asyncDiskIO program
 
 #include "cx.h"
@@ -62,7 +66,7 @@ int main(int argc,char *argv[])
 	// Here we optionally flush OS disk cache which is ~10 GB on my Windows 10 system.
 	// Note this is very slow and only defeats read caching not write caching. 
 	// A better approching is to run muiltple jobs with a script file as dicussed in the text.
-	// The extended version of this program was used to constuct table 7.3.
+	// The extended version of this program that was used to constuct table 7.3.
 
 	if(flush>0){               // flush OS disk cache
 		uint flsize = 1<< 28;  // file size 1 GB needs flush=10 on test PC

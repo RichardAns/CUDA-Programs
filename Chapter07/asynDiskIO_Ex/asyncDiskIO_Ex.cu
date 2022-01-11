@@ -1,7 +1,118 @@
-// example 7.4 & 7.5 extended version (not shown in book)
-// The the associated run12.bat file can be used to run the program
-// without disk caching atrifically reducing running times.
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
 
+// example 7.4 & 7.5 extended version (not shown in book)
+// The associated run12_new.bat file can be used to run the program
+// without disk caching which artificially reduces running times.
+// The bat file can be found in Chapter07\asynDiskIO_Ex\data
+// 
+// =========================== 2070 test =============================
+// 
+// RTX 2070
+// D:\temp\asyncDiskIO>run12_new.bat C:\Users\Richard\OneDrive\toGit2\bin . 64 12800 1
+// 15:54:20.60
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 flush 0 check 0
+// Total time 12441.884 ms gputime 11065.638 difference 1376.245, iotot 12437.022
+// done
+// 15:54:35.79
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 flush 0 check 0
+// Total time 16546.677 ms gputime 11110.821 difference 5435.856, iotot 16542.042
+// done
+// 15:54:55.18
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 flush 0 check 0
+// Total time 19432.707 ms gputime 11169.936 difference 8262.771, iotot 19158.694
+// done
+// 15:55:17.12
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 flush 0 check 0
+// Total time 20950.266 ms gputime 11216.035 difference 9734.231, iotot 20911.181
+// done
+// 15:55:41.18
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 flush 0 check 0
+// Total time 19154.099 ms gputime 11245.301 difference 7908.797, iotot 19071.200
+// done
+// 15:56:03.56
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 flush 0 check 0
+// Total time 20355.519 ms gputime 11252.608 difference 9102.911, iotot 20348.180
+// done
+// 15:56:26.53
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 flush 0 check 0
+// Total time 19934.922 ms gputime 11325.740 difference 8609.182, iotot 19840.964
+// done
+// 15:56:49.34
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 flush 0 check 0
+// Total time 20770.608 ms gputime 11356.542 difference 9414.066, iotot 20612.708
+// done
+// 15:57:12.95
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 flush 0 check 0
+// Total time 20447.162 ms gputime 11380.529 difference 9066.633, iotot 20365.528
+// done
+// 15:57:35.32
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 flush 0 check 0
+// Total time 21786.833 ms gputime 11412.178 difference 10374.656, iotot 21628.433
+// done
+// 15:58:00.15
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 flush 0 check 0
+// Total time 18649.454 ms gputime 11386.548 difference 7262.906, iotot 18436.460
+// done
+// 15:58:21.43
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 flush 0 check 0
+// Total time 20903.031 ms gputime 11387.494 difference 9515.536, iotot 20752.146
+// done
+// 15:58:45.13
+// 
+// ======================================= 3080 test ==============================================
+// 
+// D:\temp\asyncDiskIO>run12_new.bat C:\Users\Richard\OneDrive\toGit2\bin . 64 12800 1
+// 15:25:41.55
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 // flush 0 check 0
+// Total time 9372.409 ms gputime 5413.966 difference 3958.443, iotot 9367.582
+// done
+// 15:25:53.11
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 // flush 0 check 0
+// Total time 10931.311 ms gputime 5453.515 difference 5477.796, iotot 10926.865
+// done
+// 15:26:05.96
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 // flush 0 check 0
+// Total time 12652.068 ms gputime 5461.494 difference 7190.575, iotot 12647.636
+// done
+// 15:26:20.44
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 // flush 0 check 0
+// Total time 12878.954 ms gputime 5473.744 difference 7405.210, iotot 12874.350
+// done
+// 15:26:35.77
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 // flush 0 check 0
+// Total time 13921.287 ms gputime 5494.661 difference 8426.627, iotot 13916.344
+// done
+// 15:26:51.77
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 // flush 0 check 0
+// Total time 13248.364 ms gputime 5477.741 difference 7770.624, iotot 13243.814
+// done
+// 15:27:07.14
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 // flush 0 check 0
+// Total time 12989.967 ms gputime 5516.291 difference 7473.676, iotot 12985.355
+// done
+// 15:27:21.71
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 // flush 0 check 0
+// Total time 14345.649 ms gputime 5497.588 difference 8848.061, iotot 14284.304
+// done
+// 15:27:37.91
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 // gpu 1 flush 0 check 0
+// Total time 14362.065 ms gputime 5494.562 difference 8867.503, iotot 14336.865
+// done
+// 15:27:54.34
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 // flush 0 check 0
+// Total time 13636.458 ms gputime 5496.577 difference 8139.881, iotot 13630.245
+// done
+// 15:28:11.11
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 // flush 0 check 0
+// Total time 13027.074 ms gputime 5494.062 difference 7533.011, iotot 13022.412
+// done
+// 15:28:25.71
+// blocks 256 threads 256 dsize 268435456 subsets 64 dsize 268435456 fsize 4194304 ktime 12800 gpu 1 // flush 0 check 0
+// Total time 13444.947 ms gputime 5495.771 difference 7949.176, iotot 13384.892
+// done
+// 15:28:41.69
 #include "cx.h"
 #include "cxtimers.h"
 #include "cxbinio.h"
@@ -269,6 +380,15 @@ int main(int argc,char *argv[])
 	if(argc < 2) {
 		printf("usage asyncDiskIO_ex <file in> <file out> <blocks> <threads> dataSize|2^28 frames|16 ktime|100 gpu|1 doflush|0 check|(0 or 1 <file>)\n");
 		printf("NB if flush set >= 2 then the required input files will be generated\n");
+		printf("gpu = 0: standard run as per figure 7.3\n");
+		printf("gpu = 1: same as gpu = 0\n");
+		printf("gpu = 2: call baseline\n");
+		printf("gpu = 3: call kernel_baseline\n");
+		printf("gpu = 4: call kernel_baseline2\n");
+		printf("gpu = 5: call one_thread\n");
+		printf("gpu = 6: call kcheck\n");
+		printf("gpu = 7: call baselineX\n");
+		printf("gpu > 7: same as gpu = 0\n");
 		return 0;
 	}
 

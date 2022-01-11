@@ -1,4 +1,21 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // pipeline example 7.1  overlap IO and multiple kernel executions on GPU 
+// RTX 2070
+// C:\bin\pipeline.exe 256 256 28 1 60 0
+// time 215.031 ms
+// 
+// C:\bin\pipeline.exe 256 256 28 8 60 8
+// time 120.456 ms
+// 
+// RTX 3080
+// C:\bin\pipeline.exe 256 256 28 1 60 0
+// time 178.953 ms
+// 
+// C:\bin\pipeline.exe 256 256 28 8 60 8
+// time 107.898 ms
 
 #include "cx.h"
 #include "cxtimers.h"
