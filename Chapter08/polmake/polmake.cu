@@ -1,12 +1,26 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // chapter 8 polmake
 // This is a support program for chapter 8 PET simualtion
 // It generates the lookup table required to convert polar voxels into 
-// convetional catiesian voxels. Only the tranvers plane is transformed
+// convetional catiesian voxels. Only the transverse plane is transformed
 // i.e. (r,phi) goes to (x,y). Although an analyical calculation is possible
 // it is much simpler to use an MC method which on the GPU is very fast.
 //
 // This is a good example of where knowing a bit of CUDA can be very helpful
 // for specific one-off tasks.
+
+// RTX 2070
+// C:\bin\polmake.exe  polcav.tab 123456 10000000
+// done time 10309.635 ms
+// file polcav.tab written
+// 
+// RTX 3080
+// C:\bin\polmake.exe pol2cart.tab 123456 10000000
+// done time 7063.882 ms
+// file pol2cart.tab written
 
 #include "cx.h"
 #include "cxtimers.h"
@@ -121,7 +135,7 @@ int main(int argc,char *argv[])
 {
 	if(argc < 2){
 		printf("usage >polmake.exe <poluse file> <seed|rd()> <ngen|1000000>  domaps|0 myp|0 myr|0\n");
-		printf("parameters myp and myr select polar voxel for display  if either is non zero\n");
+		printf("parameters myp and myr select polar voxel for display if either is non zero\n");
 		return 0;
 	}
 

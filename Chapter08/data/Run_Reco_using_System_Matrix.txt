@@ -1,0 +1,25 @@
+================================= test reco ======================
+C:\Users\Richard\OneDrive\toGit2>bin\reco.exe derenzo_full.raw recotest petSM.raw petSMtab.raw 10
+using blocks = 180000, threads = 400 valcut 0.0 dzcut 63
+file petSMtab.raw read
+sm_size = 12829371, lor_size 167232000 vol_size 2560000
+file petSM.raw read
+file derenzo_full.raw read
+bad open on gold.raw for read
+normalization done for 100 rings and 64 slices
+file norm_new.raw written
+file smnorm.raw written
+Host normalize call 194.542 ms
+total activity 33232349840, activity density 264455
+iteration   1 chi 0.000000e+00 times fwd 1048.244 bwd 952.505 rsc 0.138 chi 0.000 all 2000.889 ms
+iteration   2 chi 0.000000e+00 times fwd 2082.276 bwd 1909.848 rsc 0.289 chi 0.000 all 3992.564 ms
+iteration   3 chi 0.000000e+00 times fwd 3113.187 bwd 2866.901 rsc 0.417 chi 0.000 all 5980.790 ms
+iteration   4 chi 0.000000e+00 times fwd 4145.231 bwd 3827.395 rsc 0.547 chi 0.000 all 7973.587 ms
+iteration   5 chi 0.000000e+00 times fwd 5177.648 bwd 4788.314 rsc 0.688 chi 0.000 all 9967.286 ms
+iteration   6 chi 0.000000e+00 times fwd 6210.208 bwd 5750.391 rsc 0.821 chi 0.000 all 11962.194 ms
+iteration   7 chi 0.000000e+00 times fwd 7243.195 bwd 6711.357 rsc 0.948 chi 0.000 all 13956.396 ms
+iteration   8 chi 0.000000e+00 times fwd 8276.924 bwd 7673.887 rsc 1.061 chi 0.001 all 15952.897 ms
+iteration   9 chi 0.000000e+00 times fwd 9310.370 bwd 8637.269 rsc 1.195 chi 0.001 all 17949.986 ms
+iteration  10 chi 0.000000e+00 times fwd 10344.888 bwd 9601.053 rsc 1.327 chi 0.001 all 19948.545 ms
+file recotest.raw_mlem010.raw written
+All time 19953.733 ms

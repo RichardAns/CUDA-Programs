@@ -1,3 +1,7 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // fullblk program Chaper 8 examples 8.10 - 8.13
 
 // Note a blocked detector breaks the 400-fold phi symmetry of the previous PET examples.

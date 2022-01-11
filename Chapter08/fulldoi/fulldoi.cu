@@ -1,3 +1,7 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // example 8.9 The fulldoi program
 // This is the same os the fullsim program except that depth of interation is added to ray_to_cyl
 // The spot sizes are bigger for oblique rays are find_spot is alos modified.

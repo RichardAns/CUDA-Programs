@@ -1,0 +1,1246 @@
+C:\Users\Richard\OneDrive\toGit2>dergen5.bat
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1234 derenzo_full.raw 0   3.06 0 360   64.000  192.000     0.000000     9.792000 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (0.0 9.8 0.0)
+Phantom ngen 376176640 good 131915026 eff 35.067% time 39.031 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1271 derenzo_full.raw 0   3.06 0 360   64.000  192.000    -6.120000    20.392151 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-6.1 20.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 131952949 eff 35.077% time 42.766 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1308 derenzo_full.raw 0   3.06 0 360   64.000  192.000     6.120000    20.392151 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (6.1 20.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 131953463 eff 35.078% time 42.758 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1345 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -12.240000    30.992302 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-12.2 31.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132023163 eff 35.096% time 43.662 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1382 derenzo_full.raw 0   3.06 0 360   64.000  192.000     0.000000    30.992302 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (0.0 31.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132005256 eff 35.091% time 44.503 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1419 derenzo_full.raw 0   3.06 0 360   64.000  192.000    12.240000    30.992302 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (12.2 31.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132023110 eff 35.096% time 45.136 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1456 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -18.360000    41.592453 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-18.4 41.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132122928 eff 35.123% time 45.514 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1493 derenzo_full.raw 0   3.06 0 360   64.000  192.000    -6.120000    41.592453 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-6.1 41.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132090106 eff 35.114% time 46.929 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1530 derenzo_full.raw 0   3.06 0 360   64.000  192.000     6.120000    41.592453 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (6.1 41.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132088096 eff 35.113% time 45.906 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1567 derenzo_full.raw 0   3.06 0 360   64.000  192.000    18.360000    41.592453 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (18.4 41.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132118256 eff 35.121% time 45.553 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1604 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -24.480000    52.192604 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-24.5 52.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132244427 eff 35.155% time 47.525 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1641 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -12.240000    52.192604 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-12.2 52.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132202315 eff 35.144% time 48.534 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1678 derenzo_full.raw 0   3.06 0 360   64.000  192.000     0.000000    52.192604 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (0.0 52.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132187203 eff 35.140% time 46.172 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1715 derenzo_full.raw 0   3.06 0 360   64.000  192.000    12.240000    52.192604 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (12.2 52.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132199838 eff 35.143% time 47.524 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1752 derenzo_full.raw 0   3.06 0 360   64.000  192.000    24.480000    52.192604 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (24.5 52.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132241418 eff 35.154% time 47.951 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1789 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -30.600000    62.792755 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-30.6 62.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132383352 eff 35.192% time 48.068 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1826 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -18.360000    62.792755 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-18.4 62.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132330704 eff 35.178% time 47.764 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1863 derenzo_full.raw 0   3.06 0 360   64.000  192.000    -6.120000    62.792755 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-6.1 62.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132301672 eff 35.170% time 48.836 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1900 derenzo_full.raw 0   3.06 0 360   64.000  192.000     6.120000    62.792755 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (6.1 62.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132300788 eff 35.170% time 47.830 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1937 derenzo_full.raw 0   3.06 0 360   64.000  192.000    18.360000    62.792755 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (18.4 62.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132326445 eff 35.177% time 48.573 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1974 derenzo_full.raw 0   3.06 0 360   64.000  192.000    30.600000    62.792755 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (30.6 62.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132381209 eff 35.191% time 47.832 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2011 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -36.720000    73.392906 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-36.7 73.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132536823 eff 35.233% time 49.801 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2048 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -24.480000    73.392906 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-24.5 73.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132475960 eff 35.216% time 48.015 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2085 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -12.240000    73.392906 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-12.2 73.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132441128 eff 35.207% time 47.850 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2122 derenzo_full.raw 0   3.06 0 360   64.000  192.000     0.000000    73.392906 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (0.0 73.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132427590 eff 35.204% time 48.000 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2159 derenzo_full.raw 0   3.06 0 360   64.000  192.000    12.240000    73.392906 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (12.2 73.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132437816 eff 35.206% time 48.284 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2196 derenzo_full.raw 0   3.06 0 360   64.000  192.000    24.480000    73.392906 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (24.5 73.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132474843 eff 35.216% time 49.614 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2233 derenzo_full.raw 0   3.06 0 360   64.000  192.000    36.720000    73.392906 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (36.7 73.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132533139 eff 35.232% time 48.273 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2270 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -42.840000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-42.8 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132689089 eff 35.273% time 48.136 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2307 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -30.600000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-30.6 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132630261 eff 35.257% time 48.545 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2344 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -18.360000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-18.4 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132586078 eff 35.246% time 47.687 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2381 derenzo_full.raw 0   3.06 0 360   64.000  192.000    -6.120000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-6.1 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132561831 eff 35.239% time 49.304 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2418 derenzo_full.raw 0   3.06 0 360   64.000  192.000     6.120000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (6.1 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132563092 eff 35.240% time 48.234 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2455 derenzo_full.raw 0   3.06 0 360   64.000  192.000    18.360000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (18.4 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132580641 eff 35.244% time 48.051 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2492 derenzo_full.raw 0   3.06 0 360   64.000  192.000    30.600000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (30.6 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132625422 eff 35.256% time 49.373 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2529 derenzo_full.raw 0   3.06 0 360   64.000  192.000    42.840000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (42.8 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132685000 eff 35.272% time 50.894 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2566 derenzo_full.raw 0   4.30 0 360   64.000  192.000    11.916510     6.880000 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (11.9 6.9 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 260616605 eff 35.068% time 88.175 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2603 derenzo_full.raw 0   4.30 0 360   64.000  192.000    20.516510    21.775637 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (20.5 21.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 260766130 eff 35.088% time 89.435 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2640 derenzo_full.raw 0   4.30 0 360   64.000  192.000    29.116510     6.880000 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (29.1 6.9 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 260766805 eff 35.088% time 86.663 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2677 derenzo_full.raw 0   4.30 0 360   64.000  192.000    29.116510    36.671274 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (29.1 36.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261031096 eff 35.124% time 91.037 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2714 derenzo_full.raw 0   4.30 0 360   64.000  192.000    37.716510    21.775637 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (37.7 21.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 260975024 eff 35.116% time 91.091 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2751 derenzo_full.raw 0   4.30 0 360   64.000  192.000    46.316510     6.880000 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (46.3 6.9 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261030084 eff 35.123% time 91.758 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2788 derenzo_full.raw 0   4.30 0 360   64.000  192.000    37.716510    51.566911 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (37.7 51.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261385061 eff 35.171% time 92.918 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2825 derenzo_full.raw 0   4.30 0 360   64.000  192.000    46.316510    36.671274 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (46.3 36.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261274002 eff 35.156% time 93.541 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2862 derenzo_full.raw 0   4.30 0 360   64.000  192.000    54.916510    21.775637 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (54.9 21.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261277148 eff 35.157% time 93.755 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2899 derenzo_full.raw 0   4.30 0 360   64.000  192.000    63.516510     6.880000 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (63.5 6.9 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261383966 eff 35.171% time 95.120 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2936 derenzo_full.raw 0   4.30 0 360   64.000  192.000    46.316510    66.462548 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (46.3 66.5 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261797663 eff 35.227% time 96.942 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2973 derenzo_full.raw 0   4.30 0 360   64.000  192.000    54.916510    51.566911 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (54.9 51.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261656889 eff 35.208% time 94.294 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3010 derenzo_full.raw 0   4.30 0 360   64.000  192.000    63.516510    36.671274 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (63.5 36.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261603573 eff 35.201% time 94.368 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3047 derenzo_full.raw 0   4.30 0 360   64.000  192.000    72.116510    21.775637 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (72.1 21.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261657865 eff 35.208% time 94.911 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3084 derenzo_full.raw 0   4.30 0 360   64.000  192.000    80.716510     6.880000 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (80.7 6.9 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261800187 eff 35.227% time 95.525 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3121 derenzo_full.raw 0   4.30 0 360   64.000  192.000    54.916510    81.358185 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (54.9 81.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 262209183 eff 35.282% time 96.625 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3158 derenzo_full.raw 0   4.30 0 360   64.000  192.000    63.516510    66.462548 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (63.5 66.5 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 262064153 eff 35.263% time 98.266 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3195 derenzo_full.raw 0   4.30 0 360   64.000  192.000    72.116510    51.566911 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (72.1 51.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261982719 eff 35.252% time 95.044 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3232 derenzo_full.raw 0   4.30 0 360   64.000  192.000    80.716510    36.671274 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (80.7 36.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261984410 eff 35.252% time 95.896 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3269 derenzo_full.raw 0   4.30 0 360   64.000  192.000    89.316510    21.775637 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (89.3 21.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 262065860 eff 35.263% time 95.511 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3306 derenzo_full.raw 0   4.30 0 360   64.000  192.000    97.916510     6.880000 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (97.9 6.9 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 262216075 eff 35.283% time 98.320 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3343 derenzo_full.raw 0   4.90 0 360   64.000  192.000    13.579278    -7.840000 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (13.6 -7.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 338509556 eff 35.071% time 113.699 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3380 derenzo_full.raw 0   4.90 0 360   64.000  192.000    33.179278    -7.840000 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (33.2 -7.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 338761346 eff 35.097% time 119.476 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3417 derenzo_full.raw 0   4.90 0 360   64.000  192.000    23.379278   -24.814098 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (23.4 -24.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 338759564 eff 35.097% time 119.706 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3454 derenzo_full.raw 0   4.90 0 360   64.000  192.000    52.779278    -7.840000 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (52.8 -7.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 339193761 eff 35.142% time 119.645 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3491 derenzo_full.raw 0   4.90 0 360   64.000  192.000    42.979278   -24.814098 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (43.0 -24.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 339091482 eff 35.131% time 120.410 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3528 derenzo_full.raw 0   4.90 0 360   64.000  192.000    33.179278   -41.788196 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (33.2 -41.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 339186127 eff 35.141% time 121.054 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3565 derenzo_full.raw 0   4.90 0 360   64.000  192.000    72.379278    -7.840000 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (72.4 -7.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 339764917 eff 35.201% time 122.847 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3602 derenzo_full.raw 0   4.90 0 360   64.000  192.000    62.579278   -24.814098 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (62.6 -24.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 339586947 eff 35.183% time 121.552 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3639 derenzo_full.raw 0   4.90 0 360   64.000  192.000    52.779278   -41.788196 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (52.8 -41.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 339591625 eff 35.183% time 125.442 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3676 derenzo_full.raw 0   4.90 0 360   64.000  192.000    42.979278   -58.762294 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (43.0 -58.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 339760411 eff 35.201% time 121.556 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3713 derenzo_full.raw 0   4.90 0 360   64.000  192.000    91.979278    -7.840000 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (92.0 -7.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 340385140 eff 35.265% time 127.311 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3750 derenzo_full.raw 0   4.90 0 360   64.000  192.000    82.179278   -24.814098 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (82.2 -24.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 340174152 eff 35.243% time 124.429 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3787 derenzo_full.raw 0   4.90 0 360   64.000  192.000    72.379278   -41.788196 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (72.4 -41.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 340102625 eff 35.236% time 123.052 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3824 derenzo_full.raw 0   4.90 0 360   64.000  192.000    62.579278   -58.762294 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (62.6 -58.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 340180243 eff 35.244% time 122.635 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3861 derenzo_full.raw 0   4.90 0 360   64.000  192.000    52.779278   -75.736392 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (52.8 -75.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 340386570 eff 35.265% time 122.764 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 3898 derenzo_full.raw 0   6.12 0 360   64.000  192.000     0.000000   -19.584000 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (0.0 -19.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 528316494 eff 35.074% time 182.167 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 3935 derenzo_full.raw 0   6.12 0 360   64.000  192.000    12.240000   -40.784302 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (12.2 -40.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 528911067 eff 35.114% time 190.004 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 3972 derenzo_full.raw 0   6.12 0 360   64.000  192.000   -12.240000   -40.784302 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (-12.2 -40.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 528912279 eff 35.114% time 187.597 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 4009 derenzo_full.raw 0   6.12 0 360   64.000  192.000    24.480000   -61.984604 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (24.5 -62.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 529907279 eff 35.180% time 190.237 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 4046 derenzo_full.raw 0   6.12 0 360   64.000  192.000     0.000000   -61.984604 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (0.0 -62.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 529690200 eff 35.165% time 193.962 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 4083 derenzo_full.raw 0   6.12 0 360   64.000  192.000   -24.480000   -61.984604 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (-24.5 -62.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 529910112 eff 35.180% time 198.157 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 4120 derenzo_full.raw 0   6.12 0 360   64.000  192.000    36.720000   -83.184906 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (36.7 -83.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 531118026 eff 35.260% time 194.779 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 4157 derenzo_full.raw 0   6.12 0 360   64.000  192.000    12.240000   -83.184906 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (12.2 -83.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 530768008 eff 35.237% time 192.346 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 4194 derenzo_full.raw 0   6.12 0 360   64.000  192.000   -12.240000   -83.184906 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (-12.2 -83.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 530773822 eff 35.237% time 193.045 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 4231 derenzo_full.raw 0   6.12 0 360   64.000  192.000   -36.720000   -83.184906 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (-36.7 -83.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 531119193 eff 35.260% time 196.342 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 2946 4268 derenzo_full.raw 0   8.56 0 360   64.000  192.000   -23.722168   -13.696000 0 0 1
+Phantom r (0.0 8.6) p (0.000 6.283) z (64.0 192.0) o (-23.7 -13.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 2946760704 good 1033885920 eff 35.086% time 365.517 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 2946 4305 derenzo_full.raw 0   8.56 0 360   64.000  192.000   -40.842168   -43.348710 0 0 1
+Phantom r (0.0 8.6) p (0.000 6.283) z (64.0 192.0) o (-40.8 -43.3 0.0)
+file derenzo_full.raw read
+Phantom ngen 2946760704 good 1036072963 eff 35.160% time 380.336 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 2946 4342 derenzo_full.raw 0   8.56 0 360   64.000  192.000   -57.962168   -13.696000 0 0 1
+Phantom r (0.0 8.6) p (0.000 6.283) z (64.0 192.0) o (-58.0 -13.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 2946760704 good 1036054748 eff 35.159% time 386.449 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 2946 4379 derenzo_full.raw 0   8.56 0 360   64.000  192.000   -57.962168   -73.001420 0 0 1
+Phantom r (0.0 8.6) p (0.000 6.283) z (64.0 192.0) o (-58.0 -73.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 2946760704 good 1039274312 eff 35.268% time 389.627 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 2946 4416 derenzo_full.raw 0   8.56 0 360   64.000  192.000   -75.082168   -43.348710 0 0 1
+Phantom r (0.0 8.6) p (0.000 6.283) z (64.0 192.0) o (-75.1 -43.3 0.0)
+file derenzo_full.raw read
+Phantom ngen 2946760704 good 1038643290 eff 35.247% time 383.661 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 2946 4453 derenzo_full.raw 0   8.56 0 360   64.000  192.000   -92.202168   -13.696000 0 0 1
+Phantom r (0.0 8.6) p (0.000 6.283) z (64.0 192.0) o (-92.2 -13.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 2946760704 good 1039252009 eff 35.268% time 386.002 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 6024 4490 derenzo_full.raw 0  12.24 0 360   64.000  192.000   -33.920483    19.584000 0 0 1
+Phantom r (0.0 12.2) p (0.000 6.283) z (64.0 192.0) o (-33.9 19.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 6024331264 good 2114997405 eff 35.108% time 781.732 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 6024 4527 derenzo_full.raw 0  12.24 0 360   64.000  192.000   -82.880483    19.584000 0 0 1
+Phantom r (0.0 12.2) p (0.000 6.283) z (64.0 192.0) o (-82.9 19.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 6024331264 good 2123067058 eff 35.242% time 797.100 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 6024 4564 derenzo_full.raw 0  12.24 0 360   64.000  192.000   -58.400483    61.984604 0 0 1
+Phantom r (0.0 12.2) p (0.000 6.283) z (64.0 192.0) o (-58.4 62.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 6024331264 good 2123056254 eff 35.241% time 785.314 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================== Derenzo PET Phantom Generation with RTX 3080 ==============================
+
+C:\Users\Richard\OneDrive\toGit2>bin\derenzo.exe dergen5.bat
+genrated dergen5.bat for activity 0.10 savevol 0 radius 50.00 z1 64.00 z2 192.00
+rod radii     3.060    4.300    4.900    6.120    8.560   12.240
+91 points in phantom
+
+------------------------------
+C:\Users\Richard\OneDrive\toGit2>dergen5.bat
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1234 derenzo_full.raw 0   3.06 0 360   64.000  192.000     0.000000     9.792000 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (0.0 9.8 0.0)
+Phantom ngen 376176640 good 131915026 eff 35.067% time 39.031 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1271 derenzo_full.raw 0   3.06 0 360   64.000  192.000    -6.120000    20.392151 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-6.1 20.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 131952949 eff 35.077% time 42.766 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1308 derenzo_full.raw 0   3.06 0 360   64.000  192.000     6.120000    20.392151 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (6.1 20.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 131953463 eff 35.078% time 42.758 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1345 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -12.240000    30.992302 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-12.2 31.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132023163 eff 35.096% time 43.662 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1382 derenzo_full.raw 0   3.06 0 360   64.000  192.000     0.000000    30.992302 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (0.0 31.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132005256 eff 35.091% time 44.503 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1419 derenzo_full.raw 0   3.06 0 360   64.000  192.000    12.240000    30.992302 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (12.2 31.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132023110 eff 35.096% time 45.136 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1456 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -18.360000    41.592453 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-18.4 41.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132122928 eff 35.123% time 45.514 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1493 derenzo_full.raw 0   3.06 0 360   64.000  192.000    -6.120000    41.592453 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-6.1 41.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132090106 eff 35.114% time 46.929 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1530 derenzo_full.raw 0   3.06 0 360   64.000  192.000     6.120000    41.592453 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (6.1 41.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132088096 eff 35.113% time 45.906 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1567 derenzo_full.raw 0   3.06 0 360   64.000  192.000    18.360000    41.592453 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (18.4 41.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132118256 eff 35.121% time 45.553 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1604 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -24.480000    52.192604 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-24.5 52.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132244427 eff 35.155% time 47.525 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1641 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -12.240000    52.192604 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-12.2 52.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132202315 eff 35.144% time 48.534 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1678 derenzo_full.raw 0   3.06 0 360   64.000  192.000     0.000000    52.192604 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (0.0 52.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132187203 eff 35.140% time 46.172 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1715 derenzo_full.raw 0   3.06 0 360   64.000  192.000    12.240000    52.192604 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (12.2 52.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132199838 eff 35.143% time 47.524 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1752 derenzo_full.raw 0   3.06 0 360   64.000  192.000    24.480000    52.192604 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (24.5 52.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132241418 eff 35.154% time 47.951 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1789 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -30.600000    62.792755 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-30.6 62.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132383352 eff 35.192% time 48.068 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1826 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -18.360000    62.792755 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-18.4 62.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132330704 eff 35.178% time 47.764 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1863 derenzo_full.raw 0   3.06 0 360   64.000  192.000    -6.120000    62.792755 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-6.1 62.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132301672 eff 35.170% time 48.836 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1900 derenzo_full.raw 0   3.06 0 360   64.000  192.000     6.120000    62.792755 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (6.1 62.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132300788 eff 35.170% time 47.830 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1937 derenzo_full.raw 0   3.06 0 360   64.000  192.000    18.360000    62.792755 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (18.4 62.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132326445 eff 35.177% time 48.573 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 1974 derenzo_full.raw 0   3.06 0 360   64.000  192.000    30.600000    62.792755 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (30.6 62.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132381209 eff 35.191% time 47.832 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2011 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -36.720000    73.392906 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-36.7 73.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132536823 eff 35.233% time 49.801 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2048 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -24.480000    73.392906 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-24.5 73.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132475960 eff 35.216% time 48.015 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2085 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -12.240000    73.392906 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-12.2 73.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132441128 eff 35.207% time 47.850 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2122 derenzo_full.raw 0   3.06 0 360   64.000  192.000     0.000000    73.392906 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (0.0 73.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132427590 eff 35.204% time 48.000 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2159 derenzo_full.raw 0   3.06 0 360   64.000  192.000    12.240000    73.392906 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (12.2 73.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132437816 eff 35.206% time 48.284 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2196 derenzo_full.raw 0   3.06 0 360   64.000  192.000    24.480000    73.392906 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (24.5 73.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132474843 eff 35.216% time 49.614 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2233 derenzo_full.raw 0   3.06 0 360   64.000  192.000    36.720000    73.392906 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (36.7 73.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132533139 eff 35.232% time 48.273 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2270 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -42.840000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-42.8 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132689089 eff 35.273% time 48.136 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2307 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -30.600000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-30.6 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132630261 eff 35.257% time 48.545 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2344 derenzo_full.raw 0   3.06 0 360   64.000  192.000   -18.360000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-18.4 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132586078 eff 35.246% time 47.687 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2381 derenzo_full.raw 0   3.06 0 360   64.000  192.000    -6.120000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (-6.1 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132561831 eff 35.239% time 49.304 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2418 derenzo_full.raw 0   3.06 0 360   64.000  192.000     6.120000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (6.1 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132563092 eff 35.240% time 48.234 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2455 derenzo_full.raw 0   3.06 0 360   64.000  192.000    18.360000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (18.4 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132580641 eff 35.244% time 48.051 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2492 derenzo_full.raw 0   3.06 0 360   64.000  192.000    30.600000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (30.6 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132625422 eff 35.256% time 49.373 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  376 2529 derenzo_full.raw 0   3.06 0 360   64.000  192.000    42.840000    83.993057 0 0 1
+Phantom r (0.0 3.1) p (0.000 6.283) z (64.0 192.0) o (42.8 84.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 376176640 good 132685000 eff 35.272% time 50.894 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2566 derenzo_full.raw 0   4.30 0 360   64.000  192.000    11.916510     6.880000 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (11.9 6.9 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 260616605 eff 35.068% time 88.175 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2603 derenzo_full.raw 0   4.30 0 360   64.000  192.000    20.516510    21.775637 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (20.5 21.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 260766130 eff 35.088% time 89.435 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2640 derenzo_full.raw 0   4.30 0 360   64.000  192.000    29.116510     6.880000 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (29.1 6.9 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 260766805 eff 35.088% time 86.663 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2677 derenzo_full.raw 0   4.30 0 360   64.000  192.000    29.116510    36.671274 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (29.1 36.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261031096 eff 35.124% time 91.037 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2714 derenzo_full.raw 0   4.30 0 360   64.000  192.000    37.716510    21.775637 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (37.7 21.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 260975024 eff 35.116% time 91.091 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2751 derenzo_full.raw 0   4.30 0 360   64.000  192.000    46.316510     6.880000 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (46.3 6.9 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261030084 eff 35.123% time 91.758 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2788 derenzo_full.raw 0   4.30 0 360   64.000  192.000    37.716510    51.566911 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (37.7 51.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261385061 eff 35.171% time 92.918 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2825 derenzo_full.raw 0   4.30 0 360   64.000  192.000    46.316510    36.671274 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (46.3 36.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261274002 eff 35.156% time 93.541 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2862 derenzo_full.raw 0   4.30 0 360   64.000  192.000    54.916510    21.775637 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (54.9 21.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261277148 eff 35.157% time 93.755 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2899 derenzo_full.raw 0   4.30 0 360   64.000  192.000    63.516510     6.880000 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (63.5 6.9 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261383966 eff 35.171% time 95.120 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2936 derenzo_full.raw 0   4.30 0 360   64.000  192.000    46.316510    66.462548 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (46.3 66.5 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261797663 eff 35.227% time 96.942 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 2973 derenzo_full.raw 0   4.30 0 360   64.000  192.000    54.916510    51.566911 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (54.9 51.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261656889 eff 35.208% time 94.294 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3010 derenzo_full.raw 0   4.30 0 360   64.000  192.000    63.516510    36.671274 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (63.5 36.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261603573 eff 35.201% time 94.368 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3047 derenzo_full.raw 0   4.30 0 360   64.000  192.000    72.116510    21.775637 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (72.1 21.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261657865 eff 35.208% time 94.911 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3084 derenzo_full.raw 0   4.30 0 360   64.000  192.000    80.716510     6.880000 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (80.7 6.9 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261800187 eff 35.227% time 95.525 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3121 derenzo_full.raw 0   4.30 0 360   64.000  192.000    54.916510    81.358185 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (54.9 81.4 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 262209183 eff 35.282% time 96.625 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3158 derenzo_full.raw 0   4.30 0 360   64.000  192.000    63.516510    66.462548 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (63.5 66.5 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 262064153 eff 35.263% time 98.266 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3195 derenzo_full.raw 0   4.30 0 360   64.000  192.000    72.116510    51.566911 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (72.1 51.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261982719 eff 35.252% time 95.044 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3232 derenzo_full.raw 0   4.30 0 360   64.000  192.000    80.716510    36.671274 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (80.7 36.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 261984410 eff 35.252% time 95.896 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3269 derenzo_full.raw 0   4.30 0 360   64.000  192.000    89.316510    21.775637 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (89.3 21.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 262065860 eff 35.263% time 95.511 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  743 3306 derenzo_full.raw 0   4.30 0 360   64.000  192.000    97.916510     6.880000 0 0 1
+Phantom r (0.0 4.3) p (0.000 6.283) z (64.0 192.0) o (97.9 6.9 0.0)
+file derenzo_full.raw read
+Phantom ngen 743178240 good 262216075 eff 35.283% time 98.320 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3343 derenzo_full.raw 0   4.90 0 360   64.000  192.000    13.579278    -7.840000 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (13.6 -7.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 338509556 eff 35.071% time 113.699 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3380 derenzo_full.raw 0   4.90 0 360   64.000  192.000    33.179278    -7.840000 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (33.2 -7.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 338761346 eff 35.097% time 119.476 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3417 derenzo_full.raw 0   4.90 0 360   64.000  192.000    23.379278   -24.814098 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (23.4 -24.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 338759564 eff 35.097% time 119.706 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3454 derenzo_full.raw 0   4.90 0 360   64.000  192.000    52.779278    -7.840000 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (52.8 -7.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 339193761 eff 35.142% time 119.645 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3491 derenzo_full.raw 0   4.90 0 360   64.000  192.000    42.979278   -24.814098 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (43.0 -24.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 339091482 eff 35.131% time 120.410 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3528 derenzo_full.raw 0   4.90 0 360   64.000  192.000    33.179278   -41.788196 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (33.2 -41.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 339186127 eff 35.141% time 121.054 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3565 derenzo_full.raw 0   4.90 0 360   64.000  192.000    72.379278    -7.840000 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (72.4 -7.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 339764917 eff 35.201% time 122.847 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3602 derenzo_full.raw 0   4.90 0 360   64.000  192.000    62.579278   -24.814098 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (62.6 -24.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 339586947 eff 35.183% time 121.552 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3639 derenzo_full.raw 0   4.90 0 360   64.000  192.000    52.779278   -41.788196 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (52.8 -41.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 339591625 eff 35.183% time 125.442 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3676 derenzo_full.raw 0   4.90 0 360   64.000  192.000    42.979278   -58.762294 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (43.0 -58.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 339760411 eff 35.201% time 121.556 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3713 derenzo_full.raw 0   4.90 0 360   64.000  192.000    91.979278    -7.840000 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (92.0 -7.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 340385140 eff 35.265% time 127.311 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3750 derenzo_full.raw 0   4.90 0 360   64.000  192.000    82.179278   -24.814098 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (82.2 -24.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 340174152 eff 35.243% time 124.429 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3787 derenzo_full.raw 0   4.90 0 360   64.000  192.000    72.379278   -41.788196 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (72.4 -41.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 340102625 eff 35.236% time 123.052 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3824 derenzo_full.raw 0   4.90 0 360   64.000  192.000    62.579278   -58.762294 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (62.6 -58.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 340180243 eff 35.244% time 122.635 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024  965 3861 derenzo_full.raw 0   4.90 0 360   64.000  192.000    52.779278   -75.736392 0 0 1
+Phantom r (0.0 4.9) p (0.000 6.283) z (64.0 192.0) o (52.8 -75.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 965214208 good 340386570 eff 35.265% time 122.764 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 3898 derenzo_full.raw 0   6.12 0 360   64.000  192.000     0.000000   -19.584000 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (0.0 -19.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 528316494 eff 35.074% time 182.167 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 3935 derenzo_full.raw 0   6.12 0 360   64.000  192.000    12.240000   -40.784302 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (12.2 -40.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 528911067 eff 35.114% time 190.004 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 3972 derenzo_full.raw 0   6.12 0 360   64.000  192.000   -12.240000   -40.784302 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (-12.2 -40.8 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 528912279 eff 35.114% time 187.597 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 4009 derenzo_full.raw 0   6.12 0 360   64.000  192.000    24.480000   -61.984604 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (24.5 -62.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 529907279 eff 35.180% time 190.237 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 4046 derenzo_full.raw 0   6.12 0 360   64.000  192.000     0.000000   -61.984604 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (0.0 -62.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 529690200 eff 35.165% time 193.962 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 4083 derenzo_full.raw 0   6.12 0 360   64.000  192.000   -24.480000   -61.984604 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (-24.5 -62.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 529910112 eff 35.180% time 198.157 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 4120 derenzo_full.raw 0   6.12 0 360   64.000  192.000    36.720000   -83.184906 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (36.7 -83.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 531118026 eff 35.260% time 194.779 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 4157 derenzo_full.raw 0   6.12 0 360   64.000  192.000    12.240000   -83.184906 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (12.2 -83.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 530768008 eff 35.237% time 192.346 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 4194 derenzo_full.raw 0   6.12 0 360   64.000  192.000   -12.240000   -83.184906 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (-12.2 -83.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 530773822 eff 35.237% time 193.045 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 1506 4231 derenzo_full.raw 0   6.12 0 360   64.000  192.000   -36.720000   -83.184906 0 0 1
+Phantom r (0.0 6.1) p (0.000 6.283) z (64.0 192.0) o (-36.7 -83.2 0.0)
+file derenzo_full.raw read
+Phantom ngen 1506279424 good 531119193 eff 35.260% time 196.342 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 2946 4268 derenzo_full.raw 0   8.56 0 360   64.000  192.000   -23.722168   -13.696000 0 0 1
+Phantom r (0.0 8.6) p (0.000 6.283) z (64.0 192.0) o (-23.7 -13.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 2946760704 good 1033885920 eff 35.086% time 365.517 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 2946 4305 derenzo_full.raw 0   8.56 0 360   64.000  192.000   -40.842168   -43.348710 0 0 1
+Phantom r (0.0 8.6) p (0.000 6.283) z (64.0 192.0) o (-40.8 -43.3 0.0)
+file derenzo_full.raw read
+Phantom ngen 2946760704 good 1036072963 eff 35.160% time 380.336 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 2946 4342 derenzo_full.raw 0   8.56 0 360   64.000  192.000   -57.962168   -13.696000 0 0 1
+Phantom r (0.0 8.6) p (0.000 6.283) z (64.0 192.0) o (-58.0 -13.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 2946760704 good 1036054748 eff 35.159% time 386.449 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 2946 4379 derenzo_full.raw 0   8.56 0 360   64.000  192.000   -57.962168   -73.001420 0 0 1
+Phantom r (0.0 8.6) p (0.000 6.283) z (64.0 192.0) o (-58.0 -73.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 2946760704 good 1039274312 eff 35.268% time 389.627 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 2946 4416 derenzo_full.raw 0   8.56 0 360   64.000  192.000   -75.082168   -43.348710 0 0 1
+Phantom r (0.0 8.6) p (0.000 6.283) z (64.0 192.0) o (-75.1 -43.3 0.0)
+file derenzo_full.raw read
+Phantom ngen 2946760704 good 1038643290 eff 35.247% time 383.661 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 2946 4453 derenzo_full.raw 0   8.56 0 360   64.000  192.000   -92.202168   -13.696000 0 0 1
+Phantom r (0.0 8.6) p (0.000 6.283) z (64.0 192.0) o (-92.2 -13.7 0.0)
+file derenzo_full.raw read
+Phantom ngen 2946760704 good 1039252009 eff 35.268% time 386.002 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 6024 4490 derenzo_full.raw 0  12.24 0 360   64.000  192.000   -33.920483    19.584000 0 0 1
+Phantom r (0.0 12.2) p (0.000 6.283) z (64.0 192.0) o (-33.9 19.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 6024331264 good 2114997405 eff 35.108% time 781.732 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 6024 4527 derenzo_full.raw 0  12.24 0 360   64.000  192.000   -82.880483    19.584000 0 0 1
+Phantom r (0.0 12.2) p (0.000 6.283) z (64.0 192.0) o (-82.9 19.6 0.0)
+file derenzo_full.raw read
+Phantom ngen 6024331264 good 2123067058 eff 35.242% time 797.100 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>bin\fullsim.exe 2 256 1024 6024 4564 derenzo_full.raw 0  12.24 0 360   64.000  192.000   -58.400483    61.984604 0 0 1
+Phantom r (0.0 12.2) p (0.000 6.283) z (64.0 192.0) o (-58.4 62.0 0.0)
+file derenzo_full.raw read
+Phantom ngen 6024331264 good 2123056254 eff 35.241% time 785.314 ms
+file derenzo_full.raw written
+
+C:\Users\Richard\OneDrive\toGit2>
+================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

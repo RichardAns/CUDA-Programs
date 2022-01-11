@@ -1,5 +1,9 @@
-// program smsplit support programfor Chapter 8 OSEM PET reconstuction
-// Sort system matrix into OSEM substes as discussed in text
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
+// program smsplit support program for Chapter 8 OSEM PET reconstuction
+// Sort system matrix into OSEM subsets as discussed in text
 
 #include "cx.h"
 #include "cxbinio.h"

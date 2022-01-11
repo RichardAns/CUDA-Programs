@@ -1,0 +1,207 @@
+================================= generate spot maps with fullsim ================================
+D:\temp\newspot>c:\Users\Richard\OneDrive\toGit2\bin\fullsim.exe 1 256 1024 100000 123456 0 100 0 1
+Detector: len 508.0 radius 254.648 rings 127 crytals/ring 400 zstep 4.000 phistep 0.900 (degrees)
+Roi  phi (  0.000   0.016) r (    0.0     2.0) z (  252.0   256.0) a (    0.01     1.00   254.00)
+file spot_map000.raw written
+ngen 100007936000 good 44914700712 eff 44.911% tries 3815 passes 100 gen time 5773.044 io time 331.913 total 6106.401 ms
+file spot_map001.raw written
+ngen 100007936000 good 44915910607 eff 44.912% tries 3815 passes 100 gen time 11573.237 io time 316.170 total 12225.033 ms
+file spot_map002.raw written
+ngen 100007936000 good 44917917303 eff 44.914% tries 3815 passes 100 gen time 17350.051 io time 297.366 total 18301.818 ms
+file spot_map003.raw written
+ngen 100007936000 good 44921464874 eff 44.918% tries 3815 passes 100 gen time 23177.233 io time 345.339 total 24476.778 ms
+file spot_map004.raw written
+ngen 100007936000 good 44925962257 eff 44.922% tries 3815 passes 100 gen time 29011.294 io time 326.997 total 30640.169 ms
+file spot_map005.raw written
+ngen 100007936000 good 44931471925 eff 44.928% tries 3815 passes 100 gen time 34860.116 io time 392.479 total 36883.626 ms
+file spot_map006.raw written
+ngen 100007936000 good 44938160399 eff 44.935% tries 3815 passes 100 gen time 40768.156 io time 296.678 total 43090.623 ms
+file spot_map007.raw written
+ngen 100007936000 good 44945658460 eff 44.942% tries 3815 passes 100 gen time 46679.961 io time 337.968 total 49342.799 ms
+file spot_map008.raw written
+ngen 100007936000 good 44954656494 eff 44.951% tries 3815 passes 100 gen time 52558.816 io time 316.030 total 55540.237 ms
+file spot_map009.raw written
+ngen 100007936000 good 44964712721 eff 44.961% tries 3815 passes 100 gen time 58465.399 io time 310.812 total 61760.037 ms
+file spot_map010.raw written
+ngen 100007936000 good 44975838198 eff 44.972% tries 3815 passes 100 gen time 64390.954 io time 291.622 total 67979.515 ms
+file spot_map011.raw written
+ngen 100007936000 good 44988239339 eff 44.985% tries 3815 passes 100 gen time 70325.310 io time 326.514 total 74242.806 ms
+file spot_map012.raw written
+ngen 100007936000 good 45001225727 eff 44.998% tries 3815 passes 100 gen time 76247.715 io time 414.449 total 80582.503 ms
+file spot_map013.raw written
+ngen 100007936000 good 45015955514 eff 45.012% tries 3815 passes 100 gen time 82187.332 io time 361.216 total 86886.538 ms
+file spot_map014.raw written
+ngen 100007936000 good 45031855908 eff 45.028% tries 3815 passes 100 gen time 88176.307 io time 291.678 total 93169.562 ms
+file spot_map015.raw written
+ngen 100007936000 good 45048386219 eff 45.045% tries 3815 passes 100 gen time 94253.690 io time 327.626 total 99576.289 ms
+file spot_map016.raw written
+ngen 100007936000 good 45065995437 eff 45.062% tries 3815 passes 100 gen time 100410.238 io time 305.197 total 106040.332 ms
+file spot_map017.raw written
+ngen 100007936000 good 45085577742 eff 45.082% tries 3815 passes 100 gen time 106537.638 io time 442.836 total 112613.078 ms
+file spot_map018.raw written
+ngen 100007936000 good 45105787776 eff 45.102% tries 3815 passes 100 gen time 112592.777 io time 306.792 total 118977.297 ms
+file spot_map019.raw written
+ngen 100007936000 good 45126947717 eff 45.123% tries 3815 passes 100 gen time 118658.738 io time 393.677 total 125439.880 ms
+file spot_map020.raw written
+ngen 100007936000 good 45149865870 eff 45.146% tries 3815 passes 100 gen time 124752.979 io time 321.775 total 131858.305 ms
+file spot_map021.raw written
+ngen 100007936000 good 45173437659 eff 45.170% tries 3815 passes 100 gen time 130933.548 io time 546.827 total 138588.186 ms
+file spot_map022.raw written
+ngen 100007936000 good 45198549351 eff 45.195% tries 3815 passes 100 gen time 137173.262 io time 295.754 total 145126.328 ms
+file spot_map023.raw written
+ngen 100007936000 good 45224947989 eff 45.221% tries 3815 passes 100 gen time 143570.391 io time 350.593 total 151876.272 ms
+file spot_map024.raw written
+ngen 100007936000 good 45252412618 eff 45.249% tries 3815 passes 100 gen time 149910.727 io time 318.039 total 158537.086 ms
+file spot_map025.raw written
+ngen 100007936000 good 45281130766 eff 45.278% tries 3815 passes 100 gen time 156236.433 io time 301.707 total 165166.741 ms
+file spot_map026.raw written
+ngen 100007936000 good 45310699208 eff 45.307% tries 3815 passes 100 gen time 162526.311 io time 379.936 total 171839.002 ms
+file spot_map027.raw written
+ngen 100007936000 good 45341963476 eff 45.338% tries 3815 passes 100 gen time 168773.642 io time 332.939 total 178422.496 ms
+file spot_map028.raw written
+ngen 100007936000 good 45374444946 eff 45.371% tries 3815 passes 100 gen time 174982.955 io time 317.549 total 184951.599 ms
+file spot_map029.raw written
+ngen 100007936000 good 45407602955 eff 45.404% tries 3815 passes 100 gen time 181255.984 io time 286.943 total 191513.943 ms
+file spot_map030.raw written
+ngen 100007936000 good 45442737249 eff 45.439% tries 3815 passes 100 gen time 187574.801 io time 285.397 total 198120.411 ms
+file spot_map031.raw written
+ngen 100007936000 good 45478941992 eff 45.475% tries 3815 passes 100 gen time 193927.829 io time 327.901 total 204803.723 ms
+file spot_map032.raw written
+ngen 100007936000 good 45516331308 eff 45.513% tries 3815 passes 100 gen time 200257.361 io time 308.097 total 211443.628 ms
+file spot_map033.raw written
+ngen 100007936000 good 45555508498 eff 45.552% tries 3815 passes 100 gen time 206659.799 io time 300.617 total 218149.247 ms
+file spot_map034.raw written
+ngen 100007936000 good 45595273816 eff 45.592% tries 3815 passes 100 gen time 213088.269 io time 439.974 total 225020.489 ms
+file spot_map035.raw written
+ngen 100007936000 good 45636941032 eff 45.633% tries 3815 passes 100 gen time 219425.125 io time 321.919 total 231681.763 ms
+file spot_map036.raw written
+ngen 100007936000 good 45679632931 eff 45.676% tries 3815 passes 100 gen time 225747.643 io time 304.321 total 238311.030 ms
+file spot_map037.raw written
+ngen 100007936000 good 45724031286 eff 45.720% tries 3815 passes 100 gen time 232016.692 io time 312.222 total 244894.495 ms
+file spot_map038.raw written
+ngen 100007936000 good 45769628751 eff 45.766% tries 3815 passes 100 gen time 238166.327 io time 332.587 total 251378.944 ms
+file spot_map039.raw written
+ngen 100007936000 good 45816780828 eff 45.813% tries 3815 passes 100 gen time 244107.985 io time 308.762 total 257631.570 ms
+file spot_map040.raw written
+ngen 100007936000 good 45865386601 eff 45.862% tries 3815 passes 100 gen time 249968.109 io time 291.197 total 263785.060 ms
+file spot_map041.raw written
+ngen 100007936000 good 45915344347 eff 45.912% tries 3815 passes 100 gen time 255840.329 io time 367.279 total 270026.695 ms
+file spot_map042.raw written
+ngen 100007936000 good 45966764634 eff 45.963% tries 3815 passes 100 gen time 261772.913 io time 317.457 total 276278.883 ms
+file spot_map043.raw written
+ngen 100007936000 good 46019664145 eff 46.016% tries 3815 passes 100 gen time 267715.241 io time 308.413 total 282531.834 ms
+file spot_map044.raw written
+ngen 100007936000 good 46074346897 eff 46.071% tries 3815 passes 100 gen time 273605.964 io time 293.667 total 288718.398 ms
+file spot_map045.raw written
+ngen 100007936000 good 46130110828 eff 46.126% tries 3815 passes 100 gen time 279489.396 io time 332.569 total 294937.531 ms
+file spot_map046.raw written
+ngen 100007936000 good 46187642695 eff 46.184% tries 3815 passes 100 gen time 285451.967 io time 407.707 total 301310.070 ms
+file spot_map047.raw written
+ngen 100007936000 good 46246808149 eff 46.243% tries 3815 passes 100 gen time 291460.167 io time 310.476 total 307631.015 ms
+file spot_map048.raw written
+ngen 100007936000 good 46307807142 eff 46.304% tries 3815 passes 100 gen time 297429.359 io time 293.594 total 313896.475 ms
+file spot_map049.raw written
+ngen 100007936000 good 46370139611 eff 46.366% tries 3815 passes 100 gen time 303358.442 io time 331.650 total 320159.712 ms
+file spot_map050.raw written
+ngen 100007936000 good 46434116241 eff 46.430% tries 3815 passes 100 gen time 309313.643 io time 317.347 total 326434.427 ms
+file spot_map051.raw written
+ngen 100007936000 good 46500023560 eff 46.496% tries 3815 passes 100 gen time 315361.493 io time 302.331 total 332786.865 ms
+file spot_map052.raw written
+ngen 100007936000 good 46567134795 eff 46.563% tries 3815 passes 100 gen time 321472.293 io time 283.417 total 339183.312 ms
+file spot_map053.raw written
+ngen 100007936000 good 46636575660 eff 46.633% tries 3815 passes 100 gen time 327598.580 io time 322.440 total 345634.459 ms
+file spot_map054.raw written
+ngen 100007936000 good 46707925607 eff 46.704% tries 3815 passes 100 gen time 333637.184 io time 311.817 total 351986.996 ms
+file spot_map055.raw written
+ngen 100007936000 good 46780739306 eff 46.777% tries 3815 passes 100 gen time 339662.405 io time 302.495 total 358316.918 ms
+file spot_map056.raw written
+ngen 100007936000 good 46855242446 eff 46.852% tries 3815 passes 100 gen time 345678.129 io time 322.842 total 364657.660 ms
+file spot_map057.raw written
+ngen 100007936000 good 46932100503 eff 46.928% tries 3815 passes 100 gen time 351618.043 io time 317.620 total 370917.443 ms
+file spot_map058.raw written
+ngen 100007936000 good 47010604676 eff 47.007% tries 3815 passes 100 gen time 357523.524 io time 304.859 total 377130.164 ms
+file spot_map059.raw written
+ngen 100007936000 good 47090840279 eff 47.087% tries 3815 passes 100 gen time 363401.875 io time 293.685 total 383304.719 ms
+file spot_map060.raw written
+ngen 100007936000 good 47173714358 eff 47.170% tries 3815 passes 100 gen time 369273.051 io time 334.635 total 389512.728 ms
+file spot_map061.raw written
+ngen 100007936000 good 47258365394 eff 47.255% tries 3815 passes 100 gen time 375208.317 io time 315.114 total 395765.358 ms
+file spot_map062.raw written
+ngen 100007936000 good 47344980020 eff 47.341% tries 3815 passes 100 gen time 381279.350 io time 389.788 total 402228.746 ms
+file spot_map063.raw written
+ngen 100007936000 good 47434164062 eff 47.430% tries 3815 passes 100 gen time 387476.972 io time 295.466 total 408724.203 ms
+file spot_map064.raw written
+ngen 100007936000 good 47524748083 eff 47.521% tries 3815 passes 100 gen time 393685.902 io time 328.175 total 415263.665 ms
+file spot_map065.raw written
+ngen 100007936000 good 47618516026 eff 47.615% tries 3815 passes 100 gen time 399897.405 io time 304.665 total 421782.051 ms
+file spot_map066.raw written
+ngen 100007936000 good 47713983253 eff 47.710% tries 3815 passes 100 gen time 406047.429 io time 299.471 total 428233.704 ms
+file spot_map067.raw written
+ngen 100007936000 good 47812035866 eff 47.808% tries 3815 passes 100 gen time 412191.644 io time 337.809 total 434717.998 ms
+file spot_map068.raw written
+ngen 100007936000 good 47912440595 eff 47.909% tries 3815 passes 100 gen time 418425.443 io time 325.627 total 441279.596 ms
+file spot_map069.raw written
+ngen 100007936000 good 48015190939 eff 48.011% tries 3815 passes 100 gen time 424597.759 io time 300.159 total 447754.353 ms
+file spot_map070.raw written
+ngen 100007936000 good 48120695570 eff 48.117% tries 3815 passes 100 gen time 430970.337 io time 296.552 total 454426.204 ms
+file spot_map071.raw written
+ngen 100007936000 good 48228659663 eff 48.225% tries 3815 passes 100 gen time 437311.720 io time 328.639 total 461098.385 ms
+file spot_map072.raw written
+ngen 100007936000 good 48339549508 eff 48.336% tries 3815 passes 100 gen time 443907.540 io time 307.053 total 468003.488 ms
+file spot_map073.raw written
+ngen 100007936000 good 48452731000 eff 48.449% tries 3815 passes 100 gen time 450319.210 io time 425.507 total 474843.107 ms
+file spot_map074.raw written
+ngen 100007936000 good 48569432252 eff 48.566% tries 3815 passes 100 gen time 456461.574 io time 316.941 total 481304.964 ms
+file spot_map075.raw written
+ngen 100007936000 good 48688425250 eff 48.685% tries 3815 passes 100 gen time 462592.593 io time 318.112 total 487756.245 ms
+file spot_map076.raw written
+ngen 100007936000 good 48810480546 eff 48.807% tries 3815 passes 100 gen time 468913.475 io time 404.773 total 494484.285 ms
+file spot_map077.raw written
+ngen 100007936000 good 48936048666 eff 48.932% tries 3815 passes 100 gen time 475256.801 io time 293.118 total 501124.025 ms
+file spot_map078.raw written
+ngen 100007936000 good 49064323739 eff 49.060% tries 3815 passes 100 gen time 481572.090 io time 332.192 total 507774.033 ms
+file spot_map079.raw written
+ngen 100007936000 good 49195979138 eff 49.192% tries 3815 passes 100 gen time 487824.593 io time 317.978 total 514346.781 ms
+file spot_map080.raw written
+ngen 100007936000 good 49331107305 eff 49.327% tries 3815 passes 100 gen time 494043.812 io time 307.700 total 520876.702 ms
+file spot_map081.raw written
+ngen 100007936000 good 49469253234 eff 49.465% tries 3815 passes 100 gen time 500187.248 io time 294.046 total 527316.603 ms
+file spot_map082.raw written
+ngen 100007936000 good 49611368851 eff 49.607% tries 3815 passes 100 gen time 506257.025 io time 334.185 total 533723.616 ms
+file spot_map083.raw written
+ngen 100007936000 good 49756935848 eff 49.753% tries 3815 passes 100 gen time 512322.795 io time 328.235 total 540119.902 ms
+file spot_map084.raw written
+ngen 100007936000 good 49906485028 eff 49.903% tries 3815 passes 100 gen time 518537.039 io time 417.717 total 546754.084 ms
+file spot_map085.raw written
+ngen 100007936000 good 50060057988 eff 50.056% tries 3815 passes 100 gen time 524782.386 io time 327.072 total 553329.166 ms
+file spot_map086.raw written
+ngen 100007936000 good 50217586125 eff 50.214% tries 3815 passes 100 gen time 531018.812 io time 304.899 total 559872.998 ms
+file spot_map087.raw written
+ngen 100007936000 good 50379585123 eff 50.376% tries 3815 passes 100 gen time 537293.369 io time 320.761 total 566472.237 ms
+file spot_map088.raw written
+ngen 100007936000 good 50545587838 eff 50.542% tries 3815 passes 100 gen time 543619.312 io time 291.595 total 573092.470 ms
+file spot_map089.raw written
+ngen 100007936000 good 50716298068 eff 50.712% tries 3815 passes 100 gen time 550075.957 io time 306.281 total 579858.088 ms
+file spot_map090.raw written
+ngen 100007936000 good 50891586605 eff 50.888% tries 3815 passes 100 gen time 556554.614 io time 326.966 total 586666.355 ms
+file spot_map091.raw written
+ngen 100007936000 good 51072059600 eff 51.068% tries 3815 passes 100 gen time 562918.330 io time 299.803 total 593332.270 ms
+file spot_map092.raw written
+ngen 100007936000 good 51257681620 eff 51.254% tries 3815 passes 100 gen time 569351.427 io time 318.874 total 600086.496 ms
+file spot_map093.raw written
+ngen 100007936000 good 51448190587 eff 51.444% tries 3815 passes 100 gen time 575718.627 io time 294.695 total 606750.771 ms
+file spot_map094.raw written
+ngen 100007936000 good 51644306683 eff 51.640% tries 3815 passes 100 gen time 582098.009 io time 317.856 total 613450.289 ms
+file spot_map095.raw written
+ngen 100007936000 good 51846253641 eff 51.842% tries 3815 passes 100 gen time 588735.563 io time 344.901 total 620435.382 ms
+file spot_map096.raw written
+ngen 100007936000 good 52054118470 eff 52.050% tries 3815 passes 100 gen time 595508.330 io time 309.700 total 627520.573 ms
+file spot_map097.raw written
+ngen 100007936000 good 52268376118 eff 52.264% tries 3815 passes 100 gen time 602249.620 io time 330.877 total 634595.125 ms
+file spot_map098.raw written
+ngen 100007936000 good 52489281746 eff 52.485% tries 3815 passes 100 gen time 608980.330 io time 418.625 total 641747.023 ms
+file spot_map099.raw written
+ngen 100007936000 good 52716665044 eff 52.712% tries 3815 passes 100 gen time 615685.439 io time 311.678 total 648766.086 ms
+done
+
+D:\temp\newspot>

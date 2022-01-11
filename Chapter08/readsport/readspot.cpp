@@ -1,3 +1,7 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // chapter 8 readspot 
 // This is a support program for chapter 8 PET simualtion
 // This code does not use the GPU and is not discussed in detail in the book.
@@ -130,7 +134,7 @@ int main(int argc,char* argv[])
 			} // end (z2,c2) loop
 			sum_sum += slice_sum;
 			sum_lors += lors;
-			std::max(lmax_max,lmax);
+			lmax_max = std::max(lmax_max,lmax);  
 			(slice_sum > 0) ? good++ : bad++;
 			if(lors > 0 && dologs){
 				fprintf(slog,"slice %2.2d-%3.3d hits %llu lors %d max %u min %u\n",z1,c1,slice_sum,lors,lmax,lmin);

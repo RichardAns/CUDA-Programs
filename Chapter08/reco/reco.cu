@@ -1,4 +1,58 @@
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
 // reco program includes examples 8.7 and 8.8.
+// 
+// RTX 2070
+// using blocks = 180000, threads = 400 valcut 0.0 dzcut 63
+// file petSMtab.raw read
+// sm_size = 12829371, lor_size 167232000 vol_size 2560000
+// file petSM.raw read
+// file derenzo_full.raw read
+// normalization done for 100 rings and 64 slices
+// file norm_new.raw written
+// file smnorm.raw written
+// Host normalize call 218.755 ms
+// total activity 33232349840, activity density 264455
+// iteration   1 chi 6.187530e+16 times fwd 1738.016 bwd 1713.315 rsc 0.166 chi 0.339 all 3451.838 ms
+// iteration   2 chi 5.228258e+16 times fwd 3434.485 bwd 3438.568 rsc 0.325 chi 0.656 all 6874.229 ms
+// iteration   3 chi 4.512538e+16 times fwd 5133.819 bwd 5166.416 rsc 0.485 chi 0.972 all 10302.026 ms
+// iteration   4 chi 3.954603e+16 times fwd 6832.397 bwd 6896.475 rsc 0.651 chi 1.286 all 13731.291 ms
+// iteration   5 chi 3.499340e+16 times fwd 8537.485 bwd 8631.004 rsc 0.809 chi 1.601 all 17171.546 ms
+// iteration   6 chi 3.122855e+16 times fwd 10241.888 bwd 10367.569 rsc 0.980 chi 1.876 all 20613.123 ms
+// iteration   7 chi 2.809372e+16 times fwd 11947.100 bwd 12106.307 rsc 1.142 chi 2.222 all 24057.757 ms
+// iteration   8 chi 2.546026e+16 times fwd 13656.071 bwd 13849.784 rsc 1.301 chi 2.537 all 27510.837 ms
+// iteration   9 chi 2.322437e+16 times fwd 15367.685 bwd 15595.321 rsc 1.452 chi 2.854 all 30968.618 ms
+// iteration  10 chi 2.130530e+16 times fwd 17081.295 bwd 17342.082 rsc 1.613 chi 3.171 all 34429.630 ms
+// file reco2022cav_mlem010.raw written
+// All time 34435.392 ms
+// 
+// RTX 3080
+// C:\bin\reco.exe derenzo_full.raw recotest petSM.raw petSMtab.raw 10
+// using blocks = 180000, threads = 400 valcut 0.0 dzcut 63
+// file petSMtab.raw read
+// sm_size = 12829371, lor_size 167232000 vol_size 2560000
+// file petSM.raw read
+// file derenzo_full.raw read
+// bad open on gold.raw for read
+// normalization done for 100 rings and 64 slices
+// file norm_new.raw written
+// file smnorm.raw written
+// Host normalize call 194.542 ms
+// total activity 33232349840, activity density 264455
+// iteration   1 chi 6.187530e+16 times fwd 1042.826 bwd 955.639 rsc 0.057 chi 0.152 all 1998.676 ms
+// iteration   2 chi 5.228258e+16 times fwd 2076.026 bwd 1920.139 rsc 0.113 chi 0.281 all 3996.642 ms
+// iteration   3 chi 4.512538e+16 times fwd 3111.229 bwd 2886.575 rsc 0.172 chi 0.412 all 5998.537 ms
+// iteration   4 chi 3.954603e+16 times fwd 4146.787 bwd 3854.938 rsc 0.228 chi 0.541 all 8002.729 ms
+// iteration   5 chi 3.499340e+16 times fwd 5182.085 bwd 4824.915 rsc 0.282 chi 0.672 all 10008.276 ms
+// iteration   6 chi 3.122855e+16 times fwd 6217.956 bwd 5794.162 rsc 0.335 chi 0.806 all 12013.653 ms
+// iteration   7 chi 2.809372e+16 times fwd 7252.934 bwd 6765.277 rsc 0.392 chi 0.939 all 14020.012 ms
+// iteration   8 chi 2.546026e+16 times fwd 8288.410 bwd 7736.630 rsc 0.455 chi 1.072 all 16027.124 ms
+// iteration   9 chi 2.322437e+16 times fwd 9325.056 bwd 8708.379 rsc 0.515 chi 1.211 all 18035.805 ms
+// iteration  10 chi 2.130530e+16 times fwd 10361.244 bwd 9680.231 rsc 0.599 chi 1.356 all 20044.162 ms
+// file recotest.raw_mlem010.raw written
+// All time 20048.690 ms
 
 #include "cx.h"
 #include "cxtimers.h"
@@ -232,10 +286,49 @@ int list_sm(thrustHvec<smPart> &sm,thrustHvec<uint> &smhits,thrustHvec<uint> &sm
 	return 0;
 }
 
+// save direclty are Cartesian 200x200x64 image
+int pol_save(const char* name, float* vol)
+{
+	struct cp_grid_map {
+		float b[voxBox][voxBox];
+		int x; // carteisian origin
+		int y;
+		int phi;  // polar voxel
+		int r;
+	};
+
+	//int pol_size =  cryNum*zNum*radNum;  // NB order [ring, z, phi]
+	int cart_size = voxNum*voxNum*zNum;  //          [2*z,    y,   x]
+	int map_size =  cryNum*radNum;       //          [ring, phi]
+
+	std::vector<float>       cart(cart_size);
+	std::vector<cp_grid_map>  map(map_size);
+	if(cx::read_raw("pol2cart.tab",map.data(),map_size,0)){printf("bad read on pol2cart.tab\n"); return 1;}
+	for(int r=0;r<radNum;r++) for(int z=0;z<zNum;z++) for(int p=0;p<cryNum;p++){
+		float val = vol[(r*zNum+z)*cryNum+p];
+
+		float vol_fraction =  1.0f;  //2*r+1;
+		int index = r*cryNum+p;
+		if(val > 0.0f){
+			int x0 = map[index].x;
+			int y0 = map[index].y;
+			for(int i=0;i<voxBox;i++) {
+				int y = y0+i;
+				if(y>=0 && y<voxNum) for(int j= 0;j<voxBox;j++){
+					int x = x0+j;
+					if(x>=0 && x <voxNum && map[index].b[i][j]>0.0f) cart[(z*voxNum+y)*voxNum+x] += vol_fraction*val*map[index].b[i][j];
+				}
+			}
+		}
+	}
+	cx::write_raw(name,cart.data(),cart_size);
+	return 0;
+}
+
 int main(int argc,char *argv[])
 {
 	if(argc < 2){
-		printf("usage reco <pet file (phantom)> <result file> <sm file> <sm tab file> <iterations> [ dzcut|63] valcut|0 usehost|0] blocks|5000 threads|400 rmin|0 rmax|100\n");
+		printf("usage reco <pet file (phantom)> <result file> <sm file> <sm tab file> <iterations> [ dzcut|63] valcut|0 usehost|0] blocks|5000 threads|400 rmin|0 rmax|100  snapsave|50\n");
 		return 0;
 	}
 
@@ -258,6 +351,7 @@ int main(int argc,char *argv[])
 
 	int rmin  = (argc > 11) ? atoi(argv[11]) : 0;
 	int rmax = (argc > 12) ? atoi(argv[12]) : 100;
+	int snapsave = (argc > 13) ? atoi(argv[13]) : 50;  // extra saves
 
 	// this for sysmat_tab
 	thrustHvec<smTab> systab(radNum);  // start and end indicies for individual rings within sysmat file
@@ -289,12 +383,16 @@ int main(int argc,char *argv[])
 	thrustHvec<float>     vol(vol_size); // The PET voxels to be calculated
 	thrustDvec<float> dev_vol(vol_size);
 
-	int usegold = 1;
-	thrustHvec<float> gold(vol_size);                     // gold standard answer from simuation
-	thrustDvec<float> dev_gold(vol_size);                 // a chisqd will be calculated if the
-	thrustDvec<float> dev_chisd(vol_size);                // file gold.raw is succefully read
-	if( cx::read_raw("gold.raw",gold.data(),vol_size,0) ) usegold = 0;
-	if(usegold) dev_gold = gold;
+	// here we use the known generated phantom from fullsim to calculate a chi-square
+	// with respect to the current interation as a progress monitor. At present this
+	// is not very successful. 
+	int usegold = 1;   
+	thrustHvec<float> gold(vol_size);    // gold standard answer from simuation
+	thrustDvec<float> dev_gold(vol_size);   // a chisqd will be calculated if the
+	thrustDvec<float> dev_chisd(vol_size);  // file gold.raw is successfully read	
+	if( cx::read_raw("gold.raw",gold.data(),vol_size,0) ) usegold = 0;  
+	if (usegold) dev_gold = gold; 
+	
 	thrustHvec<float>     norm(norm_size); // voxel normaliztions depends on both ring and z values
 	thrustDvec<float> dev_norm(norm_size);
 
@@ -303,7 +401,7 @@ int main(int argc,char *argv[])
 	ntim.start();
 
 	// due to z-sliding of sm elements normaisation of sm elements requires care
-	// the required factors are calculated here every time but could be read from
+	// the required factors are calculated here every run but could be read from
 	// the saved file to save time.
 	normalise_sm(sm,norm,systab,dzcut,valcut);
 	cx::write_raw("smnorm.raw",norm.data(),norm_size);
@@ -388,10 +486,14 @@ int main(int argc,char *argv[])
 		rescale<<<blscale,thscale>>>(dev_vol.data().get(),dev_BP.data().get(),dev_norm.data().get());
 		cx::ok(cudaDeviceSynchronize());
 		tim3.add();
-		// debug detailed progess check
-		//vol = dev_vol;  
-		//sprintf(name,"%s%3.3d.raw",argv[2],iter+1);
-		//cx::write_raw(name, vol.data(), vol_size);
+		// save  progress
+		if ((iter+1)%snapsave == 0 && (iter+1) < niter) {
+			vol = dev_vol;
+			//sprintf(name, "%s%3.3d.raw", argv[2], iter+1);
+			//cx::write_raw(name, vol.data(), vol_size);
+			sprintf(name, "%s_cart%3.3d.raw", argv[2], iter+1);
+			pol_save(name, vol.data());
+		}
 		cx::ok(cudaDeviceSynchronize());
 
 		tim4.start();
@@ -407,10 +509,12 @@ int main(int argc,char *argv[])
 		printf("iteration %3d chi %5e times fwd %.3f bwd %.3f rsc %.3f chi %.3f all %.3f ms\n",iter+1,xhisd,tim1.time(),tim2.time(),tim3.time(),tim4.time(),all.time());
 		int iout = iter+1;
 		//if(iout<=5 || (iout<=10 && iout%2==0) || (iout<=50 && iout%10==0) || iout%50==0 || iout==niter ){  // long runs
-		if(iout==niter){
-			sprintf(name,"%s_mlem%3.3d.raw",argv[2],iout);
+		if(iout==niter){		
 			vol = dev_vol;
-			cx::write_raw(name,vol.data(),vol_size);
+			//sprintf(name,"%s_mlem%3.3d.raw",argv[2],iout);
+			//cx::write_raw(name,vol.data(),vol_size);
+			sprintf(name,"%s_cart%3.3d.raw",argv[2],iout);
+			pol_save(name, vol.data());
 		}
 	}
 

@@ -1,6 +1,28 @@
-// examples 8.1-8.4 The fullsim program
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
 
-// This is a complete MC program with the modes of operation selected with first parameter
+// examples 8.1-8.4 The fullsim program
+// 
+// 8.1 - 8.4 (fullsim)
+// 
+// RTX 2070
+// C:\bin\fullsim.exe 1 256 1024  100000 123456 50 51 0 1
+// Detector: len 508.0 radius 254.648 rings 127 crytals/ring 400 zstep 4.000 phistep 0.900 (degrees)
+// Roi  phi (  0.000   0.016) r (  100.0   102.0) z (  252.0   256.0) a (    0.79   101.00   254.00)
+// file spot_map050.raw written
+// ngen 100007936000 good 46433964145 eff 46.430% tries 3815 passes 100 gen time 19719.253 io time // 87.248 total 19810.513 ms
+// done
+// 
+// RTX 3080
+// C:\bin\fullsim.exe 1 256 1024  100000 123456 50 51 0 1
+// Detector: len 508.0 radius 254.648 rings 127 crytals/ring 400 zstep 4.000 phistep 0.900 (degrees)
+// Roi  phi (  0.000   0.016) r (  100.0   102.0) z (  252.0   256.0) a (    0.79   101.00   254.00)
+// file spot_map050.raw written
+// ngen 100007936000 good 46433964145 eff 46.430% tries 3815 passes 100 gen time 6247.259 io time // 58.241 total 6306.808 ms
+// done
+
+// Fullsim is a complete MC program with the modes of operation selected with first parameter
 // 
 // mode 1:
 //   Generate polar voxel spot files needed to build system matrix as discussed in chapter 8.
@@ -18,7 +40,7 @@
 //   Note the output files have fixed names are are overwritten if fullsim is rerun.
 //
 // mode 2:
-//   Generate phantom data set as lor file. Currently only cylindrical voulems are
+//   Generate phantom data set as lor file. Currently only cylindrical voulumes are
 //   supported by the code can easily be extended to in include cubes and spheres as required
 //   The output file is appended to if it already exists. This allows a phantom with multiple 
 //   cylinders to be built and as an example associated Derenzo program builds a script file to do this.
@@ -350,14 +372,14 @@ int do_phantom(int argc,char *argv[])
 	thrustDvec<uint>   dev_zdzmap(zsize);
 
 	// if file exists we append
-	if(cx::can_be_opened(argv[6])){
+	if(savelors != 0 && cx::can_be_opened(argv[6])){
 		if(cx::read_raw(argv[6],zdzmap.data(),zsize) != 0) for(uint k=0;k<zsize;k++) zdzmap[k] = 0;
 		else dev_zdzmap = zdzmap;
 	}
-	if(cx::can_be_opened("phant_roi_all.raw")){
+	if(savevol != 0 && cx::can_be_opened("phant_roi_all.raw")){
 		if(cx::read_raw("phant_roi_all.raw",vfill.data(),vsize) == 0) dev_vfill = vfill;
 	}
-	if(cx::can_be_opened("phant_roi_good.raw")){
+	if(savevol != 0 && cx::can_be_opened("phant_roi_good.raw")){
 		if(cx::read_raw("phant_roi_good.raw",vfill.data(),vsize) == 0) dev_vfill2 = vfill;
 	}
 
@@ -532,7 +554,7 @@ int main(int argc,char *argv[])
 	if(ndo <= 1000) ngen *= (long long)ndo;
 	else {
 		passes = (ndo + 999) / 1000;
-		ngen *= 1000ll;
+		ngen *= 1000ll;  // ll long long
 	}
 	uint tries = (ngen+size-1)/size;
 	ngen = (long long)tries*(long long)size;
