@@ -1,5 +1,17 @@
-﻿// program gpusum, example 1.3
-//
+﻿// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 is licensed under CC BY-NC 4.0 for non-commercial use
+// This code may be freely changed but please retain an acknowledgement
+
+// program 1.3 gpusum
+// 
+// RTX 2070
+// C:\Users\Richard\OneDrive\toGit2>bin\gpusum.exe 1000000000 1000
+// gpu sum = 2.0000000134, steps 1000000000 terms 1000 time 1881.113 ms
+// 
+// RTX 3080
+// C:\Users\Richard\OneDrive\toGit2>bin\gpusum.exe 1000000000 1000
+// gpu sum = 1.9999998123, steps 1000000000 terms 1000 time 726.253 ms
+
 #include "cx.h"
 #include "cxtimers.h"              // cx timers
 

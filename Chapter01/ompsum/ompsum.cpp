@@ -1,5 +1,22 @@
 // program ompsum, example 1.2
+// 1.2 ompsum
 //
+// RTX 2070 
+// C:\bin\ompsum.exe 1000000 1000 4
+// omp sum = 1.9999999978,steps 1000000 terms 1000 time 648.783 ms
+// C:\bin\ompsum.exe 1000000 1000 8
+// omp sum = 1.9999999978,steps 1000000 terms 1000 time 491.938 ms
+// 
+// RTX 3080
+// C:\bin\ompsum.exe 1000000 1000 4
+// omp sum = 1.9999999978,steps 1000000 terms 1000 time 272.854 ms
+// C:\bin\ompsum.exe 1000000 1000 8
+// omp sum = 1.9999999978,steps 1000000 terms 1000 time 148.224 ms
+// C:\bin\ompsum.exe 1000000 1000 10
+// omp sum = 1.9999999978,steps 1000000 terms 1000 time 140.529 ms
+// C:\bin\ompsum.exe 1000000 1000 20
+// omp sum = 1.9999999978,steps 1000000 terms 1000 time 90.348 ms
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
@@ -27,14 +44,14 @@ int main(int argc,char *argv[])
 	double omp_sum = 0.0;
 
 	omp_set_num_threads(threads);                   // OpenMP 
-#pragma omp parallel for reduction (+:omp_sum)  // OpenMP
+    #pragma omp parallel for reduction (+:omp_sum)  // OpenMP
 	for(int step = 0; step < steps; step++){
-		float x = (float)step_size*step;                          // cast to suppress compiler warning
+		float x = step_size*step;
 		omp_sum += sinsum(x,terms);   // get sum of Taylor series
 	}
 	double cpu_time = tim.lap_ms(); // get elapsed time
 	// Trapezoidal Rule correction for end points
-	omp_sum -= 0.5*(sinsum(0.0f,terms)+sinsum((float)pi,terms));  // cast to suppress compiler warning
+	omp_sum -= 0.5*(sinsum(0.0,terms)+sinsum(pi,terms));
 	omp_sum *= step_size;
 	printf("omp sum = %.10f,steps %d terms %d time %.3f ms\n",
 		omp_sum,steps,terms,cpu_time);

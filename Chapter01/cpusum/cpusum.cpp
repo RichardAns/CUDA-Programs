@@ -1,5 +1,17 @@
-// program cpusum  example 1.1
-//
+// Programming in Parallel with CUDA - supporting code by Richard Ansorge 
+// copyright 2021 this code is licensed under CC BY-NC 4.0 for non-commercial use
+// The code may be freely changed but please retain an acknowledgement
+
+// 1.1 cpusum
+// 
+// RTX 2070
+// C:\bin\cpusum.exe 1000000 1000
+// cpu sum = 1.9999999978,steps 1000000 terms 1000 time 1966.554 ms
+// 
+// RTX 3080
+// C:\bin\cpusum.exe 1000000 1000
+// cpu sum = 1.9999999978,steps 1000000 terms 1000 time 1085.465 ms
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "cxtimers.h"
