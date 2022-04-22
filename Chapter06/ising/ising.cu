@@ -20,7 +20,7 @@
 #include <curand_kernel.h> 
 #include <random>
 
-#include "Windows.h"
+// #include "Windows.h"  // Is not required on Windows and breaks Linux compilation
 #include "opencv2/core/core.hpp"
 #include "opencv2/highgui/highgui.hpp"
 using namespace cv;
