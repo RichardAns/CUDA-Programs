@@ -61,5 +61,6 @@ int main(int argc,char *argv[])
 	int blocks  = (argc > 2) ? atoi(argv[2]) : 288;
 	int threads = (argc > 3) ? atoi(argv[3]) : 256;
 	grid3D_linear<<<blocks,threads>>>(512,512,256,id);
+    cudaDeviceSynchronize(); // necessary in Linux to see kernel printf
 	return 0;
 }
