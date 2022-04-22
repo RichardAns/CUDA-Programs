@@ -12,10 +12,10 @@
 // reduceT sums host 134217190.1 TC 134215272.0  gpu 134217184.0
 // reduceT times host (1 call) 534.644 TC 1580.658 gpu 1386.739 ms
 // 
-// NB for these timings the GPU caluclation uses FP16 values and takes
-// about the same time as the TC version. This differers from the book whee 
-// FP32 values were used and the gpu clacultion took twice as long as the TC 
-// version.
+// NB for these timings the GPU calculation uses FP16 values and takes
+// about the same time as the TC version. This differers from the book where 
+// FP32 values were used and the gpu calculation took twice as long as the TC 
+// version. These differences are explained by memory access times.
 
 #include "cx.h"
 #include "cxtimers.h"
