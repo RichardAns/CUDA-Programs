@@ -4,6 +4,9 @@
 
 // program gpusaxpy  example D.4
 //
+// RTX 3080 Linux
+// ../../Linux/gpusaxpy 21 3000
+// gpusaxpy: size 536870912, time 268.861378 ms check 1000187.81250 GFlops 23961.980
 
 #include "cx.h"
 #include "cxtimers.h"

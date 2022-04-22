@@ -7,7 +7,9 @@
 //  avxsaxpy: a*x + y for vectors x and y
 //
 // This example requires Intel C++
-
+// 
+// 3080 Linux
+// avxsaxpy: size 4194304, time 1389.132530 ms check 1000.09351 GFlops 18.116
 #include <immintrin.h>
 #include <stdio.h>
 #include <stdlib.h>

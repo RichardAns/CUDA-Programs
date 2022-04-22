@@ -7,6 +7,10 @@
 // Enabling AVX2 gives 50% speed boost.
 //
 // see also cpusaxpy which is part of this example
+//
+// RXT 3080 Linux
+// ../../Linux saxpy_vx 21 3000
+// saxpy_vs: size 2097152, time 2966.147018 ms check 1000.09351 GFlops 4.242
 
 #include <stdio.h>
 #include <stdlib.h>

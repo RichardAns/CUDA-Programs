@@ -14,7 +14,9 @@
 //                  parallel_studio_xe_2020.2.899\
 //                       compilers_and_libraries_2020\
 //                                 windows\redist\intel64\compiler
-// on my PC
+// RTX 3080 Linux (very fast)
+// ../../Linux/ompsaxpy 21 3000
+// ompsaxpy: size 4194304, time 106.611439 ms check 1000.09351 GFlops 236.052
 
 #include <immintrin.h>
 #include <stdio.h>
@@ -50,7 +52,7 @@ int main(int argc,char *argv[])
 
 	float check[8];  _mm256_storeu_ps(check,mx[7]); // get 8 elements u in case check no aligned
 	double gflops = 2.0*(double)(size)*(double)reps/(t1*1000000);
-	printf("avxsaxpy: size %d, time %.6f ms check %10.5f GFlops %.3f\n",size,t1,check[7],gflops);
+	printf("ompsaxpy: size %d, time %.6f ms check %10.5f GFlops %.3f\n",size,t1,check[7],gflops);
 
 	free(mx); free(my);	//tidy up
 	return 0;

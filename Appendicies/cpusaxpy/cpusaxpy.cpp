@@ -7,6 +7,10 @@
 //
 // see also saxpy_vs which is part of this example
 //
+// RTX 3080
+// ../../Linux/cpusaxpy 21 3000
+// cpusaxpy: size 2097152, time 2950.528415 ms check 1000.09351 GFlops 4.265
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "cxtimers.h"
