@@ -1,7 +1,0 @@
-﻿  Compiling CUDA source file median9PT.cu...
-  
-  C:\Users\Richard\OneDrive\toGit2\Chapter04\median9>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\bin\nvcc.exe" -gencode=arch=compute_75,code=\"sm_75,compute_75\" -gencode=arch=compute_86,code=\"sm_86,compute_86\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\include" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v11.5\common\inc" -IC:\new_code\inc -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\include"     --keep-dir x64\Release -use_fast_math -maxrregcount=0  --machine 64 --compile -cudart static    -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Fdx64\Release\vc142.pdb /FS   /MD " -o x64\Release\median9PT.cu.obj "C:\Users\Richard\OneDrive\toGit2\Chapter04\median9\median9PT.cu" 
-  median9PT.cu
-     Creating library C:\Users\Richard\OneDrive\toGit2\build\x64\Release\median9PT.lib and object C:\Users\Richard\OneDrive\toGit2\build\x64\Release\median9PT.exp
-  LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
-  median9.vcxproj -> C:\Users\Richard\OneDrive\toGit2\build\x64\Release\median9PT.exe
