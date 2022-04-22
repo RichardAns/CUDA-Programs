@@ -1,0 +1,7 @@
+﻿  Compiling CUDA source file ising.cu...
+  
+  C:\Users\Richard\OneDrive\toGit2\Chapter06\ising>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\bin\nvcc.exe" -gencode=arch=compute_75,code=\"sm_75,compute_75\" -gencode=arch=compute_86,code=\"sm_86,compute_86\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\include" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v11.5\common\inc" -IC:\new_code\inc -ID:\opencv454\build\install\include -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\include"     --keep-dir x64\Release -use_fast_math -maxrregcount=0  --machine 64 --compile -cudart static    -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Fdx64\Release\vc142.pdb /FS   /MD " -o x64\Release\ising.cu.obj "C:\Users\Richard\OneDrive\toGit2\Chapter06\ising\ising.cu" 
+  ising.cu
+     Creating library C:\Users\Richard\OneDrive\toGit2\build\x64\Release\ising.lib and object C:\Users\Richard\OneDrive\toGit2\build\x64\Release\ising.exp
+  LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
+  ising.vcxproj -> C:\Users\Richard\OneDrive\toGit2\build\x64\Release\ising.exe
