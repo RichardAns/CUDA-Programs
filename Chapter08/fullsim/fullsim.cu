@@ -76,6 +76,41 @@
 #include "curand_kernel.h"   // for cuRand
 #include <random>
 
+// modified ray_to_cyl accumulates singles map in short detector for debug
+__device__ int ray_to_cyl_singles(r_Ptr<uint> singles, Ray& g)
+{
+	//swim to cyl: solve quadratic Ax^2+2Bx+C = 0
+	float A = g.n.x*g.n.x + g.n.y*g.n.y;
+	float B = g.a.x*g.n.x + g.a.y*g.n.y;  // factors of 2 ommited as they cancel
+	float C = g.a.x*g.a.x + g.a.y*g.a.y - detRadius*detRadius;
+	float D = B*B-A*C;
+	float rad = sqrtf(D);
+	g.lam1 = (-B+rad)/A;  // gamma1
+	float z1 = g.a.z+g.lam1*g.n.z;
+	g.lam2 = (-B-rad)/A;  // gamma2
+	float z2 = g.a.z+g.lam2*g.n.z;
+
+	if (z1 >= 0.0f && z1 < detLen) {
+		float x1  = g.a.x+g.lam1*g.n.x;
+		float y1  = g.a.y+g.lam1*g.n.y;
+		float phi = myatan2(x1, y1);
+		int iz1 =  (int)(z1*detStep);
+		int ic1 =  phi2cry(phi);
+		int index=(iz1*cryNum)+ ic1;
+		atomicAdd(&singles[index], 1);
+	}
+	if (z2 >= 0.0f && z2 < detLen) {
+		float x2  = g.a.x+g.lam2*g.n.x;
+		float y2  = g.a.y+g.lam2*g.n.y;
+		float phi = myatan2(x2,y2);
+		int iz2 = (int)(z2*detStep);  
+		int ic2 = phi2cry(phi);                 
+		int index=(iz2*cryNum)+ ic2;
+		atomicAdd(&singles[index], 1);
+	}
+	return 0; 
+}
+
 
 // this is example 8.3 in text
 __host__ __device__ int ray_to_cyl(Ray &g,Lor &l,float length)  //15/6/19 added length argument  
@@ -249,7 +284,7 @@ __device__ int zdz_slice(int z)
 // very similar to voxgen but used for large volume phantoms. The set of lors produced simulates data from
 // scanning a real ojbect. The code can be extended to include other shapes and the addition of noise.
 // It would also be possible to simualate scatter from a realistic patient volume.
-template <typename S> __global__ void phantom(r_Ptr<uint> map,r_Ptr<uint> vfill,r_Ptr<uint> vfill2,PRoi roi,r_Ptr<double> ngood,S *states,uint tries,int savevol)
+template <typename S> __global__ void phantom(r_Ptr<uint> map,r_Ptr<uint> vfill,r_Ptr<uint> vfill2,r_Ptr<uint> singles,PRoi roi,r_Ptr<double> ngood,S *states,uint tries,int savevol,int dosing)
 {
 	int id = threadIdx.x + blockIdx.x*blockDim.x;
 	S state = states[id];
@@ -292,6 +327,7 @@ template <typename S> __global__ void phantom(r_Ptr<uint> map,r_Ptr<uint> vfill,
 		g.n.x = sinf(phi)*sinf(theta);
 		g.n.y = cosf(phi)*sinf(theta);
 		g.n.z = cosf(theta);
+		if (dosing) ray_to_cyl_singles(singles, g); // generate singles map
 		if(ray_to_cyl(g,lor,detLen)){
 			int cdiff = abs(lor.c1-lor.c2);
 			if(cdiff >= cryDiffMin && cdiff <=cryDiffMax){
@@ -349,11 +385,12 @@ int do_phantom(int argc,char *argv[])
 	roi.o.x      = (argc >13) ? atof(argv[13]) : 0.0f;
 	roi.o.y      = (argc >14) ? atof(argv[14]) : 0.0f;
 	roi.o.z      = (argc >15) ? atof(argv[15]) : 0.0f;
-	int savevol    = (argc >16) ? atof(argv[16]) : 0;
+	int savevol  = (argc >16) ? atof(argv[16]) : 0;
 	int savelors = (argc >17) ? atoi(argv[17]) : 1; 
+	int dosing   = (argc >18) ? atoi(argv[18]) : 0; 
 
-	printf("Phantom r (%.1f %.1f) p (%.3f %.3f) z (%.1f %.1f) o (%.1f %.1f %.1f)\n",
-		roi.r.x,roi.r.y,roi.phi.x,roi.phi.y,roi.z.x,roi.z.y,roi.o.x,roi.o.y,roi.o.z);
+	printf("Phantom r (%.1f %.1f) p (%.3f %.3f) z (%.1f %.1f) o (%.1f %.1f %.1f) saves %d %d %d\n",
+		roi.r.x,roi.r.y,roi.phi.x,roi.phi.y,roi.z.x,roi.z.y,roi.o.x,roi.o.y,roi.o.z,savevol,savelors,dosing);
 
 	// use XORWOW
 	thrustDvec<curandState> state(size);  // this for curand_states
@@ -361,6 +398,7 @@ int do_phantom(int argc,char *argv[])
 	uint vsize = zNum*voxNum*voxNum;
 	uint msize = mapSlice*mapSlice;
 	uint zsize = cryNum*cryDiffNum*detZdZNum;
+	uint ssize = cryNum*zNum;
 	thrustHvec<uint>       vfill(vsize);
 	thrustDvec<uint>   dev_vfill(vsize);
 	thrustHvec<uint>       vfill2(vsize);
@@ -370,6 +408,9 @@ int do_phantom(int argc,char *argv[])
 	thrustDvec<double> dev_good(size);
 	thrustHvec<uint>       zdzmap(zsize);
 	thrustDvec<uint>   dev_zdzmap(zsize);
+	thrustHvec<uint>       singles(zsize);
+	thrustDvec<uint>   dev_singles(zsize);
+
 
 	// if file exists we append
 	if(savelors != 0 && cx::can_be_opened(argv[6])){
@@ -383,11 +424,15 @@ int do_phantom(int argc,char *argv[])
 		if(cx::read_raw("phant_roi_good.raw",vfill.data(),vsize) == 0) dev_vfill2 = vfill;
 	}
 
+	if(dosing != 0 && cx::can_be_opened("singles_roi_all.raw")){
+		if (cx::read_raw("singles_roi_all.raw", singles.data(), ssize) == 0) dev_singles = singles;
+	}
+
 	cx::timer tim;
 	init_generator<<<blocks,threads>>>(seed,state.data().get());
 	for(int k=0;k<passes;k++){
 		phantom<<<blocks,threads >>>(dev_zdzmap.data().get(),dev_vfill.data().get(),dev_vfill2.data().get(),
-			                         roi,dev_good.data().get(),state.data().get(),tries,savevol);
+			dev_singles.data().get(),roi,dev_good.data().get(),state.data().get(),tries,savevol,dosing);
 	}
 	checkCudaErrors(cudaPeekAtLastError());
 	checkCudaErrors(cudaDeviceSynchronize());
@@ -399,13 +444,17 @@ int do_phantom(int argc,char *argv[])
 
 	if(savevol){
 		vfill = dev_vfill;
-		cx::write_raw("phant_roi_all.raw",vfill.data(),zNum*voxNum*voxNum);
+		cx::write_raw("phant_roi_all.raw",vfill.data(),vsize);
 		vfill = dev_vfill2; // NB
-		cx::write_raw("phant_roi_good.raw",vfill.data(),zNum*voxNum*voxNum);
+		cx::write_raw("phant_roi_good.raw",vfill.data(),vsize);
 	}
 	if(savelors){
 		zdzmap = dev_zdzmap;
-		cx::write_raw(argv[6],zdzmap.data(),cryNum*cryDiffNum*detZdZNum); // always append
+		cx::write_raw(argv[6],zdzmap.data(),zsize); // always append
+	}
+	if (dosing) {
+		singles = dev_singles;
+		cx::write_raw("singles_roi_all.raw", singles.data(), ssize);
 	}
 
 	return 0;
@@ -514,7 +563,7 @@ int main(int argc,char *argv[])
 		printf("mode 2 genrate cylindrical phantom datasets for testing reconstuction\n");
 		printf("mode 3 is a simple host verison of mode1 for timing comparisons\n");
 		printf("usage: fullsim 1 threads blocks ngen seed vx1 vx2 savelors savemap\n");
-		printf("or:    fullsim 2 threads blocks ngen seed <outfile name> r-range phi-range z-range offsets savelors\n");
+		printf("or:    fullsim 2 threads blocks ngen seed <outfile name> r1 r2 phi1 phi2 z1 z2 ox oy oz savevol savelors singles\n");
 		printf("or:    fullsim 3 ngen seed vx1 vx2 savelors\n");
 		return 0;
 	}

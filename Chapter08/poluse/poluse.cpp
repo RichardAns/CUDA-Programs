@@ -17,7 +17,6 @@
 #include "cx.h"  // host only cx
 #include "cxbinio.h"
 #include "scanner.h"
-#include "timers.h"   // accurate timers for windows
 
 #include <vector>
 

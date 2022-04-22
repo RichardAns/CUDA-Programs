@@ -262,7 +262,7 @@ int main(int argc,char *argv[])
 	for(int k=0;k<size;k++) im8[k] = min(255,(int)(im_bl[k]+0.5f));
 	if(iter_gpu>1)cx::write_raw(name,im8.data(),size);
 
-	printf("times host %.3f gpu %.3f",t1,t2);
+	printf("times host %.3f gpu %.3f\n",t1,t2);
 
 	return 0;
 

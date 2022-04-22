@@ -42,7 +42,7 @@ int hex_mesh(std::vector<dpoint> &p,double r,double theta,double cut)
 
 	dpoint spot;
 	double sx = 0.0;
-	double sy = 1.6*dist;  // dit from centre of first spot
+	double sy = 1.6*dist;  // distance from centre of first spot
 	spot.x =  sx*ct + sy*st;
 	spot.y = -sx*st + sy*ct;
 	spot.r = r;
@@ -71,30 +71,42 @@ int hex_mesh(std::vector<dpoint> &p,double r,double theta,double cut)
 int main(int argc,char *argv[])
 {
 	if (argc < 2) {
-		printf("Usage derenzo.exe <batchfile name> activity|0.1 savevol|0  radius|50.0 z1|64.0 z2|192.0 [r1, r2 ... r6] \n");
+		printf("Usage derenzo OS|0 activity|0.1 savevol|0  radius|50.0 z1|64.0 z2|192.0 [r1, r2 ... r6] \n");
 		printf("recommended defaults for r1-6 at radius 50.0: 3.06 4.30 4.90 6.12 8.56 12.24\n");
+        printf("set OS to zero for Windows or 1 for Linux\n");
 		return 0;
 	}
 	// fullsim contains the command to run fullsim.exe from working directory
 	//const char *fullsim = "D:\\all_code\\vs17\\pet\\x64\\Release\\fullsim.exe";
-	const char *fullsim = "bin\\fullsim.exe"; 
+    /// modifed to include Linux or Windows versions. The path the the executable is now
+    // suppplied by the user as the first command line argument.
 
-	// this is name of the phantom dataset created by the batch file 
-	const char *phantom = "derenzo_full.raw";
-
+    int ostype       = (argc > 1) ? atoi(argv[1]) : 0;     // Windows if zero (default) or else Linux.
 	double activity = (argc > 2) ? atof(argv[2]) : 0.1;   // activity in 10^6 decays per mm^3
 	int savevol     = (argc > 3) ? atof(argv[3]) : 0;     // save volume as [r,z,phi] [100,64,400] 
 	double radius   = (argc > 4) ? atof(argv[4]) : 50.0;  // outer radius of phantom mm
 	double z1       = (argc > 5) ? atof(argv[5]) : 64.0;  // rod z start in [0, 256] mm
 	double z2       = (argc > 6) ? atof(argv[6]) : 192.0; // rod z end in   [0, 256] mm
 
+    // execuable name, note $1 for user supplied path
+    const char* fullsim = (ostype==0) ? "$1\\fullsim.exe" : "$1/fullsim";
+
+    // this is name of the phantom dataset created by the batch file 
+    const char *phantom = "derenzo_full.raw";
+
+    // radii of cylinder groups
 	std::vector<double> rodradii ={ 3.06, 4.30, 4.90, 6.12, 8.56, 12.24 };
-	for (int k=7; k<13; k++) if (argc>k) rodradii[k-7] = atof(argv[k]);
+	for (int k=7; k<17; k++) if (argc>k) rodradii[k-7] = atof(argv[k]);
+
 	printf("genrated %s for activity %.2f savevol %d radius %.2f z1 %.2f z2 %.2f\n", argv[1], activity, savevol, radius, z1, z2);
 	printf("rod radii "); for (int k=0; k<6; k++) printf(" %8.3f", rodradii[k]); printf("\n");
-	FILE *flog = fopen(argv[1],"w");
-	double theta = 0.0;
-	
+   
+    const char *scriptfile = (ostype==0) ? "derenzo.bat" : "derenzo.sh";
+	FILE *flog = fopen(scriptfile,"w");
+    if (!flog) { printf("cannot create %s \n",scriptfile); return 1; }
+    if (ostype != 0)fprintf(flog, "#!/bin/bash\n");
+
+    double theta = 0.0;	
 	std::vector<dpoint> p;  // p holds all rods
 	for(int k=0;k<6;k++) {
 		hex_mesh(p,rodradii[k], theta,radius);
@@ -108,5 +120,11 @@ int main(int argc,char *argv[])
 		fprintf(flog,"%s 2 256 1024 %4d %4d %s 0 %6.2f 0 360 %8.3f %8.3f %12.6f %12.6f 0 %d 1\n",
 			fullsim,(int)(volume*activity),1234+k*37,phantom,p[k].r,z1,z2,p[k].x,p[k].y,savevol);
 	}
+	double area = 0.0;
+	for (int k=0; k<p.size(); k++) area += cx::pi<double>*p[k].r*p[k].r;
+	double vol = area*(z2-z1);
+	printf("total area %f mm^2, vol %f mm^3 activity %f MB\n", area, vol, vol*activity);
+    fclose(flog);
+    printf("script file %s written\n", scriptfile);
 	return 0;
 }
