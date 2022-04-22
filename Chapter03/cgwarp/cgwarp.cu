@@ -60,5 +60,6 @@ int main(int argc,char *argv[])
 	int blocks  = (argc > 2) ? atoi(argv[2]) : 28800;
 	int threads = (argc > 3) ? atoi(argv[3]) : 256;
 	cgwarp<<<blocks,threads>>>(id);
+    cudaDeviceSynchronize(); // necessary in Linux to see kernel printf
 	return 0;
 }

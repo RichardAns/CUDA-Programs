@@ -48,5 +48,6 @@ int main(int argc,char *argv[])
 	dim3 thread3d(32,8,2); // 32*8*2    = 512
 	dim3  block3d(16,64,128); // 16*64*128 = 131072
 	coop3D<<<block3d,thread3d>>>(512,512,256,id);
+    cudaDeviceSynchronize(); // necessary in Linux to see kernel printf
 	return 0;
 }
