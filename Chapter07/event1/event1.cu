@@ -12,7 +12,7 @@
 // C:\bin\event1.exe 256 256 26 10 10
 // times 1.046 1.258 0.954 0.954 diff 0.396 ms
 
-#include "cx_gpu.h"
+#include "cx.h"
 #include "cxtimers.h"
 //#include "helper_math.h"
 //#include <thread>       

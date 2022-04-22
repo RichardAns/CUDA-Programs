@@ -47,8 +47,9 @@ int main(int argc,char *argv[])
 	if(maxcon > 0) {
 		char set_maxconnect[256];
 		sprintf(set_maxconnect,"CUDA_DEVICE_MAX_CONNECTIONS=%d",maxcon);
-		_putenv(set_maxconnect);
-	}
+        _putenv(set_maxconnect);    // this for Windows
+        // putenv(set_maxconnect);  // this for Linux
+    }
 	thrustHvecPin<float>  host(dsize);     // host data buffer
 	thrustDvec<float>     dev_in(dsize);   // device input data buffer
 	thrustDvec<float>     dev_out(dsize);  // device output data buffer

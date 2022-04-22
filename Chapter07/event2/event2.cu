@@ -28,7 +28,7 @@
 // event: et1+et2 295.742 et1 146.986 et2 148.756 diff 8.197 ms
 // done
 
-#include "cx_gpu.h"
+#include "cx.h" 
 #include "cxtimers.h"
 //#include "helper_math.h"
 //#include <thread>       
