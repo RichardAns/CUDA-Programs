@@ -25,6 +25,16 @@
 // test 5 total time 155.775 kernel time 5.826 ms
 // test 6 total time 631.557 kernel time 50.210 ms
 // test 7 total time 629.506 kernel time 49.840 ms
+// 
+// RTX 3080 Linux note tests 6 & 7 much improved
+// test 0 total time 180.471 kernel time 7.095 ms
+// test 1 total time 232.240 kernel time 5.586 ms
+// test 2 total time 363.982 kernel time 7.407 ms
+// test 3 total time 398.766 kernel time 5.548 ms
+// test 4 total time 364.661 kernel time 5.570 ms
+// test 5 total time 190.071 kernel time 5.586 ms
+// test 6 total time 195.511 kernel time 21.775 ms
+// test 7 total time 190.013 kernel time 6.196 ms
 //
 // NB for the uint data type used here the reduction step will overflow for
 // buffer sizes greater than about 2^24. The timing information remains correct
