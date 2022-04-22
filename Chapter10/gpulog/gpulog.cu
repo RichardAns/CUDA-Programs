@@ -146,6 +146,7 @@ __global__ void reduce_warp_vlB(r_Ptr<float> sums,cr_Ptr<float> data,uint steps)
 
 int main(int argc,char *argv[])
 {
+    // Windows only, comment out for Linux
 	_controlfp_s(nullptr,_DN_FLUSH,_MCW_DN);  // flush unnormalised floats to zero on host
 
 	int  shift =   argc > 1 ? atoi(argv[1]) : 16;
@@ -189,6 +190,7 @@ int main(int argc,char *argv[])
 	double ferr2 = 100.0f*(logint-gpuint)/logint;     // gpu integral error
 	printf("gpu  int   %f frac err %10.3e%% \n",gpuint,ferr2);
 
+    // Windows only, comment out for Linux
 	_controlfp_s(nullptr,_DN_FLUSH,_MCW_DN);
 
 	tim.reset();                   // start host timer
