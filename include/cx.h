@@ -11,9 +11,6 @@
 
 // work around pinned memory issue in CUDA 12 refeding the constant to value 11
 // is using SDK s up to 11.8 by editing this file or defining on command line.
-#ifndef _CUDA_VER
-#define _CUDA_VER 12
-#endif
 
 // these for visual studio
 #pragma warning( disable : 4244)  // vebose thrust warnings
@@ -32,7 +29,7 @@
 #include "helper_cuda.h"
 #include "thrust/host_vector.h"
 #include "thrust/device_vector.h"
-#if _CUDA_VER < 12
+#if __CUDACC_VER_MAJOR__ < 12
 #include "thrust/system/cuda/experimental/pinned_allocator.h"
 #endif
 
@@ -90,7 +87,7 @@ template <typename T> using thrustDvec    = thrust::device_vector<T>;
 //*** change February 2023 ***/
 // thrust pinned host allocation broken in SDK 12.0 therefore removed. This affects only
 // a few examples and hopefully a fix will be avaible soon
-#if _CUDA_VER < 12
+#if __CUDACC_VER_MAJOR__ < 12
 template <typename T> using thrustHvecPin =
         thrust::host_vector<T,thrust::cuda::experimental::pinned_allocator<T>>;
 #endif 
