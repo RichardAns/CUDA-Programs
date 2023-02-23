@@ -6,5 +6,5 @@ Project and solution files to build the examples in Visual Studio 19 are provide
 I am happy to be contacted on rea1@cam.ac.uk if you have questions.
 
 Updated 23 February 2023 to work with CUDA SDK 12.0. 
-   all #include cooperative_groups.h now movie to be first workaround confilcts with CUDA chrono includes
-   thrust host_pinned memory currently not working
+   All #include cooperative_groups.h now moved to be first as workaround for confilcts with CUDA chrono includes.
+   Thrust host_pinned memory currently not working.
