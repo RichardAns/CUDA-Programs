@@ -17,9 +17,9 @@
 // FP32 values were used and the gpu calculation took twice as long as the TC 
 // version. These differences are explained by memory access times.
 
+#include "cooperative_groups.h"
 #include "cx.h"
 #include "cxtimers.h"
-#include "cooperative_groups.h"
 #include "helper_math.h"
 #include <random>
 #include "mma.h"   // this for TC support

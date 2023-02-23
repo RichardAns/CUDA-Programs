@@ -71,12 +71,13 @@
 // file test2to1.raw written
 // final cf  2.59529e-01 total cf calls 209 reg time 51.201 ms job time 235.172 ms
 
+#include "cooperative_groups.h"
 #include "cx.h"
 #include "helper_math.h" 
 #include "cxtimers.h"
 #include "cxbinio.h"
 #include "cxtextures.h"
-#include "cooperative_groups.h"
+
 namespace cg = cooperative_groups;
 
 // used by GPU code

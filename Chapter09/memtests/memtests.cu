@@ -39,11 +39,11 @@
 // NB for the uint data type used here the reduction step will overflow for
 // buffer sizes greater than about 2^24. The timing information remains correct
 
+#include "cooperative_groups.h"
 #include "cx.h"
 #include "cxtimers.h"
 #include "helper_math.h"
 
-#include "cooperative_groups.h"
 namespace cg = cooperative_groups;
 
 // best reduce version 

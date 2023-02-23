@@ -3,9 +3,10 @@
 // This code may be freely changed but please retain an acknowledgement
 
 // coop3D example 3.2
-#include "cx.h"
 
 #include "cooperative_groups.h"
+#include "cx.h"
+
 namespace cg = cooperative_groups;
 
 __device__  int   a[256][512][512];  // file scope

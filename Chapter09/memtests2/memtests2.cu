@@ -27,11 +27,11 @@
 // test 6 total time 602.524 kernel time 50.754 ms
 // test 7 total time 620.869 kernel time 50.557 ms
 
+#include "cooperative_groups.h"
 #include "cx.h"
 #include "cxtimers.h"
 #include "helper_math.h"
 
-#include "cooperative_groups.h"
 namespace cg = cooperative_groups;
 
 __global__ void intsqrt(r_Ptr<uint> data,uint n)

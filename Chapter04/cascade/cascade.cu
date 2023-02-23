@@ -51,11 +51,10 @@
 // file cascade1024_8.raw written
 // cascade time 6823.324 ms
 
+#include "cooperative_groups.h"
 #include "cx.h"
 #include "cxbinio.h"
 #include "cxtimers.h"
-
-#include "cooperative_groups.h"
 
 namespace cg = cooperative_groups;
 

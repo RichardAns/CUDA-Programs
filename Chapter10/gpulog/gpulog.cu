@@ -48,9 +48,9 @@
 // host int   0.386245 frac err  1.267e-02%
 // times gpu 2203.229 host 1521.715 gpujob 2318.414 ms speedup 690.7
 
+#include "cooperative_groups.h"
 #include "cx.h"
 #include "cxtimers.h"
-#include "cooperative_groups.h"
 #include "helper_math.h"
 
 namespace cg = cooperative_groups;

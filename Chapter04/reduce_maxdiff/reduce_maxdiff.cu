@@ -20,10 +20,10 @@
 // host iter     1000 time  1816.242 ms GFlops    2.309
 // gpu  iter    10000 time   157.209 ms GFlops  266.798
 
+#include "cooperative_groups.h"
 #include "cx.h"
 #include "cxtimers.h"
 #include "cxbinio.h"
-#include "cooperative_groups.h"
 
 namespace cg = cooperative_groups;
 

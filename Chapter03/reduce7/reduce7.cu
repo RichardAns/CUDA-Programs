@@ -12,10 +12,10 @@
 // C:\bin\reduce7.exe 26 256 256  1000
 // sum of 67108864 numbers: host 33557315.6 63.688 ms GPU 33557266432.0 0.471 ms
 
+#include "cooperative_groups.h"
 #include "cx.h"
 #include "cxtimers.h"
 #include <random>
-#include "cooperative_groups.h"
 
 namespace cg = cooperative_groups;
 

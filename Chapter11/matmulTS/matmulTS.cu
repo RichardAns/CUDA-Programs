@@ -13,9 +13,9 @@
 // blocks 512 threads 256
 // A 1024 x 1024 B 1024 x 1024 host 0.000 gpu time 201.368 TCS time 29.580 ms GFlops 1066.446 7259.991 speedup 6.81
 
+#include "cooperative_groups.h"
 #include "cx.h"
 #include "cxtimers.h"
-#include "cooperative_groups.h"
 #include "helper_math.h"
 #include <random>
 #include "mma.h"   // this for TC support

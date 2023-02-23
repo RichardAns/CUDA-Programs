@@ -22,8 +22,9 @@
 // tile8  rank in tile  7 tile size  8 tile rank    0 tile number   4 net size 32
 // tile4  rank in tile  3 tile size  4 tile rank    1 tile number   2 net size 8
 
-#include "cx.h"
 #include "cooperative_groups.h"
+#include "cx.h"
+
 namespace cg = cooperative_groups;
 
 template <int T> __device__ void show_tile(const char *tag,cg::thread_block_tile<T> p)

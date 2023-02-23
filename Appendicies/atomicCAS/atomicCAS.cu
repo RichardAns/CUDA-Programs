@@ -28,7 +28,7 @@ __device__ float myatomic_add(float *acc,float val)
 	float acc_now = acc[0];
 	while(1) {
 		float acc_test = acc_now; // curent acculator
-		acc_now = uint_as_float(atomicCAS((uint *)acc,
+		acc_now = __uint_as_float(atomicCAS((uint *)acc,
 			__float_as_uint(acc_test),
 			__float_as_uint(acc_now+val)));
 		//if(acc_test == acc_now) break;

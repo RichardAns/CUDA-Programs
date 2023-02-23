@@ -23,6 +23,7 @@
 // #include "Windows.h"  // Is not required on Windows and breaks Linux compilation
 #include "opencv2/core/core.hpp"
 #include "opencv2/highgui/highgui.hpp"
+
 using namespace cv;
 
 // NB because of 2-pass checkerboard update pattern the nx parameter

@@ -4,11 +4,11 @@
 
 // reduce8_vl vl version of example 3.6 but not in book
 
+#include "cooperative_groups.h"
+#include "cooperative_groups/reduce.h"  // needed for new warp level reduce function
 #include "cx.h"
 #include "cxtimers.h"
 #include <random>
-#include "cooperative_groups.h"
-#include "cooperative_groups/reduce.h"  // needed for new warp level reduce function
 #include "helper_math.h"
 
 namespace cg = cooperative_groups;

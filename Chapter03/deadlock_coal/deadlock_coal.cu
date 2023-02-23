@@ -4,8 +4,8 @@
 
 // deadlock_coalesced example 3.9
 
-#include "cx.h"
 #include "cooperative_groups.h"
+#include "cx.h"
 
 namespace cg = cooperative_groups;
 

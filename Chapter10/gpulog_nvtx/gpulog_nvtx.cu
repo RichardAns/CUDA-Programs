@@ -8,9 +8,9 @@
 // cudaProfilerStart/Stop() statements in main and
 // an extra include.
 
+#include "cooperative_groups.h"
 #include "cx.h"
 #include "cxtimers.h"
-#include "cooperative_groups.h"
 #include "helper_math.h"
 
 #include "cuda_profiler_api.h" // NB added

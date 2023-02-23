@@ -42,11 +42,11 @@
 // gpu    iter    10000 time  2433.695 ms GFlops  413.623 bandwidth 1930.242
 // final convergence diff  2.205372e-05 for type float  method 1
 
+#include "cooperative_groups.h"
 #include "cx.h"
 #include "cxtimers.h"
 #include "cxbinio.h"
 
-#include "cooperative_groups.h"
 namespace cg = cooperative_groups;
 
 template <typename T> int main2(int argc,char *argv[]);

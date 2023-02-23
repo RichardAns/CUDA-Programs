@@ -58,6 +58,8 @@ void uchar4_to_opencv(Mat &image,uchar4 *a)
 
 int main(int argc,char *argv[])
 {
+    
+
 	if(argc < 2){
 		printf("usage rot4dcv <infile> out<file>  mx|nx my|ny angle|30.0 scale|1\n");
 		return 0;
