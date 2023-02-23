@@ -90,6 +90,8 @@ template <typename T> using thrustDvec    = thrust::device_vector<T>;
 #if __CUDACC_VER_MAJOR__ < 12
 template <typename T> using thrustHvecPin =
         thrust::host_vector<T,thrust::cuda::experimental::pinned_allocator<T>>;
+#else
+template <typename T> using thrustHvecPin = thrust::host_vector<T>;  // no pinned in SDK 12.0
 #endif 
 
 // get pointer to thrust device array
