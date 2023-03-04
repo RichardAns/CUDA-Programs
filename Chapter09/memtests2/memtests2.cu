@@ -4,7 +4,7 @@
 
 // program memtests2 example 9.9
 //
-// NB for the uint data type used hre the recudtion step will overflow for
+// NB for the uint data type used hre the reduction step will overflow for
 // buffer sizes greater than about 2^24. The timing information remains correct
 
 // RTX 2070

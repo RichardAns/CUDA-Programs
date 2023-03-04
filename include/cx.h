@@ -29,13 +29,8 @@
 #include "helper_cuda.h"
 #include "thrust/host_vector.h"
 #include "thrust/device_vector.h"
-
-#ifndef __CUDACC_VER_MAJOR__
-#define __CUDACC_VER_MAJOR__ 12
-#endif
 #if __CUDACC_VER_MAJOR__ < 12
 #include "thrust/system/cuda/experimental/pinned_allocator.h"
-
 #endif
 
 // C++ includes
