@@ -8,7 +8,7 @@ rem
 rem setx CUDA_SM   "compute_75,sm_75"
 rem setx CUDA_SM   "compute_86,sm_86"
 setx CUDA_SM   "compute_75,sm_75;compute_86,sm_86;"
-setx CUDA_VER  "11.5"
+setx CUDA_VER  "12.0"
 setx CX_ROOT   "C:\new_code\inc"
 rem
 setx OpenCV_Root "D:\opencv454\build"
