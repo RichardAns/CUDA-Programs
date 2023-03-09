@@ -16,6 +16,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{64621c04-0137-441d-82da-6ef4a79db667}</ProjectGuid>
     <RootNamespace>poluse</RootNamespace>
+    <ProjectName>poluse</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

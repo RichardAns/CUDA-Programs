@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{2bbd2bff-b7b5-4fe3-98c1-e3fc97423b06}</ProjectGuid>
     <RootNamespace>multiGPU</RootNamespace>
+    <ProjectName>multiGPU</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

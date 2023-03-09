@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{392b5b99-4c27-48c3-909e-8f744d7c95a6}</ProjectGuid>
     <RootNamespace>stencil9PT</RootNamespace>
+    <ProjectName>stencil9PT</ProjectName>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{c6d83dac-36c4-45ae-8370-b3dfa6f5663c}</ProjectGuid>
     <RootNamespace>graph</RootNamespace>
+    <ProjectName>graph</ProjectName>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

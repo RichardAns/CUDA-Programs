@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8fdbe397-62c8-4f5a-aab6-eac654815e39}</ProjectGuid>
     <RootNamespace>rotate1</RootNamespace>
+    <ProjectName>rotate1</ProjectName>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{2278a8a7-a7a7-428e-aaca-a592a23cc592}</ProjectGuid>
     <RootNamespace>piH6</RootNamespace>
+    <ProjectName>piH6</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

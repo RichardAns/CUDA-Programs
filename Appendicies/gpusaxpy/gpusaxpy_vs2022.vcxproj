@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{866f8c48-d84b-4027-b34f-2e1b2c529ed1}</ProjectGuid>
     <RootNamespace>gpusaxpy</RootNamespace>
+    <ProjectName>gpusaxpy</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

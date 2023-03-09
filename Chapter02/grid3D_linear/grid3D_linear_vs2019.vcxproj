@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{caf621e7-f5fa-47d0-87a8-375b1d1c614c}</ProjectGuid>
     <RootNamespace>grid3D_linear</RootNamespace>
+    <ProjectName>grid3D_linear</ProjectName>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

@@ -79,7 +79,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "reduce6", "..\Chapter03\red
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "reduce7", "..\Chapter03\reduce7\reduce7_vs2019.vcxproj", "{3490825D-6B22-4D76-BC75-F43C6C553411}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "reduce7_vl_coal_any", "..\Chapter03\reduce7_coal_any_vl\reduce7_coal_any_vl_vs2019.vcxproj", "{4CA00BFB-4A46-4E9A-BADA-19DCCDC73D93}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "reduce7_vl_coal_any", "..\Chapter03\reduce7_vl_coal_any\reduce7_vl_coal_any_vs2019.vcxproj", "{4CA00BFB-4A46-4E9A-BADA-19DCCDC73D93}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "reduce7_vl", "..\Chapter03\reduce7_vl\reduce7_vl_vs2019.vcxproj", "{E81D97BA-5CFC-4628-8C75-FDACACF0A461}"
 EndProject
@@ -169,7 +169,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "polmake", "..\Chapter08\pol
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "poluse", "..\Chapter08\poluse\poluse_vs2019.vcxproj", "{64621C04-0137-441D-82DA-6EF4A79DB667}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "readspot", "..\Chapter08\readsport\readsport_vs2019.vcxproj", "{7407CE0E-8124-44B5-8946-5F4F07E7BF8C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "readspot", "..\Chapter08\readspot\readspot_vs2019.vcxproj", "{7407CE0E-8124-44B5-8946-5F4F07E7BF8C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "reco", "..\Chapter08\reco\reco_vs2019.vcxproj", "{E236AA56-2923-4043-BCAD-6CE86E8FAFB6}"
 EndProject
@@ -217,7 +217,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ompsaxpy", "..\Appendicies\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "saxpy_vs", "..\Appendicies\saxpy_vs\saxpy_vs_vs2019.vcxproj", "{F3CB0949-2553-4A95-B0B0-102EB27537C3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iter", "..\Appendicies\iterators\iterators_vs2019.vcxproj", "{F2B03DF4-542C-4DF6-B45B-0C3349F77A5D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iter", "..\Appendicies\iter\iter_vs2019.vcxproj", "{F2B03DF4-542C-4DF6-B45B-0C3349F77A5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

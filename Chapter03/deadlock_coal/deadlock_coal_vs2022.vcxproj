@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{a385db40-59c7-4650-85b4-af3c0165e9c6}</ProjectGuid>
     <RootNamespace>deadlock_coal</RootNamespace>
+    <ProjectName>deadlock_coal</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

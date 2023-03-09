@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6051d93b-c21b-4329-a5a3-6dd3dc410501}</ProjectGuid>
     <RootNamespace>reduce_maxdiff</RootNamespace>
+    <ProjectName>reduce_maxdiff</ProjectName>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

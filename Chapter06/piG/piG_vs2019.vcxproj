@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{d24b4ea4-71f7-4c37-9bb1-9ac8baeddf26}</ProjectGuid>
     <RootNamespace>piG</RootNamespace>
+    <ProjectName>piG</ProjectName>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

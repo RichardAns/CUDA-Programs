@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{ced54df0-ae9f-415d-ad6a-676c960faa5c}</ProjectGuid>
     <RootNamespace>gpusum</RootNamespace>
+    <ProjectName>gpusum</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

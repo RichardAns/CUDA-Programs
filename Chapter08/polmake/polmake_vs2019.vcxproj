@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{a880ec12-0579-4d56-b131-0dea3d84b8e9}</ProjectGuid>
     <RootNamespace>polmake</RootNamespace>
+    <ProjectName>polmake</ProjectName>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

@@ -169,7 +169,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "polmake", "..\Chapter08\pol
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "poluse", "..\Chapter08\poluse\poluse_vs2022.vcxproj", "{64621C04-0137-441D-82DA-6EF4A79DB667}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "readspot", "..\Chapter08\readsport\readsport_vs2022.vcxproj", "{7407CE0E-8124-44B5-8946-5F4F07E7BF8C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "readspot", "..\Chapter08\readspot\readspot_vs2022.vcxproj", "{7407CE0E-8124-44B5-8946-5F4F07E7BF8C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "reco", "..\Chapter08\reco\reco_vs2022.vcxproj", "{E236AA56-2923-4043-BCAD-6CE86E8FAFB6}"
 EndProject

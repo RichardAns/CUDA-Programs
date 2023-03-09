@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{a1de540a-daea-41da-98ac-d38d83f36ccf}</ProjectGuid>
     <RootNamespace>memtests</RootNamespace>
+    <ProjectName>memtests</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

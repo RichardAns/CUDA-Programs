@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{bc831322-6242-4ef9-a808-6ef83c6de2f7}</ProjectGuid>
     <RootNamespace>event1</RootNamespace>
+    <ProjectName>event1</ProjectName>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

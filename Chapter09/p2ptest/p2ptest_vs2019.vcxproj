@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6f985ca6-92ac-4251-8bc4-1b63b1e77a08}</ProjectGuid>
     <RootNamespace>p2ptest</RootNamespace>
+    <ProjectName>p2ptest</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

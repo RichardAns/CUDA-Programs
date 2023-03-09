@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9787b6bc-07b7-4922-84e7-f912a8ad97d5}</ProjectGuid>
     <RootNamespace>fulldoi</RootNamespace>
+    <ProjectName>fulldoi</ProjectName>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

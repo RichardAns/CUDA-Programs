@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3efe8ffd-c69f-40ae-a83c-b3fef02ce16b}</ProjectGuid>
     <RootNamespace>fullsim</RootNamespace>
+    <ProjectName>fullsim</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

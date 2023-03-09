@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{d39d3191-4057-4efb-81c0-4f3d30bfb954}</ProjectGuid>
     <RootNamespace>gpumult0</RootNamespace>
+    <ProjectName>gpumult0</ProjectName>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

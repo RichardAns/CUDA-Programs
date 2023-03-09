@@ -7,7 +7,7 @@ and a Makefile for Linux.
 Additional directories are:
 
 bin:            Windows executables
-build:          A VS19 solution file to build the entire example set on Windows. The Widowws executables are placed in bin.
+build:          VS19 and VS22 solution files to build the entire example set on Windows.
 data:           Data for image processing examples. 
 Chapter08/data: Data files for PET simulation and reconsuction.
 include:        Contains cx.h and other include files used by the examples.
@@ -20,5 +20,7 @@ makeall.sh:             A Linux script to build all the examples.
 
 I am happy to receive comments and suggestions at rea1@cam.ac.uk
 
-Richard Ansorge April 2022.
+Richard Ansorge
+
+Last update 08-March-2023   added seperate vs2019 and vs2022 solution files.
 

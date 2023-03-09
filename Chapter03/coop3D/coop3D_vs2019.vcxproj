@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{154bf4de-f8fe-40e1-a72c-b0f0128a3839}</ProjectGuid>
     <RootNamespace>coop3D</RootNamespace>
+    <ProjectName>coop3D</ProjectName>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

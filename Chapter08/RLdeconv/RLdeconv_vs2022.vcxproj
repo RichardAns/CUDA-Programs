@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{bc10ae60-971d-4acb-a344-ea37911302c7}</ProjectGuid>
     <RootNamespace>RLdeconv</RootNamespace>
+    <ProjectName>RLdeconv</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

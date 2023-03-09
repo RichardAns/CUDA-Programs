@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7e25fc0b-10bd-4491-91e8-2533a899b11b}</ProjectGuid>
     <RootNamespace>batcher9PT</RootNamespace>
+    <ProjectName>batcher9PT</ProjectName>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

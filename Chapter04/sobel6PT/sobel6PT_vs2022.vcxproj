@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{797e7293-3a40-4dd8-a6ce-4b47875c3aa8}</ProjectGuid>
     <RootNamespace>sobel6PT</RootNamespace>
+    <ProjectName>sobel6PT</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

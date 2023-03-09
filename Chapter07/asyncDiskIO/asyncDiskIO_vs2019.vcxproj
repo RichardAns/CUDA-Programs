@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3bcf75a2-87d0-427e-ad77-2c66a53ffc8b}</ProjectGuid>
     <RootNamespace>asyncDiskIO</RootNamespace>
+    <ProjectName>asyncDiskIO</ProjectName>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{aa848948-a106-4144-82f9-d1182a632185}</ProjectGuid>
     <RootNamespace>reduce3</RootNamespace>
+    <ProjectName>reduce3</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
