@@ -23,6 +23,11 @@
 #undef min
 #undef max
 
+// fix for host code - change as necessary (TODO automate this)
+#ifndef __CUDACC_VER_MAJOR__
+#define __CUDACC_VER_MAJOR__ 12
+#endif
+
 // cuda includes
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
@@ -31,6 +36,8 @@
 #include "thrust/device_vector.h"
 #if __CUDACC_VER_MAJOR__ < 12
 #include "thrust/system/cuda/experimental/pinned_allocator.h"
+#else
+#include "cxpinned.h" // this uses cudaMallocHost and cudaFreeHost
 #endif
 
 // C++ includes
@@ -91,7 +98,8 @@ template <typename T> using thrustDvec    = thrust::device_vector<T>;
 template <typename T> using thrustHvecPin =
         thrust::host_vector<T,thrust::cuda::experimental::pinned_allocator<T>>;
 #else
-template <typename T> using thrustHvecPin = thrust::host_vector<T>;  // no pinned in SDK 12.0
+template <typename T> using thrustHvecPin =
+        thrust::host_vector<T,cx::Pallocator<T>>;  // home brewed cuda pinned allocator
 #endif 
 
 // get pointer to thrust device array
