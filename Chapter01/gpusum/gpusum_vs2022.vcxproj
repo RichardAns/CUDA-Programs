@@ -46,7 +46,7 @@
     <IncludePath>$(CUDA_PATH)\include;$(NVCUDASAMPLES_ROOT)\common\inc;$(CX_ROOT);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(CUDA_PATH)\include;$(NVCUDASAMPLES_ROOT)\common\inc;$(CX_ROOT);$(IncludePath)</IncludePath>
+    <IncludePath>$(CUDA_PATH)\include;$(NVCUDASAMPLES_ROOT)\Common;$(CX_ROOT);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -83,9 +83,11 @@
     </Link>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <Include>$(CUDA_PATH)\include;$(NVCUDASAMPLES_ROOT)\common\inc;$(CX_ROOT);%(Include)</Include>
+      <Include>$(CUDA_PATH)\include;$(NVCUDASAMPLES_ROOT)\Common;$(CX_ROOT);%(Include)</Include>
       <CodeGeneration>$(CUDA_SM)</CodeGeneration>
       <FastMath>true</FastMath>
+      <AdditionalCompilerOptions>/Zc:preprocessor</AdditionalCompilerOptions>
+      <AdditionalOptions>--std c++17 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
