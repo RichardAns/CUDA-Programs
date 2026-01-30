@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{a490c8ad-05d1-41ce-8658-276649f60ee1}</ProjectGuid>
+    <ProjectGuid>{A490C8AD-05D1-41CE-8658-276649F60EE1}</ProjectGuid>
     <RootNamespace>event2</RootNamespace>
     <ProjectName>event2</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
@@ -46,7 +46,7 @@
     <IncludePath>$(CUDA_PATH)\include;$(NVCUDASAMPLES_ROOT)\common\inc;$(CX_ROOT);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(CUDA_PATH)\include;$(NVCUDASAMPLES_ROOT)\common\inc;$(CX_ROOT);$(IncludePath)</IncludePath>
+    <IncludePath>$(CUDA_PATH)\include;$(NVCUDASAMPLES_ROOT)\Common;$(CX_ROOT);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -73,6 +73,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -83,9 +84,11 @@
     </Link>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <Include>$(CUDA_PATH)\include;$(NVCUDASAMPLES_ROOT)\common\inc;$(CX_ROOT);%(Include)</Include>
+      <Include>$(CUDA_PATH)\include;$(NVCUDASAMPLES_ROOT)\Common;$(CX_ROOT);%(Include)</Include>
       <CodeGeneration>$(CUDA_SM)</CodeGeneration>
       <FastMath>true</FastMath>
+      <AdditionalCompilerOptions>/Zc:preprocessor</AdditionalCompilerOptions>
+      <AdditionalOptions>--std c++17 %(AdditionalOptions)</AdditionalOptions>
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
