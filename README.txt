@@ -1,5 +1,7 @@
 This repository contains all the examples for my book 
-     ìProgramming in Parallel with CUDAî. 
+     ‚ÄúProgramming in Parallel with CUDA‚Äù. 
+
+The Ver2026 Branch has updated build files for Visusal Studio 2022 and CUDA 13.1 
 
 Each example is in a separate directory containing a Visual Studio project file for Windows
 and a Makefile for Linux. 
@@ -23,4 +25,5 @@ I am happy to receive comments and suggestions at rea1@cam.ac.uk
 Richard Ansorge
 
 Last update 08-March-2023   added seperate vs2019 and vs2022 solution files.
+
 
