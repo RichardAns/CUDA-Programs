@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -11,10 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{c49ae98e-ecef-4042-a7a1-bd6140f0320f}</ProjectGuid>
+    <ProjectGuid>{4D8CA84C-F5A9-3CFB-75F2-29559422279C}</ProjectGuid>
     <RootNamespace>piH4</RootNamespace>
-    <ProjectName>piH4</ProjectName>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -32,7 +30,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
-    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA $(CUDA_VER).props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 13.1.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -43,10 +41,6 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(CUDA_PATH)\include;$(NVCUDASAMPLES_ROOT)\common\inc;$(CX_ROOT);$(IncludePath)</IncludePath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(CUDA_PATH)\include;$(NVCUDASAMPLES_ROOT)\common\inc;$(CX_ROOT);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -61,9 +55,6 @@
     </Link>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <Include>$(NVCUDASAMPLES_ROOT)\common\inc;$(CX_ROOT);%(Include)</Include>
-      <CodeGeneration>$(CUDA_SM)</CodeGeneration>
-      <FastMath>true</FastMath>
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -73,6 +64,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(CX_ROOT);$(CUDA_PATH)\include\cccl;$(NVCUDASAMPLES_ROOT)\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -83,16 +77,16 @@
     </Link>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <Include>$(CUDA_PATH)\include;$(NVCUDASAMPLES_ROOT)\common\inc;$(CX_ROOT);%(Include)</Include>
-      <CodeGeneration>$(CUDA_SM)</CodeGeneration>
-      <FastMath>true</FastMath>
+      <AdditionalDeps>/ZC:preprocessor</AdditionalDeps>
+      <AdditionalOptions>--std c++17 %(AdditionalOptions)</AdditionalOptions>
+      <Include>$(CX_ROOT);%(Include)</Include>
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CudaCompile Include="piH4.cpp" />
+    <CudaCompile Include="piH4.cu" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA $(CUDA_VER).targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 13.1.targets" />
   </ImportGroup>
 </Project>
