@@ -35,7 +35,7 @@
 #include "helper_cuda.h"
 #include "thrust/host_vector.h"
 #include "thrust/device_vector.h"
-//#if __CUDACC_VER_MAJOR__ < 12
+//#if __CUDACC_VER_MAJOR__ < 12    // todo get this working again
 //#include "thrust/system/cuda/experimental/pinned_allocator.h"
 //#else
 //#include "cxpinned.h" // this uses cudaMallocHost and cudaFreeHost
