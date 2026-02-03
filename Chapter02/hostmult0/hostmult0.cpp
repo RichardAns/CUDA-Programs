@@ -12,9 +12,14 @@
 // C:\bin\hostmult0.exe
 // A 1024 x 1024 B 1024 x 1024 host time 2916.772 ms Gflops/sec 0.736
 
+#undef min
+#undef max
+
+#include "cx.h"
 #include "thrust/host_vector.h"
 #include "cxtimers.h"
 #include <random>
+
 int hostmult0(float * C, float * A, float * B, int Ay, int Ax, int Bx)
 {
 	// compute C = A * B for matrices (assume Ax = By and C  is Ay x Bx)

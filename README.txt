@@ -1,7 +1,7 @@
 This repository contains all the examples for my book 
      “Programming in Parallel with CUDA”. 
 
-The Ver2026 Branch has updated build files for Visusal Studio 2022 and CUDA 13.1 
+The Ver2026 Branch has updated build files for Visual Studio 2022 and CUDA 13.1 
 
 Each example is in a separate directory containing a Visual Studio project file for Windows
 and a Makefile for Linux. 
@@ -11,7 +11,7 @@ Additional directories are:
 bin:            Windows executables
 build:          VS19 and VS22 solution files to build the entire example set on Windows.
 data:           Data for image processing examples. 
-Chapter08/data: Data files for PET simulation and reconsuction.
+Chapter08/data: Data files for PET simulation and reconstruction.
 include:        Contains cx.h and other include files used by the examples.
 Linux:          Linux executables (Ubuntu 22.04)
 

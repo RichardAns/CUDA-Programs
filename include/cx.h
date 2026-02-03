@@ -17,6 +17,7 @@
 #pragma warning( disable : 4267)
 #pragma warning( disable : 4996)  // warnings: unsafe functions e.g fread 
 #pragma warning( disable : 4838)  // warnings: size_t to int
+#pragma warning( disable : 4003)  // not enough arguments for function-like macro invocation 'min/max' thrust errors in CUDA 13.1
 
 // macro #defines for min & max are usually bad news,
 // the native CUDA versions compile to single instuctions hence very fast.
@@ -34,11 +35,11 @@
 #include "helper_cuda.h"
 #include "thrust/host_vector.h"
 #include "thrust/device_vector.h"
-#if __CUDACC_VER_MAJOR__ < 12
-#include "thrust/system/cuda/experimental/pinned_allocator.h"
-#else
-#include "cxpinned.h" // this uses cudaMallocHost and cudaFreeHost
-#endif
+//#if __CUDACC_VER_MAJOR__ < 12
+//#include "thrust/system/cuda/experimental/pinned_allocator.h"
+//#else
+//#include "cxpinned.h" // this uses cudaMallocHost and cudaFreeHost
+//#endif
 
 // C++ includes
 #include <stdio.h>
@@ -94,13 +95,13 @@ template <typename T> using thrustDvec    = thrust::device_vector<T>;
 //*** change February 2023 ***/
 // thrust pinned host allocation broken in SDK 12.0 therefore removed. This affects only
 // a few examples and hopefully a fix will be avaible soon
-#if __CUDACC_VER_MAJOR__ < 12
-template <typename T> using thrustHvecPin =
-        thrust::host_vector<T,thrust::cuda::experimental::pinned_allocator<T>>;
-#else
-template <typename T> using thrustHvecPin =
-        thrust::host_vector<T,cx::Pallocator<T>>;  // home brewed cuda pinned allocator
-#endif 
+//#if __CUDACC_VER_MAJOR__ < 12
+//template <typename T> using thrustHvecPin =
+//        thrust::host_vector<T,thrust::cuda::experimental::pinned_allocator<T>>;
+//#else
+//template <typename T> using thrustHvecPin =
+//       thrust::host_vector<T,cx::Pallocator<T>>;  // home brewed cuda pinned allocator
+//#endif 
 
 // get pointer to thrust device array
 template <typename T> T * trDptr(thrustDvec<T> &a) { return a.data().get(); }
