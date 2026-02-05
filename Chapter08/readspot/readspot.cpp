@@ -17,6 +17,11 @@
 #include <random>
 #include <vector>
 
+#undef min
+#undef max
+
+#include <algorithm>
+
 bool hitsort_z1z2(const Hit &lhs,const Hit &rhs) {
 
 	// < means accending  i.e 00 comes before 01

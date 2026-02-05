@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4D8CA84C-F5A9-3CFB-75F2-29559422279C}</ProjectGuid>
     <RootNamespace>piH4</RootNamespace>
+    <ProjectName>piH4</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">

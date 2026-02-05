@@ -24,6 +24,7 @@
     <ProjectGuid>{d7aab3dc-03c2-49c2-8a13-b85890da6703}</ProjectGuid>
     <RootNamespace>mpi_alltoall</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>mpi_alltoall</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

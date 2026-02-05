@@ -12,6 +12,8 @@
 // C:\bin\piH.exe 1000 123456
 // pi = 3.14152040 err -23.0, ntot 1000000000, time 64159.500 ms (float gen)
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "cx.h"  
 #include "cxtimers.h"
 #include <random>

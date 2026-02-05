@@ -24,6 +24,7 @@
     <ProjectGuid>{2b6f82d6-914e-4f0d-af4c-ee38ece2f566}</ProjectGuid>
     <RootNamespace>mpi_reduce</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>mpi_reduce</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

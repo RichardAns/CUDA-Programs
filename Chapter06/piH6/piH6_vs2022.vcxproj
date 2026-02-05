@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3924B1C0-4A3F-BEBD-CF20-A4DDCB047013}</ProjectGuid>
     <RootNamespace>piH6</RootNamespace>
+    <ProjectName>piH6</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -66,6 +67,7 @@
       <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(CX_ROOT);$(NVCUDASAMPLES_ROOT)\Common;$(CUDA_PATH)\include\cccl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -78,6 +80,7 @@
       <TargetMachinePlatform>64</TargetMachinePlatform>
       <AdditionalDeps>/Zc:preprocessor</AdditionalDeps>
       <AdditionalOptions>--std c++17 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalCompilerOptions>/Zc:preprocessor</AdditionalCompilerOptions>
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemGroup>

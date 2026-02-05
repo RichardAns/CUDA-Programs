@@ -14,6 +14,7 @@
     <ProjectGuid>{F40E608C-E21B-FB25-10EB-A6024AD22559}</ProjectGuid>
     <RootNamespace>hostmult0</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>hostmult0</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
