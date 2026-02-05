@@ -18,6 +18,7 @@
 #pragma warning( disable : 4996)  // warnings: unsafe functions e.g fread 
 #pragma warning( disable : 4838)  // warnings: size_t to int
 #pragma warning( disable : 4003)  // not enough arguments for function-like macro invocation 'min/max' thrust errors in CUDA 13.1
+#pragma warning( disable : LNK4098)  // link warning about LIBCMT
 
 // macro #defines for min & max are usually bad news,
 // the native CUDA versions compile to single instuctions hence very fast.
@@ -99,8 +100,9 @@ template <typename T> using thrustDvec    = thrust::device_vector<T>;
 //template <typename T> using thrustHvecPin =
 //        thrust::host_vector<T,thrust::cuda::experimental::pinned_allocator<T>>;
 //#else
-//template <typename T> using thrustHvecPin =
-//       thrust::host_vector<T,cx::Pallocator<T>>;  // home brewed cuda pinned allocator
+#include "cxpinned.h" // this uses cudaMallocHost and cudaFreeHost
+template <typename T> using thrustHvecPin =
+        thrust::host_vector<T,cx::Pallocator<T>>;  // home brewed cuda pinned allocator
 //#endif 
 
 // get pointer to thrust device array
